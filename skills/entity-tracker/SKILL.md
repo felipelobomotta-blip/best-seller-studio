@@ -78,6 +78,13 @@ If `foundation.md` does not exist, STOP. Do not build ENTITY_STATE.yaml without 
 
 If no chapters exist, STOP. There is nothing to extract.
 
+**Exception — Phase 2.7 (pre-writing SEED mode):**
+When invoked at Phase 2.7 before any chapters exist, BUILD mode operates in SEED mode:
+- Reads foundation.md and outline.md ONLY
+- Seeds ENTITY_STATE.yaml with canonical character names, locations, and timeline from the outline
+- Does NOT require chapters to exist
+- The STOP condition above applies only when BUILD is invoked mid-pipeline as a recovery operation, not at Phase 2.7
+
 ---
 
 ## ENTITY_STATE.yaml SCHEMA
@@ -524,7 +531,6 @@ Needs review: 3 entities
 - **quality-gate** — Evaluates pipeline health, not entity data.
 - **mechanical-preprocess** — Handles formatting and typographical cleanup. No entity awareness needed.
 - **reader-persona** — Simulates reader reactions. Works from chapter text directly.
-- **bestseller-orchestrator** — Pipeline coordinator. Invokes entity-tracker but does not read its output.
 
 ---
 

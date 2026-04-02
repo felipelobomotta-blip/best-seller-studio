@@ -17,9 +17,9 @@
 - Backward compatible: falls back to V4 behavior if YAML doesn't exist
 
 ### English Standardization
-- Translated 3 remaining Portuguese skills to English: manuscript-manager, editorial-package, production-prep
+- Translated 2 remaining Portuguese skills to English: editorial-package, production-prep
 - Book-orchestrator checkpoints now language-adaptive (no hardcoded Portuguese)
-- PROJECT_STATE.yaml schema fields now in English (migration note included)
+- STATE.yaml schema fields now in English (migration note included)
 
 ### Documentation
 - FAQ updated: fixed skill count (was 12, now 21), added V4.1.1 information

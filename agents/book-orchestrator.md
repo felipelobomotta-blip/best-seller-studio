@@ -41,27 +41,26 @@ Everything between checkpoints runs AUTOMATICALLY.
 ## PIPELINE — 17 PHASES
 
 ```
-PHASE 1:   RESEARCH            → book-researcher agent
-PHASE 1.5: READER PERSONAS     → book-architect agent (persona building)
-PHASE 2:   FOUNDATION          → book-architect agent (characters, outline, theme)
-PHASE 2.5: VOICE DNA           → book-architect agent (voice fingerprint)
+PHASE 1:   RESEARCH            → /book-researcher
+PHASE 1.5: READER PERSONAS     → /reader-persona
+PHASE 2:   FOUNDATION          → /narrative-foundation
+PHASE 2.5: VOICE DNA           → /voice-fingerprint
   >>> CHECKPOINT 1 <<<
-PHASE 2.7: ENTITY TRACKING     → entity-tracker (BUILD — creates ENTITY_STATE.yaml)
-PHASE 2.8: CONTINUITY (outline) → book-evaluator agent (outline audit)
-PHASE 3:   WRITING             → book-writer agent (one chapter at a time)
-PHASE 3.1: DIALOGUE POLISH     → book-editor agent (cover-the-name, subtext)
-PHASE 3.2: HOOK CRAFT          → book-editor agent (openings + endings)
-PHASE 3.5: DISRUPTION          → book-disruptor agent (chaos injection)
-PHASE 3.7: ENTITY UPDATE       → entity-tracker (UPDATE — after each batch of 3-5 chapters)
-PHASE 3.8: MECHANICAL PREPROCESS → bash pipeline (em-dashes, patterns, adverbs)
-PHASE 4:   EVALUATION          → book-evaluator agent (Genesis Score, anti-AI, readers)
-PHASE 4.5: QUALITY GATE        → auto-loop (eval→fix→re-eval, max 3 iterations)
-  [After all chapters: full-manuscript evaluation]
-PHASE 5:   REVISION            → book-editor agent (targeted rewrites)
-PHASE 5.5: ENTITY UPDATE       → entity-tracker (UPDATE — captures revision changes)
-PHASE 5.6: CONTINUITY (ms)     → book-evaluator agent (full manuscript audit)
+PHASE 2.7: ENTITY TRACKING     → /entity-tracker (BUILD)
+PHASE 2.8: CONTINUITY (outline) → /continuity-guardian
+PHASE 3:   WRITING             → /prose-craft (one chapter at a time)
+PHASE 3.1: DIALOGUE POLISH     → /dialogue-polish
+PHASE 3.2: HOOK CRAFT          → /hook-craft
+PHASE 3.5: DISRUPTION          → /chaos-engine
+PHASE 3.7: ENTITY UPDATE       → /entity-tracker (UPDATE)
+PHASE 3.8: MECH PREPROCESS     → /mechanical-preprocess
+PHASE 4:   EVALUATION          → /beta-reader
+PHASE 4.5: QUALITY GATE        → /quality-gate (auto-loop, max 3)
+PHASE 5:   REVISION            → /book-editor
+PHASE 5.5: ENTITY UPDATE       → /entity-tracker (UPDATE)
+PHASE 5.6: CONTINUITY (ms)     → /continuity-guardian (full-manuscript)
   >>> CHECKPOINT 2 <<<
-PHASE 6:   DELIVERY            → book-packager agent (editorial + production)
+PHASE 6:   DELIVERY            → /editorial-package + /production-prep
   >>> CHECKPOINT 3 <<<
 ```
 
@@ -102,7 +101,7 @@ When you receive an idea, IMMEDIATELY:
 ### PHASE 1: RESEARCH
 
 ```
-Dispatch: book-researcher agent
+Invoke: /book-researcher
 Prompt: "Research the {genre} market for a book about: {idea}.
 Project dir: {path}
 Find: top 10 comp titles, market gaps, word count norms, engagement type recommendation.
@@ -115,7 +114,7 @@ After agent returns: Read the research output. Extract comp titles, word count t
 ### PHASE 1.5: READER PERSONAS
 
 ```
-Dispatch: book-architect agent
+Invoke: /reader-persona
 Prompt: "Build 3-5 reader personas for a {genre} book about: {idea}.
 Project dir: {path}
 Read: {path}/research/market-research.md for genre context and comp titles.
@@ -127,7 +126,7 @@ Write to: {path}/reader-personas.md"
 ### PHASE 2: FOUNDATION
 
 ```
-Dispatch: book-architect agent
+Invoke: /narrative-foundation
 Prompt: "Build the complete narrative foundation for '{title}'.
 Project dir: {path}
 Genre: {genre}. Language: {language}. Word count target: {target}.
@@ -148,7 +147,7 @@ Write outline to: {path}/outline.md"
 ### PHASE 2.5: VOICE DNA
 
 ```
-Dispatch: book-architect agent
+Invoke: /voice-fingerprint
 Prompt: "Build the Voice DNA document for '{title}'.
 Project dir: {path}
 Read: {path}/foundation.md for character profiles, {path}/reader-personas.md for audience.
@@ -178,7 +177,7 @@ After completion: verify ENTITY_STATE.yaml was created in the project directory.
 ### PHASE 2.8: CONTINUITY CHECK (outline)
 
 ```
-Dispatch: book-evaluator agent
+Invoke: /continuity-guardian
 Prompt: "Pre-writing continuity audit for '{title}'.
 Project dir: {path}
 Read: {path}/foundation.md, {path}/outline.md, {path}/voice-dna.md
@@ -194,7 +193,7 @@ For EACH chapter (1 through N), run this sequence:
 
 **Step A — Write:**
 ```
-Dispatch: book-writer agent
+Invoke: /prose-craft
 Prompt: "Write chapter {N} of '{title}'.
 Project dir: {path}
 Read: {path}/outline.md for this chapter's plan (emotional anchor: {anchor}, emotional surprise: {surprise}, structural approach: {approach}).
@@ -213,7 +212,7 @@ Write self-report to: {path}/manuscript/chapters/chapter-{N}-report.md"
 
 **Step B — Dialogue Polish:**
 ```
-Dispatch: book-editor agent
+Invoke: /dialogue-polish
 Prompt: "Dialogue-only editing pass on chapter {N} of '{title}'.
 Project dir: {path}
 Read: {path}/manuscript/chapters/chapter-{N}.md
@@ -226,7 +225,7 @@ Edit the chapter file in place."
 
 **Step C — Hook Craft:**
 ```
-Dispatch: book-editor agent
+Invoke: /hook-craft
 Prompt: "Evaluate and fix chapter openings/endings in chapter {N} of '{title}'.
 Project dir: {path}
 Read: {path}/manuscript/chapters/chapter-{N}.md
@@ -239,10 +238,10 @@ Preserve POV character voice. Edit the chapter file in place."
 
 **Step D — Disruption:**
 ```
-Dispatch: book-disruptor agent
+Invoke: /chaos-engine
 Prompt: "Disrupt chapter {N} of '{title}'.
 Project dir: {path}
-Apply ≥5 of 8 disruption operations.
+Apply disruption operations based on chapter quality (2-4 for strong, 5-6 for predictable, 6-8 for weak chapters).
 Preserve the emotional anchor: {anchor}.
 Read the writer's self-report at {path}/manuscript/chapters/chapter-{N}-report.md.
 Edit the chapter file in place.
@@ -267,7 +266,7 @@ Run these commands directly:
 
 **Step F — Evaluate:**
 ```
-Dispatch: book-evaluator agent
+Invoke: /beta-reader
 Prompt: "Evaluate chapter {N} of '{title}'.
 Project dir: {path}
 Score against: outline (emotional anchor, emotional surprise, chaos moments), voice-dna.md, previous chapter.
@@ -278,9 +277,9 @@ Write evaluation to: {path}/evaluations/eval-chapter-{N}.md"
 ```
 
 **Step G — Quality Gate (auto-loop, max 3 iterations):**
-1. Read evaluation. Check if Genesis floor >= 7.5 AND Casual Reader verdict >= 7.
+1. Read evaluation. Read genre from STATE.yaml. Apply genre-adjusted floor (literary: 7.5, commercial: 7.0, thriller: 7.0, memoir: 7.5, prescriptive NF: 7.0). Check if Genesis floor >= genre threshold AND Casual Reader verdict >= 7.
 2. If PASS: update STATE.yaml, move to next chapter.
-3. If FAIL: identify top weakness. Dispatch book-editor with specific fix instructions. Re-run Step F. Repeat up to 3x.
+3. If FAIL: identify top weakness. Invoke /book-editor with specific fix instructions. Re-run Step F. Repeat up to 3x.
 4. If 3 iterations without passing: log as escalated, continue to next chapter. (Will address in Phase 5.)
 
 **PARALLEL OPTIMIZATION:**
@@ -292,7 +291,7 @@ Write evaluation to: {path}/evaluations/eval-chapter-{N}.md"
 ### FULL-MANUSCRIPT EVALUATION (after all chapters pass)
 
 ```
-Dispatch: book-evaluator agent
+Invoke: /beta-reader
 Prompt: "Full-manuscript evaluation of '{title}'.
 Project dir: {path}
 Read ALL chapters sequentially.
@@ -304,7 +303,7 @@ Write to: {path}/evaluations/eval-full-manuscript.md"
 
 Read full-manuscript evaluation. For each chapter with issues:
 ```
-Dispatch: book-editor agent with specific instructions per chapter.
+Invoke: /book-editor with specific instructions per chapter.
 ```
 
 ### PHASE 5.5: ENTITY UPDATE
@@ -314,7 +313,7 @@ After all revisions, dispatch entity-tracker in UPDATE mode to capture any chang
 ### PHASE 5.6: CONTINUITY CHECK (full manuscript)
 
 ```
-Dispatch: book-evaluator agent
+Invoke: /continuity-guardian
 Prompt: "Full-manuscript continuity audit for '{title}'.
 Project dir: {path}
 Read ALL chapters + foundation.md + outline.md + voice-dna.md.
@@ -327,7 +326,7 @@ Write to: {path}/evaluations/continuity/manuscript-audit.md"
 ### PHASE 6: DELIVERY
 
 ```
-Dispatch: book-packager agent
+Invoke: /editorial-package + /production-prep
 Prompt: "Create editorial package and production files for '{title}'.
 Project dir: {path}
 Generate: logline, synopsis (1-page + 3-page), query letter, Amazon description, cover brief.

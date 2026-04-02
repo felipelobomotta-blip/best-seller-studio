@@ -122,7 +122,6 @@ IDEA (1 sentence)
 | PHASE 3 -- Writing                                                 |
 |                                                                    |
 | Skill:  prose-craft (Writer)                                       |
-|         manuscript-manager (state tracking)                        |
 | Process:                                                           |
 |   - VOICE INHABITATION before each chapter:                        |
 |     200-300 word freewrite AS the character (discarded)             |
@@ -238,11 +237,11 @@ IDEA (1 sentence)
 | PHASE 4 -- Evaluation                                              |
 |                                                                    |
 | Skills: Genesis Score V3.7 (built into book-genesis)               |
-|         beta-reader (4 profiles: Devourer, Critic, Hostile,        |
-|           + CASUAL READER -- NEW in V4)                            |
+|         beta-reader (5 profiles: Devourer, Critic, Hostile,        |
+|           Casual Reader, + DEVOTED READER -- NEW in V4)            |
 | Process:                                                           |
 |   - Run Genesis Score on manuscript (7 dimensions, genre-adjusted) |
-|   - Run beta-reader with 4 profiles including Casual Reader        |
+|   - Run beta-reader with 5 profiles including Casual Reader and Devoted Reader        |
 |   - THE CASUAL READER GATE (NEW):                                  |
 |     "Would a person who picks this up at an airport give it 10     |
 |     pages?" If no, the chapter fails regardless of craft scores.   |
@@ -255,9 +254,9 @@ IDEA (1 sentence)
 |                                                                    |
 | Output: Score per dimension, floor, CVI-Launch, CVI-Legacy,        |
 |         top weaknesses/strengths, revision priority                |
-| Gate: Floor >= 8.0 to advance to revision or delivery              |
+| Gate: Floor >= genre threshold (7.0-7.5) to advance               |
 |       CVI-Launch >= 7.0 for submission readiness                   |
-| Loop-back: Floor < 8.0 -> Phase 5 -> return here                  |
+| Loop-back: Floor below genre threshold -> Phase 5 -> return here   |
 +------------------------------------+------------------------------+
                                      |
                                      v
@@ -276,7 +275,7 @@ IDEA (1 sentence)
 | Gate: Pass to advance. Escalate returns to orchestrator.           |
 +------------------------------------+------------------------------+
                                      |
-                                     v (if floor < 8.0)
+                                     v (if floor below genre threshold)
 +-------------------------------------------------------------------+
 | PHASE 5 -- Revision                                                |
 |                                                                    |
@@ -329,11 +328,11 @@ IDEA (1 sentence)
 | Gate: No CRITICAL issues before delivery                           |
 +------------------------------------+------------------------------+
                                      |
-                                     v (when floor >= 8.0)
+                                     v (when floor >= genre threshold)
 +-------------------------------------------------------------------+
 | PHASE 6 -- Delivery                                                |
 |                                                                    |
-| Skills: editorial-package, production-prep, manuscript-manager     |
+| Skills: editorial-package, production-prep                         |
 | Produces:                                                          |
 |   - Logline (1 sentence)                                           |
 |   - Cover synopsis (100 words)                                     |
@@ -343,7 +342,7 @@ IDEA (1 sentence)
 |   - Final proofreading (8 categories, 3 passes)                    |
 |   - Formatting for ebook and/or print                              |
 |   - CVI-Launch assessment for submission readiness                 |
-|   - Final PROJECT_STATE.yaml update                                |
+|   - Final STATE.yaml update                                        |
 |                                                                    |
 | Gate: CVI-Launch >= 7.0 for editorial submission                   |
 | Output: Manuscript + editorial package + formatted files           |
@@ -361,7 +360,7 @@ V4 introduces a critical separation between two measures that V2 conflated:
 The Genesis Score is the craft quality measure. It has 7 dimensions, uses a FLOOR system (score = weakest dimension), and determines what gets revised first.
 
 - If Emotion is 7.0 and Prose is 8.5, Emotion gets revision priority.
-- The floor must reach 8.0 before the pipeline can advance to delivery.
+- The floor must reach the genre-adjusted threshold (7.0-7.5 depending on genre) before the pipeline can advance to delivery.
 - The Genesis Score tells you HOW GOOD the book is.
 
 ### CVI (Commercial Viability Index) -- Governs Submission Readiness
@@ -379,7 +378,7 @@ A book can have a Genesis Score of 8.5 (strong craft) but a CVI-Launch of 5.0 (b
 
 ## State Management
 
-The `manuscript-manager` skill operates across ALL phases via `STATE.yaml` (renamed from `PROJECT_STATE.yaml` in V4 for brevity):
+State is managed via `STATE.yaml` (renamed from `PROJECT_STATE.yaml` in V4 for brevity):
 
 - **STATE.yaml is the source of truth.** Every agent reads it at the start of work and writes to it at the end.
 - **CHECK-IN** at the start of every session: reads state, reports progress, verifies consistency.
@@ -410,7 +409,7 @@ The `manuscript-manager` skill operates across ALL phases via `STATE.yaml` (rena
 | Mechanical Clean | Phase 3.8 -> 4 | Pattern counts within genre targets | Re-run mechanical pass |
 | Casual Reader Gate | Phase 4 | "Would an airport reader give this 10 pages?" | Revise hook/pacing |
 | Memory Test | Phase 4 | "What would the reader remember tomorrow?" | Strengthen anchor |
-| Genesis Floor | Phase 4 -> 4.5 | Floor >= 8.0 | Enter quality gate loop |
+| Genesis Floor | Phase 4 -> 4.5 | Floor >= genre threshold (7.0-7.5) | Enter quality gate loop |
 | Quality Gate | Phase 4.5 -> 5 or 6 | Pass after max 3 iterations | Escalate to orchestrator |
 | Entity State Updated | Phase 5.5 -> 5.6 | ENTITY_STATE.yaml reflects all revisions | Re-run entity update |
 | Manuscript Continuity | Phase 5.6 -> 6 | No CRITICAL cross-chapter issues | Fix inconsistencies |
@@ -426,7 +425,7 @@ The pipeline is not linear. These are the sanctioned backward jumps:
 |------|----|---------|
 | Phase 3 (Writing) | Phase 2 (Foundation) | Character evolves beyond outline; outline needs restructuring |
 | Phase 3 (Writing) | Phase 1 (Research) | Insufficient data for non-fiction chapter |
-| Phase 4 (Evaluation) | Phase 5 (Revision) | Floor < 8.0 |
+| Phase 4 (Evaluation) | Phase 5 (Revision) | Floor below genre threshold (7.0-7.5) |
 | Phase 5 (Revision) | Phase 4 (Evaluation) | After every revision cycle (re-evaluate) |
 | Phase 5 (Revision) | Phase 2 (Foundation) | 3 revision cycles without floor improvement (structural problem) |
 | Phase 6 (Delivery) | Phase 5 (Revision) | CVI-Launch < 7.0 (market positioning issue) |
@@ -515,7 +514,7 @@ book-genesis (Orchestrator)
     |     Reads: chapter
     |
     +-- beta-reader -----------> Phase 4 (Evaluation)
-    |     Outputs: 4-reader report + cross-diagnosis
+    |     Outputs: 5-reader report + cross-diagnosis
     |     Reads: chapter or full manuscript, reader-personas.md
     |
     +-- quality-gate ----------> Phase 4.5 (Quality Gate — NEW)
@@ -537,9 +536,7 @@ book-genesis (Orchestrator)
     +-- editorial-package -----> Phase 6 (Delivery)
     +-- production-prep -------> Phase 6 (Delivery)
     |
-    +-- manuscript-manager ----> ALL PHASES (state tracking)
     +-- series-architect ------> Multi-volume projects
-    +-- bestseller-orchestrator -> Quick/autopilot mode
 ```
 
 ---

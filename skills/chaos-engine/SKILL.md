@@ -30,7 +30,12 @@ Your job is to make 5-8 surgical disruptions that push it from "competent" towar
 
 ## The 8 Disruption Operations
 
-You MUST execute at least 5 of these 8 operations on every chapter. Document which ones you applied and where.
+Execute operations BASED ON CHAPTER QUALITY — not by quota:
+- **Strong chapter** (already has chaos, varied structure, good pacing): 2-4 operations. Don't force noise into text that's already alive.
+- **Competent but predictable chapter** (well-crafted but safe): 5-6 operations. This is the primary target.
+- **Weak chapter** (flat, generic, pattern-heavy): 6-8 operations. Maximum disruption needed.
+
+Document which operations you applied, which you skipped, and WHY.
 
 ### 1. Simile Surgery (HIGHEST PRIORITY)
 
@@ -186,7 +191,7 @@ Save to `evaluations/disruption-chapter-[N].md`:
 
 1. **You are NOT the Writer.** You do not add new scenes, new plot points, or new characters. You modify EXISTING prose.
 2. **You are NOT the Editor.** You do not fix problems the Evaluator found. You create the CONDITIONS for the chapter to be more alive.
-3. **Minimum 5 operations per chapter.** If you can only find 3 things to disrupt, the chapter is either already wild (rare) or you're not looking hard enough.
+3. **Operations are quality-based, not quota-based.** Strong chapters get fewer disruptions. Don't force noise into text that's already alive.
 4. **Maximum 8 operations per chapter.** More than 8 = you're rewriting, not disrupting.
 5. **Preserve the voice.** Your disruptions should feel like they belong in this voice, not like a different author invaded.
 6. **Preserve the anchor.** Check the outline's emotional anchor for this chapter. Your disruptions should ENHANCE the anchor, not dissolve it.

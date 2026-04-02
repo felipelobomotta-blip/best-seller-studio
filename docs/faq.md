@@ -36,7 +36,7 @@ See docs/changelog.md for the full list organized by category.
 
 - **Entity Tracker** -- new skill that builds and maintains `ENTITY_STATE.yaml`, a persistent structured state file tracking all manuscript entities (characters, locations, timeline, objects, world rules, organizations, knowledge graph)
 - **Continuity Guardian upgraded** -- now reads ENTITY_STATE.yaml instead of rebuilding databases. New Audit 6 (YAML vs Text Divergence). Outputs suggested YAML patches.
-- **All skills now in English** -- manuscript-manager, editorial-package, and production-prep translated from Portuguese
+- **All skills now in English** -- editorial-package and production-prep translated from Portuguese
 - **Language-adaptive orchestrator** -- checkpoint messages match the book's language
 - **Knowledge graph** -- tracks who knows what, when they learned it, and how (told, overheard, witnessed, discovered, inferred)
 - **Chekhov tracking** -- objects tracked as `chekhov_open`, `chekhov_resolved`, or `texture`
@@ -145,7 +145,7 @@ V3.7 includes:
 - CVI-Launch and CVI-Legacy calculations
 - 5 engagement type configurations
 
-The floor must reach 8.0 to advance to delivery. 8.5+ is recommended for editorial submission.
+The floor must reach the genre-adjusted threshold (7.0-7.5 depending on genre) to advance to delivery. 8.0+ is recommended for editorial submission.
 
 ### Can I use my own voice samples?
 

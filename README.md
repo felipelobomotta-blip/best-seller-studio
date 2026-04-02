@@ -15,20 +15,20 @@
 
 </p>
 
-<h1 align="center">21 AI skills. One idea. A publish-ready book.</h1>
+<h1 align="center">19 AI skills. One idea. A publish-ready book.</h1>
 
 <p align="center">
   <a href="#quick-start">Quick Start</a> &middot;
   <a href="#the-pipeline">Pipeline</a> &middot;
   <a href="#genesis-score-v37">Genesis Score</a> &middot;
-  <a href="#the-21-skills">Skills</a> &middot;
+  <a href="#the-19-skills">Skills</a> &middot;
   <a href="#why-this-is-different">Why It's Different</a> &middot;
   <a href="docs/architecture.md">Architecture</a> &middot;
   <a href="docs/faq.md">FAQ</a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/skills-21-blue" alt="21 skills" />
+  <img src="https://img.shields.io/badge/skills-19-blue" alt="19 skills" />
   <img src="https://img.shields.io/badge/phases-17-green" alt="17 phases" />
   <img src="https://img.shields.io/badge/Genesis_Score-V3.7-orange" alt="Genesis Score V3.7" />
   <img src="https://img.shields.io/badge/license-MIT-yellow" alt="MIT License" />
@@ -38,7 +38,7 @@
 
 ---
 
-Book Genesis is the only open-source system that turns a single idea into a full manuscript using 21 specialized AI skills that research, write, evaluate, disrupt, and revise -- the same pipeline used to produce a 68,000-word memoir scoring 9.0 on an empirically-calibrated quality framework benchmarked against 15 bestsellers representing 350M+ copies sold.
+Book Genesis is the only open-source system that turns a single idea into a full manuscript using 19 specialized AI skills that research, write, evaluate, disrupt, and revise -- the same pipeline used to produce a 68,000-word memoir scoring 9.0 on an empirically-calibrated quality framework benchmarked against 15 bestsellers representing 350M+ copies sold.
 
 No external APIs. No databases. No build step. Just Claude Code and markdown files.
 
@@ -93,7 +93,7 @@ V4 is a ground-up rebuild. We ran 5 genre tests, hired a publishing consultant t
 | **Engagement Types** | None | **5 types** ranked -- Empathy, Fascination, Self-Insertion, Intellectual Stimulation, Aspiration |
 | **Re-Read Architecture** | None | **Planted details** that gain meaning after the ending |
 | **Cultural Vocabulary** | None | **Branded concepts** -- terms readers adopt and use in conversation |
-| **Skills** | 12 | **21** -- 9 new specialized skills |
+| **Skills** | 12 | **19** -- 7 new specialized skills |
 | **Phases** | 7 | **17** -- autonomous pipeline |
 | **Automation** | Manual | **Autonomous** -- 3 checkpoints only |
 | **Voice System** | Voice bank | **Voice DNA** -- per-character specs, differentiation matrix |
@@ -138,7 +138,7 @@ V4.1 adds persistent entity tracking and standardizes the pipeline for global us
 | **Skill Language** | Mixed PT/EN | **All English** -- global-ready |
 | **Orchestrator** | Hardcoded Portuguese checkpoints | **Language-adaptive** -- matches book language |
 | **Continuity Audits** | 5 | **6** -- added YAML vs Text Divergence audit |
-| **Skills** | 20 | **21** |
+| **Skills** | 20 | **19** (added entity-tracker, removed 3 dead skills) |
 
 ---
 
@@ -171,7 +171,7 @@ Phase 6:   DELIVERY -----------> /editorial-package + /production-prep
    >>> CHECKPOINT 3: Book delivered <<<
 ```
 
-Every phase has a gate. Nothing advances without passing. The revision loop (Phases 4-5) continues until the Genesis Score floor hits 8.0+ or 3 cycles are reached.
+Every phase has a gate. Nothing advances without passing. The revision loop (Phases 4-5) continues until the Genesis Score meets the genre-adjusted quality floor (7.0-7.5 depending on genre) or 3 cycles are reached.
 
 ---
 
@@ -266,7 +266,7 @@ Full scoring methodology: [`docs/genesis-score.md`](docs/genesis-score.md)
 
 ---
 
-## The 21 Skills
+## The 19 Skills
 
 | Skill | Command | Phase | What It Does |
 |-------|---------|-------|-------------|
@@ -288,9 +288,7 @@ Full scoring methodology: [`docs/genesis-score.md`](docs/genesis-score.md)
 | **Book Editor** | `/book-editor` | 5 | Surgical revision with 13 issue handlers. Structural, connective, prose, factual taxonomy. |
 | **Editorial Package** | `/editorial-package` | 6 | Query letter, 3 synopsis formats, cover brief, comp title positioning. |
 | **Production Prep** | `/production-prep` | 6 | 8-category proofreading (3 passes) + EPUB/print formatting with checklists. |
-| **Manuscript Manager** | `/manuscript-manager` | All | State engine. CHECK-IN/CHECK-OUT protocol, decision log, handoff tracking via PROJECT_STATE.yaml. |
 | **Series Architect** | `/series-architect` | -- | Series bible for multi-volume projects. Macro arc, canonical worldbuilding, character threading. |
-| **Bestseller Orchestrator** | `/bestseller-orchestrator` | -- | Alternative fast pipeline. Autopilot or guided mode (max 3 questions). |
 
 Each skill works standalone or orchestrated. Use `/book-auto` for full autonomous mode, `/book-genesis` for manual control, or any individual skill for specific tasks.
 
@@ -415,7 +413,7 @@ The installer copies skill files to `~/.claude/skills/` and verifies Claude Code
 
 1. Skills are markdown files (`SKILL.md`) installed in `~/.claude/skills/`
 2. Claude Code loads them as custom slash commands (e.g., `/book-genesis`)
-3. The orchestrator reads `PROJECT_STATE.yaml` to resume across sessions
+3. The orchestrator reads `STATE.yaml` to resume across sessions
 4. Every artifact is a file -- outlines, scores, characters, the manuscript itself
 5. The revision loop is driven by the Genesis Score: write -> disrupt -> score -> identify weakest dimension -> revise -> re-score
 6. The FLOOR system means the weakest dimension drives all revision effort

@@ -347,7 +347,7 @@ revision_cycles: 0  # Max 3 per iteration
 - [ ] /quality-gate ran auto-loop (evaluate -> targeted fix -> re-evaluate)
 - [ ] Max 3 iterations per chapter
 - [ ] If floor didn't improve after 3 iterations -> escalate to orchestrator as structural issue
-- [ ] Gate threshold met: floor >= configured minimum (default 7.5)
+- [ ] Gate threshold met: Floor >= genre threshold (see /quality-gate for genre-specific values: literary 7.5, commercial 7.0, thriller 7.0, memoir 7.5, prescriptive NF 7.0). Recommended >= 8.0 for editorial submission. >= 8.5 for best-seller/award level.
 
 ### Phase 5 -> 4 (Revision -> Re-evaluation) -- LOOP
 - [ ] Targeted rewrites completed by /book-editor
@@ -368,7 +368,7 @@ revision_cycles: 0  # Max 3 per iteration
 - [ ] World rules: no violations of established rules
 
 ### Phase 5.6 -> 6 (Continuity -> Delivery)
-- [ ] Genesis Score floor >= 7.5 (target >= 8.0, stretch >= 8.5). V3.2 calibration: Genesis Floor does NOT predict sales. Floor 7.0 books sold 62M copies. The floor measures CRAFT, not commercial viability.
+- [ ] Genesis Score Floor >= genre threshold (see /quality-gate for genre-specific values: literary 7.5, commercial 7.0, thriller 7.0, memoir 7.5, prescriptive NF 7.0). Recommended >= 8.0 for editorial submission. >= 8.5 for best-seller/award level. V3.2 calibration: Genesis Floor does NOT predict sales. Floor 7.0 books sold 62M copies. The floor measures CRAFT, not commercial viability.
 - [ ] **CVI-Launch >= 7.0.** If CVI-Launch < 7.0 and Genesis Floor >= 7.5, dispatch targeted pacing/shareability revision before packaging. CVI-Launch formula: Commercial Pacing (20%) + Tomorrow Test (20%) + Casual Reader (20%) + Shareability (20%) + Concept Pitch (10%) + Human Closeness (10%).
 - [ ] **Genesis Score governs REVISION PRIORITY. CVI-Launch governs SUBMISSION READINESS.** When they diverge by 2.0+, report the divergence prominently -- it IS the finding.
 - [ ] No structural weaknesses remaining
@@ -607,7 +607,7 @@ Next step: invoke /quality-gate
 
 Task: Quality gate loop for chapter [N] of "[title]".
 Project dir: [path]
-Threshold: floor >= [target, default 7.5]
+Threshold: Floor >= genre threshold (see /quality-gate for genre-specific values: literary 7.5, commercial 7.0, thriller 7.0, memoir 7.5, prescriptive NF 7.0). Recommended >= 8.0 for editorial submission. >= 8.5 for best-seller/award level.
 Max iterations: 3
 Loop: evaluate chapter -> identify top weakness -> dispatch targeted fix -> re-evaluate
 If threshold met: PASS, advance to Phase 5.
@@ -984,7 +984,6 @@ You track these. The evaluator scans for them. The disruptor breaks them. The wr
     +-- /book-editor             -> Phase 5   (targeted revision by taxonomy)
     +-- /editorial-package       -> Phase 6   (logline, synopsis, query, cover brief)
     +-- /production-prep         -> Phase 6   (proofreading, ebook/print formatting)
-    +-- /manuscript-manager      -> ALL phases (state tracking, continuity, handoffs)
 ```
 
 ---

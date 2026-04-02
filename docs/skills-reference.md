@@ -1,6 +1,6 @@
 # Skills Reference -- Book Genesis V4
 
-Book Genesis V4 contains **21 skills** organized into a 17-phase pipeline (with sub-phases). Each skill is a standalone specialist that also works as part of the orchestrated pipeline. V4 adds 3 skills (chaos-engine, book-editor, book-researcher). V4.1 adds 8 skills focused on automation, voice quality, and scaling. V4.1.1 adds entity-tracker for persistent state.
+Book Genesis V4 contains **19 skills** organized into a 17-phase pipeline (with sub-phases). Each skill is a standalone specialist that also works as part of the orchestrated pipeline. V4 adds 3 skills (chaos-engine, book-editor, book-researcher). V4.1 adds skills focused on automation, voice quality, and scaling. V4.1.1 adds entity-tracker for persistent state.
 
 ---
 
@@ -221,24 +221,7 @@ Final technical preparation.
 
 ## Support Skills
 
-### 10. manuscript-manager (State)
-
-**Phase:** All phases
-
-The persistent memory of the project. Manages STATE.yaml.
-
-**Protocols:**
-- CHECK-IN: Reads state, reports progress, verifies consistency
-- CHECK-OUT: Updates state, logs decisions, manages handoffs
-- Decision Log: Every significant decision with justification and reversibility
-- Handoffs: Inter-skill task tracking with priority and age alerts
-- Session Recovery: STATE.yaml contains everything needed to resume after context loss
-
-**V4 changes:** Renamed PROJECT_STATE.yaml to STATE.yaml. Added tracking for writer self-reports, disruption reports, CVI scores, and engagement type configuration.
-
----
-
-### 11. series-architect (Series)
+### 10. series-architect (Series)
 
 **Phase:** Independent (multi-volume projects)
 
@@ -249,16 +232,6 @@ Builds and maintains the series bible.
 **When to use:** Before writing Volume 2+. When a plot point could create a future contradiction. When reviewing volume endings.
 
 Book 1 ENTITY_STATE.yaml can feed book 2 tracking for cross-volume continuity (V4.1.1+).
-
----
-
-### 12. bestseller-orchestrator (Quick Mode)
-
-**Phase:** Independent (alternative pipeline)
-
-An alternative, faster orchestrator for when the user wants autopilot or guided mode with minimal questions. Supports zero-question autopilot (assume defaults) or guided mode (max 3 questions).
-
-**Note:** References V1 skill names internally. In practice, Claude uses V4 equivalents.
 
 ---
 
@@ -275,9 +248,7 @@ An alternative, faster orchestrator for when the user wants autopilot or guided 
 | synopsis-writer + cover-brief + query-letter | editorial-package | editorial-package | editorial-package (EN) |
 | proofreader + book-formatter | production-prep | production-prep | production-prep (EN) |
 | book-genesis | book-genesis | book-genesis | book-genesis (17 phases, language-adaptive) |
-| manuscript-manager | manuscript-manager | manuscript-manager | manuscript-manager (EN) |
 | series-architect | series-architect | series-architect | series-architect (cross-volume ENTITY_STATE) |
-| bestseller-orchestrator | bestseller-orchestrator | bestseller-orchestrator | bestseller-orchestrator |
 | -- | -- | -- | **reader-persona** (V4.1) |
 | -- | -- | -- | **voice-fingerprint** (V4.1) |
 | -- | -- | -- | **continuity-guardian** (V4.1, +Audit 6) |

@@ -39,6 +39,4 @@ Which skills would this affect?
 - [ ] book-formatter
 - [ ] query-letter
 - [ ] series-architect
-- [ ] manuscript-manager
-- [ ] bestseller-orchestrator
 - [ ] New skill needed

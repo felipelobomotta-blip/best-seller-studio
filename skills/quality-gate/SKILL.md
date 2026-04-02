@@ -13,7 +13,7 @@ You NEVER write prose. You NEVER evaluate prose. You ORCHESTRATE the evaluation-
 
 ## BEFORE RUNNING — MANDATORY
 
-1. **Read `PROJECT_STATE.yaml`** — Current phase, chapter statuses, prior scores, pending handoffs.
+1. **Read `STATE.yaml`** — Current phase, chapter statuses, prior scores, pending handoffs.
 2. **Read `foundation.md`** — Theme, characters, voice definition, emotional anchors, engagement type. You need these to classify issues correctly.
 3. **Read `outline.md`** — What each chapter was SUPPOSED to accomplish. A chapter that scores 8.0 but ignores its outlined function is still a failure.
 4. **Read `voice-bank/README.md`** — Voice targets. You pass these downstream to every revision dispatch.
@@ -164,7 +164,7 @@ If a chapter misses the floor by 0.5 or less on a SINGLE dimension with all othe
 
 The chapter passed. Do the following:
 
-1. **Update `PROJECT_STATE.yaml`:**
+1. **Update `STATE.yaml`:**
    - Chapter status: advance to next pipeline phase
    - Record final Genesis Score (all 7 dimensions + floor)
    - Record final Anti-AI count
@@ -448,7 +448,7 @@ For each issue type found in ANY chapter:
 | Systemic Issue | Fix Target | Action |
 |----------------|------------|--------|
 | Voice drift across chapters | `voice-bank/` | Update voice DNA, recalibrate samples, then re-run affected chapters |
-| Same AI pattern in 3+ chapters | Project-level anti-pattern | Add to `PROJECT_STATE.yaml` as a project-specific anti-pattern. Editor receives explicit warning for all future chapters |
+| Same AI pattern in 3+ chapters | Project-level anti-pattern | Add to `STATE.yaml` as a project-specific anti-pattern. Editor receives explicit warning for all future chapters |
 | Character inconsistency across chapters | `foundation.md` | Update character profile, then revise affected chapters |
 | Structural repetition (same chapter structure) | `outline.md` | Restructure outline to enforce variety, then rewrite affected chapters |
 | Theme saturation (theme in every chapter) | `outline.md` | Designate 1-2 chapters as "RECEDES" |
@@ -529,7 +529,7 @@ Every gate interaction is logged. Save to `evaluations/quality-gate-ch[N]-iter[X
 [Tracking table if iteration > 1]
 ```
 
-### PROJECT_STATE.yaml Updates
+### STATE.yaml Updates
 
 After EVERY gate interaction, update:
 
@@ -578,7 +578,7 @@ Oscillation means the editor is making a trade-off, not a fix. The solution is u
 The user or orchestrator can override thresholds per project:
 
 ```yaml
-# In PROJECT_STATE.yaml
+# In STATE.yaml
 quality_gate_config:
   genre: "literary"
   genesis_floor_override: 8.0    # stricter than default
@@ -618,4 +618,4 @@ Overrides take precedence over the default threshold table. If no overrides exis
 7. **You escalate honestly.** When a chapter is stuck, you say so. You do not burn iteration 3 on the same approach that failed in iterations 1 and 2. You escalate with a clear diagnosis and concrete options.
 8. **Systemic before local.** In batch mode, ALWAYS fix systemic issues before local ones. Fixing the same problem in 8 chapters individually is 8x the work for the same result.
 9. **Fresh evaluation context.** Re-evaluations must be blind. The evaluator does not see what was "supposed" to improve. If you contaminate the re-evaluation with prior feedback, the score is meaningless.
-10. **State is sacred.** Every gate interaction updates `PROJECT_STATE.yaml`. If the state file and reality diverge, everything downstream breaks. Update state BEFORE reporting results.
+10. **State is sacred.** Every gate interaction updates `STATE.yaml`. If the state file and reality diverge, everything downstream breaks. Update state BEFORE reporting results.
