@@ -1,5 +1,5 @@
 # Book Genesis V4 — Installer for Windows (PowerShell)
-# Installs 19 skills + 1 agent + knowledge base to ~/.claude/
+# Installs 14 active skills + 5 deprecated + 1 agent + knowledge base to ~/.claude/
 
 $ErrorActionPreference = "Stop"
 
@@ -20,7 +20,7 @@ Write-Host " | |_) | (_) | (_) |   < | |_| |  __/ | | |  __/\__ \ \__ \" -Foregr
 Write-Host " |____/ \___/ \___/|_|\_\ \____|\___| |_| |_|\___||___/_|___/" -ForegroundColor Blue
 Write-Host "                          V4 - Genesis Score V3.7" -ForegroundColor Yellow
 Write-Host ""
-Write-Host "Installing 19 skills + 1 agent + knowledge base" -ForegroundColor Yellow
+Write-Host "Installing 14 active skills + 5 deprecated + 1 agent + knowledge base" -ForegroundColor Yellow
 Write-Host ""
 
 # Check that skills directory exists

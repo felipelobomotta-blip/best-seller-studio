@@ -426,7 +426,7 @@ You are evaluating prose that THIS SYSTEM wrote. Your bias is maximum. To counte
 
 9. **Theoretical ceiling (V3.5).** A score of 10.0 on ALL dimensions simultaneously is structurally impossible for most genres due to inherent tradeoffs (prose beauty vs prose invisibility, originality vs commercial pacing, launch accessibility vs legacy depth). For cross-genre works, the practical ceiling is ~9.5 on any dimension that conflicts with another. A book achieving 9.0+ on all dimensions is operating at the theoretical maximum. CVI-Launch 9.0+ AND CVI-Legacy 9.0+ simultaneously is exceptional — expect a 1-2 point gap. Gap direction reveals commercial profile: Launch > Legacy = bestseller with shelf-life risk; Legacy > Launch = backlist performer with slow start.
 
-10. **The intrasystem bias flag.** At the END of every evaluation, write: "BIAS CHECK: This evaluation was produced by the same system that wrote the prose. Confidence in scores above 8.0 requires external validation (beta readers, editors, comp analysis)."
+10. **The intrasystem bias flag.** At the END of every evaluation, write the BIAS REMINDER from the Calibration Offset section: "INTRASYSTEM BIAS: This evaluation was produced by the same AI system that wrote the prose. Raw scores carry +0.8 measured inflation. Calibrated scores are the actionable metric. External validation required for calibrated scores above 8.0."
 
 11. **Pattern #11 is a HARD check (V3.4: genre-adjusted density).** Count every instance of explanatory simile extension. Cap thresholds are genre-adjusted and normalized by chapter length:
     - Literary Fiction: >3 instances OR >0.5/1K words → cap Prose at 7.5
@@ -434,6 +434,32 @@ You are evaluating prose that THIS SYSTEM wrote. Your bias is maximum. To counte
     - Commercial Fiction: >6 instances OR >0.8/1K words → cap Prose at 7.5
     - Prescriptive NF: >8 instances OR >1.0/1K words → cap Prose at 7.5
     This is the pipeline's primary fingerprint and the evaluator MUST catch it even though the writer couldn't.
+
+## CALIBRATION OFFSET (V5 — Empirically Validated)
+
+All scores produced by this evaluator carry a measured +0.8 inflation bias. This was validated across 3 manuscripts against external literary critics:
+
+| Internal Score | External Score | Delta |
+|---------------|---------------|-------|
+| ~9.0 | 8.2 | -0.8 |
+| ~8.25 | 7.4 | -0.8 |
+| ~7.0 | 6.2 | -0.8 |
+
+**After computing all scores, apply:**
+
+1. **Calibrated Score = Raw Score - 0.8**
+2. Report BOTH in the output: `Raw: X.X | Calibrated: X.X`
+3. The CALIBRATED score predicts external reception
+4. Calibrated scores above 8.0 are genuinely exceptional and require external validation (beta readers, editors, comp title comparison)
+5. The Genesis Floor is calculated from CALIBRATED scores, not raw
+
+**In the output format, update the headline to:**
+```
+**CVI-Launch:** X.X | **CVI-Legacy:** X.X | **Genesis Floor (Raw):** X.X | **Genesis Floor (Calibrated):** X.X | **Genesis Average (Calibrated):** X.X
+```
+
+**BIAS REMINDER (append to every evaluation):**
+> "INTRASYSTEM BIAS: This evaluation was produced by the same AI system that wrote the prose. Raw scores carry +0.8 measured inflation. Calibrated scores are the actionable metric. External validation required for calibrated scores above 8.0."
 
 ## OUTPUT FORMAT
 
@@ -444,7 +470,7 @@ Write to `evaluations/eval-chapter-[N].md`:
 **Evaluator:** beta-reader | **Date:** [YYYY-MM-DD]
 
 ## HEADLINE (V3.4 — Lead with commercial signal)
-**CVI-Launch:** X.X | **CVI-Legacy:** X.X | **Genesis Floor:** X.X | **Genesis Average:** X.X
+**CVI-Launch:** X.X | **CVI-Legacy:** X.X | **Genesis Floor (Raw):** X.X | **Genesis Floor (Calibrated):** X.X | **Genesis Average (Calibrated):** X.X
 **Engagement Type:** [Empathy / Fascination / Self-Insertion / Intellectual / Aspiration]
 **Divergence Alert:** [If CVI-Launch and Genesis Floor differ by 2.0+, state the finding here]
 

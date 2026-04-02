@@ -15,20 +15,21 @@
 
 </p>
 
-<h1 align="center">19 AI skills. One idea. A publish-ready book.</h1>
+<h1 align="center">14 active skills. One idea. A publish-ready book.</h1>
 
 <p align="center">
   <a href="#quick-start">Quick Start</a> &middot;
   <a href="#the-pipeline">Pipeline</a> &middot;
   <a href="#genesis-score-v37">Genesis Score</a> &middot;
-  <a href="#the-19-skills">Skills</a> &middot;
+  <a href="#the-14-active-skills">Skills</a> &middot;
   <a href="#why-this-is-different">Why It's Different</a> &middot;
   <a href="docs/architecture.md">Architecture</a> &middot;
-  <a href="docs/faq.md">FAQ</a>
+  <a href="docs/faq.md">FAQ</a> &middot;
+  <a href="docs/v5-philosophy.md">V5 Philosophy</a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/skills-19-blue" alt="19 skills" />
+  <img src="https://img.shields.io/badge/skills-14-blue" alt="14 active skills" />
   <img src="https://img.shields.io/badge/phases-17-green" alt="17 phases" />
   <img src="https://img.shields.io/badge/Genesis_Score-V3.7-orange" alt="Genesis Score V3.7" />
   <img src="https://img.shields.io/badge/license-MIT-yellow" alt="MIT License" />
@@ -38,7 +39,7 @@
 
 ---
 
-Book Genesis is the only open-source system that turns a single idea into a full manuscript using 19 specialized AI skills that research, write, evaluate, disrupt, and revise -- the same pipeline used to produce a 68,000-word memoir scoring 9.0 on an empirically-calibrated quality framework benchmarked against 15 bestsellers representing 350M+ copies sold.
+Book Genesis is the only open-source system that turns a single idea into a full manuscript using 14 active AI skills that research, write, evaluate, disrupt, and revise -- the same pipeline used to produce a 68,000-word memoir scoring 9.0 on an empirically-calibrated quality framework benchmarked against 15 bestsellers representing 350M+ copies sold.
 
 No external APIs. No databases. No build step. Just Claude Code and markdown files.
 
@@ -69,6 +70,20 @@ That's it. The orchestrator runs the full 17-phase pipeline autonomously. It pau
 
 ---
 
+## V5: Craft Mode
+
+V5 introduces **Craft Mode** -- a streamlined 6-phase, 8-skill pipeline that produces better prose by giving the writer fewer constraints. We benchmarked 3 books against external literary critics and found an inverse correlation between skill count and external score. The writer who knows it will be judged on 20 dimensions writes defensively; the writer with minimal constraints writes authentically. Craft Mode is now the default; the full 19-skill pipeline remains available as Production Mode via `/book-genesis-full`. Read the full rationale in [docs/v5-philosophy.md](docs/v5-philosophy.md).
+
+### External Benchmark
+
+| Book | Pipeline | Active Skills | External Score |
+|------|----------|---------------|---------------|
+| Protocolo Nao Encontrado (memoir) | V2 | ~6 | **8.2/10** |
+| The Source Code (sci-fi) | V4 | 19 | **7.4/10** |
+| Era de Aquario (fantasy) | V3 | ~12 | **6.2/10** |
+
+---
+
 ## What's New in V4
 
 V4 is a ground-up rebuild. We ran 5 genre tests, hired a publishing consultant to analyze the output, identified 9 systemic problems, and fixed every one. Here's what changed:
@@ -93,7 +108,7 @@ V4 is a ground-up rebuild. We ran 5 genre tests, hired a publishing consultant t
 | **Engagement Types** | None | **5 types** ranked -- Empathy, Fascination, Self-Insertion, Intellectual Stimulation, Aspiration |
 | **Re-Read Architecture** | None | **Planted details** that gain meaning after the ending |
 | **Cultural Vocabulary** | None | **Branded concepts** -- terms readers adopt and use in conversation |
-| **Skills** | 12 | **19** -- 7 new specialized skills |
+| **Skills** | 12 | **19** (14 active in V5 Craft Mode) -- 7 new specialized skills |
 | **Phases** | 7 | **17** -- autonomous pipeline |
 | **Automation** | Manual | **Autonomous** -- 3 checkpoints only |
 | **Voice System** | Voice bank | **Voice DNA** -- per-character specs, differentiation matrix |
@@ -138,7 +153,7 @@ V4.1 adds persistent entity tracking and standardizes the pipeline for global us
 | **Skill Language** | Mixed PT/EN | **All English** -- global-ready |
 | **Orchestrator** | Hardcoded Portuguese checkpoints | **Language-adaptive** -- matches book language |
 | **Continuity Audits** | 5 | **6** -- added YAML vs Text Divergence audit |
-| **Skills** | 20 | **19** (added entity-tracker, removed 3 dead skills) |
+| **Skills** | 20 | **19** (added entity-tracker, removed 3 dead skills) -- V5 Craft Mode uses **14 active** |
 
 ---
 
@@ -266,7 +281,7 @@ Full scoring methodology: [`docs/genesis-score.md`](docs/genesis-score.md)
 
 ---
 
-## The 19 Skills
+## The 14 Active Skills
 
 | Skill | Command | Phase | What It Does |
 |-------|---------|-------|-------------|
@@ -279,18 +294,18 @@ Full scoring methodology: [`docs/genesis-score.md`](docs/genesis-score.md)
 | **Entity Tracker** | `/entity-tracker` | 2.7 + 3.7 + 5.5 | Builds and maintains ENTITY_STATE.yaml -- persistent character, location, timeline, object, and knowledge tracking. |
 | **Continuity Guardian** | `/continuity-guardian` | 2.8 + 5.6 | Cross-manuscript consistency audit, timeline, information flow, plot threads. Now reads ENTITY_STATE.yaml (V4.1). |
 | **Prose Craft** | `/prose-craft` | 3 | Chapter writing with voice inhabitation, 8 structural types, 7 opening strategies, 20-pattern anti-AI, speed design. |
-| **Dialogue Polish** | `/dialogue-polish` | 3.1 | Cover-the-name test, subtext injection, voice consistency in dialogue. |
-| **Hook Craft** | `/hook-craft` | 3.2 | Chapter openings + endings scoring, binge test across all chapters. |
-| **Chaos Engine** | `/chaos-engine` | 3.5 | Breaks predictability. Injects irrelevant thoughts, failed composure, unprompted memories, cognitive distortions. |
-| **Mechanical Preprocess** | `/mechanical-preprocess` | 3.8 | Bash pipeline for em-dashes, Pattern #11, adverbs, repetition. Scales to 30+ chapters. |
+| **Dialogue Polish** | `/dialogue-polish` | 3.1 | Cover-the-name test, subtext injection, voice consistency in dialogue. *(deprecated -- Production Mode only)* |
+| **Hook Craft** | `/hook-craft` | 3.2 | Chapter openings + endings scoring, binge test across all chapters. *(deprecated -- Production Mode only)* |
+| **Chaos Engine** | `/chaos-engine` | 3.5 | Breaks predictability. Injects irrelevant thoughts, failed composure, unprompted memories, cognitive distortions. *(deprecated -- Production Mode only)* |
+| **Mechanical Preprocess** | `/mechanical-preprocess` | 3.8 | Bash pipeline for em-dashes, Pattern #11, adverbs, repetition. Scales to 30+ chapters. *(deprecated -- Production Mode only)* |
 | **Beta Reader** | `/beta-reader` | 4 | 5 non-convergent reader profiles. Genesis Score V3.7. CVI. Tomorrow Test. Discovery Test. Anti-AI scan. |
-| **Quality Gate** | `/quality-gate` | 4.5 | Auto-loop evaluate→fix→re-evaluate, max 3 iterations per chapter. |
+| **Quality Gate** | `/quality-gate` | 4.5 | Auto-loop evaluate->fix->re-evaluate, max 3 iterations per chapter. *(deprecated -- Production Mode only)* |
 | **Book Editor** | `/book-editor` | 5 | Surgical revision with 13 issue handlers. Structural, connective, prose, factual taxonomy. |
 | **Editorial Package** | `/editorial-package` | 6 | Query letter, 3 synopsis formats, cover brief, comp title positioning. |
 | **Production Prep** | `/production-prep` | 6 | 8-category proofreading (3 passes) + EPUB/print formatting with checklists. |
 | **Series Architect** | `/series-architect` | -- | Series bible for multi-volume projects. Macro arc, canonical worldbuilding, character threading. |
 
-Each skill works standalone or orchestrated. Use `/book-auto` for full autonomous mode, `/book-genesis` for manual control, or any individual skill for specific tasks.
+14 skills are active in Craft Mode (default). All 19 work standalone or orchestrated. Use `/book-auto` for Craft Mode, `/book-genesis-full` for Production Mode (all 19 skills), or any individual skill for specific tasks.
 
 ---
 

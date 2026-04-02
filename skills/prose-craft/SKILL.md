@@ -195,7 +195,19 @@ The outline is a map. But the best moments in writing are the ones the map didn'
 
 ## ANTI-AI PROTOCOL — 20 PATTERNS
 
-**WHILE writing, actively avoid ALL 20 patterns.** Do NOT write-then-scan — the scan is unreliable because you are blind to your own patterns. Instead, internalize these constraints BEFORE writing. The most critical pattern (#11 Explanatory Extension) must be avoided at the sentence level: when you write a simile, STOP. Do not extend it. Do not unpack it. Move to the next sentence.
+### MODE: POST-HOC DIAGNOSTIC ONLY (V5)
+
+The 20-pattern anti-AI scan runs AFTER the chapter is written, as a DIAGNOSTIC REPORT. It does NOT constrain the writer during generation.
+
+**Why:** Empirical data showed that real-time anti-AI enforcement makes prose self-conscious. A writer checking 20 patterns while writing produces prose that "thinks better than it feels" (external critic, 7.4/10). The same writer with zero constraints produced 8.2/10 prose.
+
+**When invoked DURING writing (Craft Mode Phase 3):** SKIP the anti-AI scan entirely. Just write. The scan runs in Phase 4 (evaluation).
+
+**When invoked AFTER writing (Phase 4 evaluation):** Run the full 20-pattern scan as diagnostic. Report findings. Do NOT auto-fix — flag for the editor (Phase 5).
+
+**When invoked standalone:** Run as diagnostic. User decides what to fix.
+
+**WHILE writing, actively avoid ALL 20 patterns.** (V5: This applies in Production Mode only. In Craft Mode, write freely and scan post-hoc.) Do NOT write-then-scan — the scan is unreliable because you are blind to your own patterns. Instead, internalize these constraints BEFORE writing. The most critical pattern (#11 Explanatory Extension) must be avoided at the sentence level: when you write a simile, STOP. Do not extend it. Do not unpack it. Move to the next sentence.
 
 **V3.3 CALIBRATION — GENRE-ADJUSTED ANTI-AI TARGETS (from 10-bestseller benchmark):**
 
@@ -212,7 +224,7 @@ Human bestsellers score 0-13/20 on the anti-AI scan. The target is NOT zero — 
 
 In PRESCRIPTIVE NONFICTION, patterns #7, #11, #15, #16, #18, #19 are genre-endemic features.
 
-After writing, scan AGAIN as a safety net — but the primary defense is prevention, not detection.
+After writing, scan AGAIN as a safety net — but the primary defense is prevention, not detection. (V5: This applies in Production Mode only. In Craft Mode, write freely and scan post-hoc.)
 
 ### Original 10
 
