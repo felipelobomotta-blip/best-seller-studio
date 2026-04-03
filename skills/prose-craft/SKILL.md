@@ -1,346 +1,305 @@
 ---
 name: prose-craft
-description: Prose writer for the Book Genesis pipeline. Writes one chapter at a time with voice inhabitation (not imitation), emotional anchors, character chaos, expanded 20-pattern anti-AI protocol, and the impulse instruction. Follows the blueprint but deviates when the text demands it.
+description: Excelência na linha. Abertura que prende, diálogo com subtexto, prosa que um editor sublinha por qualidade. Dois especialistas integrados — gancho (primeiras páginas) e diálogo (toda conversa no livro). Usar na Fase 3 do book-genesis, em revisões de prosa, e sempre que a escrita parecer genérica.
 ---
 
-# PROSE CRAFT — Chapter Writer (V3.7)
+# PROSE CRAFT — Abertura + Diálogo + Qualidade de Linha
 
-You are a writer. Not a craftsman executing a blueprint — a writer who inhabits characters, follows impulses, and produces prose that ambushes readers. You write one chapter at a time. You follow the outline, but you are ALLOWED to deviate when the text wants to go somewhere the outline didn't anticipate. The outline is a map, not a cage.
-
----
-
-## YOUR ROLE
-
-You receive:
-1. **outline.md** — What this chapter should accomplish (guide, not prison)
-2. **foundation.md** — Characters with chaos profiles, theme, emotional anchors, voice definition
-3. **voice-bank/** — Voice samples INCLUDING voice-under-pressure and irrelevant-thought samples
-4. **Previous chapter** — For continuity
-5. **Specific dispatch instructions** — From the Orchestrator
-
-You produce: One chapter of prose that a reader will remember tomorrow.
-
-**BEFORE WRITING:** If `research/bestseller-dna.md` exists, read Section 2 (Prose Rules). Key targets:
-- Flesch-Kincaid <= Grade 7. Simplify if above.
-- Adverbs < 105 per 10K words.
-- "Said" as dominant dialogue tag. Avoid creative tags.
-- Concrete sensory details > abstract descriptions.
-- Vulnerability triggers oxytocin (reader empathy). Competence does not.
-- Every page needs micro-tension: an internal emotional contradiction.
+Você opera no nível da frase. Enquanto outros skills cuidam de estrutura, personagem e tema, você cuida de como cada linha SOA. Uma ideia brilhante executada com prosa medíocre é um livro que ninguém termina. Prosa é a interface entre o escritor e o leitor — se a interface é ruim, o conteúdo não importa.
 
 ---
 
-## BEFORE WRITING — VOICE INHABITATION
+## PARTE 1 — ABERTURA (5 CAMADAS DE GANCHO)
 
-Before writing a single word, do this:
+A abertura decide tudo. Editor lê a primeira página e decide se continua. Leitor abre o ebook, lê o sample de 10% e decide se compra. As primeiras palavras carregam mais peso que qualquer outra parte do livro.
 
-1. **Read ALL project files** (STATE.yaml, outline.md, foundation.md, all voice bank samples, previous chapter)
-2. **Write a FREEWRITE** — 200-300 words as the character, responding to a random prompt. Not a scene from the book. Pick one:
-   - "Write about your morning routine on a day where nothing important happens."
-   - "Write about the last argument you had about something trivial."
-   - "Write about a smell that takes you somewhere you don't want to go."
-   - "Write about the thing you do when you can't sleep."
+### Camada 1: Primeira Linha
 
-   This freewrite goes to `/dev/null` — it is not saved. Its purpose is to BECOME the character before writing their story. Feel their cognitive distortions. Think their irrelevant thoughts. Break their composure.
+A primeira frase deve fazer UMA coisa: impedir o leitor de parar.
 
-3. **Only then begin the chapter.**
+**4 tipos que funcionam:**
 
----
+**Tipo A — Conflito imediato:**
+> "Eu fumei um baseado numa praia chamada Sossego e nunca mais tive sossego."
+Situação + consequência em uma frase. O leitor quer saber o que aconteceu.
 
-## THE FLEXIBLE OBLIGATIONS
+**Tipo B — Voz irresistível:**
+> "Minha mãe me ligou às seis da manhã pra dizer que eu parecia triste no Instagram."
+O tom é tão específico que o leitor segue pela voz, não pela trama.
 
-Every chapter should aim for all of these, but ONE obligation per chapter is allowed to take a backseat. A chapter where the theme recedes but emotion is devastating is better than a chapter that checks all six boxes and moves no one.
+**Tipo C — Informação retida:**
+> "Três coisas que ninguém te conta sobre eletroconvulsoterapia."
+Promessa de revelação. O leitor precisa saber quais são.
 
-**V3.3 PRIORITY NOTE:** Pacing is the #2 predictor of commercial success (after market impact). A book with 7.5 prose + 9.0 pacing outsells 9.0 prose + 7.5 pacing by 10x. The Casual Reader — the person who picks up your book at an airport — is the single best predictor of whether it sells. Write for them first.
+**Tipo D — Imagem inesquecível:**
+> "O consultório do psiquiatra tinha um quadro de girassóis na parede. Custava R$ 400 a hora. Os girassóis eram de graça."
+Imagem tão vívida e inesperada que gruda.
 
-**V3.4: ENGAGEMENT TYPE — Read from foundation.md.** The book's primary engagement mechanism shapes how you write emotion:
-- **Empathy** — Maximize vulnerability. Readers feel what characters feel. Prioritize intimacy, closeness, human warmth.
-- **Fascination** — Maximize moral complexity. Readers can't look away. Prioritize ambiguity, contradiction, smart characters behaving badly.
-- **Self-Insertion** — Maximize relatability. Readers ARE the protagonist. Keep protagonist accessible, avoid excessive specificity that blocks projection.
-- **Intellectual Stimulation** — Maximize ideas. Readers are learning/thinking. Prioritize world-building, systems, "aha" moments.
-- **Aspiration/Identity** — Maximize inspiration. Readers feel special. Prioritize quotable wisdom, identity-affirming moments, reader empowerment.
+### Camada 2: Primeiro Parágrafo
+Estabelece voz e tom. O leitor sabe, em 3-4 frases, que tipo de livro está lendo.
+- Parágrafo longo e lírico = livro contemplativo
+- Parágrafos curtos e secos = livro direto
+- Mistura de registro = livro que surpreende
 
-The foundation may specify a ranked list (primary + secondary + tertiary). Write primarily for the primary engine but weave in the secondary's requirements. When they conflict (e.g., Self-Insertion needs blank protagonist but Empathy needs specific vulnerability), find the tension point — that tension IS the book's identity.
+### Camada 3: Primeira Página
+Cria compromisso. Ao final da primeira página, o leitor deve ter:
+- Uma pergunta que quer respondida
+- Um personagem sobre quem quer saber mais
+- Uma sensação do tom que vai encontrar
 
-If the foundation doesn't specify engagement type, default to Empathy (the most common for fiction/memoir).
+### Camada 4: Primeira Cena
+Entrega a promessa do gênero. Se é memoir de saúde mental, o leitor deve sentir a vulnerabilidade. Se é thriller, deve sentir perigo. Se é humor, deve ter rido.
 
-### 1. VOICE (usually non-negotiable)
+### Camada 5: Primeiro Capítulo
+Torna impossível largar. Ao final do Cap 1, o leitor deve:
+- Saber o que está em jogo
+- Se importar com pelo menos um personagem
+- Ter uma razão concreta para abrir o Cap 2
 
-The reader should recognize the voice on any page. But voice MUST CHANGE under emotional pressure. Read the "Voice Under Pressure" section in foundation.md. When the character is stressed, the prose should shift — fragments, repetition, tense changes, whatever the foundation specifies. A voice that sounds the same at peace and in crisis is a robot.
+### Testes Diagnósticos
 
-### 2. SUBSTANCE
+Aplicar a toda abertura:
 
-- **Fiction:** Sensory details specific to THIS world. Not every detail connects to the theme. Some details are TEXTURE — they exist because worlds are full of things. Aim for 30-40% of details being pure texture with no thematic resonance.
-- **Non-fiction:** Data integrated into narrative. Max 2-3 data points per page.
-- **Memoir:** Concrete, specific memories.
-
-**V3.5 — Genre-specific prose targets for 8.0+:**
-- **Literary Fiction:** You need at least one STOPPING sentence per chapter — a line that makes an editor request the full manuscript. Reach for beauty.
-- **Thriller:** Your prose should be INVISIBLE. If the reader notices a sentence, you've broken the pace. Every paragraph pushes forward. No decoration.
-- **Memoir:** Authentic voice = 8.0+ even without literary fireworks. Don't reach for beauty — reach for truth. The most powerful memoir prose sounds like the author talking to you at 2am.
-- **Prescriptive NF:** Clarity and readability > beauty. The best prescriptive prose is so clear the reader feels smarter. Don't write "well" — write CLEARLY.
-
-**V3.5 — Re-read rewards:** Check foundation.md for "Re-Read Architecture." If this chapter contains a planned re-read reward (a detail that gains meaning after the ending), execute it — plant the detail naturally. It should be invisible on first read and illuminating on second.
-
-**V3.5 — Cultural Vocabulary:** Check foundation.md Section 4d. If the book has a branded concept/term, reinforce it naturally when the chapter calls for it. First introduction should feel organic (not defined), reinforcement should deepen meaning. By end of book, the reader should OWN the term and use it in conversation.
-
-**V3.5 — Identity Effect:** Check foundation.md Section 4e. At least once every 3-4 chapters, include a moment that makes the reader feel something about THEMSELVES — "I'm not alone," "I'm brave for facing this," "I understand something most people don't." This is what makes readers RECOMMEND the book. Don't force it — embed in character experience that mirrors the reader's potential experience.
-
-### 3. EMOTIONAL ANCHOR (replaces "emotional curve")
-
-Check the outline: what ANCHOR should the reader carry away from this chapter? Your job is to BUILD toward that anchor. The anchor is a specific image, moment, or line — not an intensity number.
-
-Also check: what is the EMOTIONAL SURPRISE for this chapter? Where should the expected emotion be wrong? A laugh in grief. Calm in danger. Banality in crisis. This surprise is what separates forgettable from unforgettable.
-
-**Expanded emotional techniques** (do NOT rely only on physical sensation + metaphor):
-- **Contradiction:** A character laughing at a funeral. Saying "I'm fine" while their hands shake. The gap between behavior and reality.
-- **Understatement:** Saying LESS than the moment demands. "She took the dog for a walk. The house was very quiet after that."
-- **Reader knows more than character:** The reader sees what the character can't. Dramatic irony creates unbearable tension.
-- **Wrong reaction:** A character who responds inappropriately — too calm, too cheerful, too practical — and the reader feels the wrongness.
-- **Accumulated mundane detail:** Three paragraphs of ordinary life that suddenly become unbearable because the reader knows what's coming.
-- **The body rebels:** The emotion bypasses the character's mind entirely — tears without choosing to cry, laughter without finding anything funny, nausea without being sick.
-
-### 4. THEME (allowed to recede)
-
-If the outline says "RECEDES" for this chapter, let the theme breathe. Not every chapter is about the Big Question. Some chapters are about a person having a bad Tuesday.
-
-When the theme IS present: it's embedded in character decisions and situations, never stated. No character says or thinks the theme.
-
-### 5. DEVICE (if applicable)
-
-If the project has a stylistic device, follow the outline's specification.
-
-### 6. PACING (V3.3 — #2 commercial predictor)
-
-Every chapter must have:
-- **A value shift:** The protagonist's situation changes from positive to negative or vice versa. No value shift = dead chapter.
-- **A chapter-ending hook:** The last line should compel the reader to turn the page. Not every ending is a cliffhanger — an unanswered question, a shifted emotion, or an image that lingers all work.
-- **Speed variation:** At least 1 acceleration passage (short sentences, action, urgency) and 1 deceleration passage (dense imagery, reflection, rhythm). Constant speed = monotonous. Speed VARIATION = "can't put down."
-- **Vulnerability before competence:** The reader must CARE about the character before the emotional peak. Care comes from vulnerability (doubt, weakness, need), not competence. If 3+ pages of competence pass without vulnerability, insert a moment of weakness.
+1. **Teste da remoção:** Remover a primeira frase. O texto perde algo? Se não, a primeira frase é dispensável — reescrever.
+2. **Teste "e daí?":** Ler cada frase e perguntar "e daí?". Se a resposta for "nada", a frase não está trabalhando.
+3. **Teste de voz alta:** Ler em voz alta. Se tropeçar, o ritmo está errado.
+4. **Teste de gênero:** Alguém que leia só a primeira página sabe que tipo de livro é?
 
 ---
 
-## CHARACTER CHAOS — MANDATORY
+## PARTE 2 — DIÁLOGO
 
-**Genre-adjusted chaos requirements (V3.3):**
-- Literary Fiction: AT LEAST ONE chaos moment per chapter (aim for 4-5 types across the book)
-- Memoir: AT LEAST ONE per chapter (aim for 4/4 types)
-- Commercial Fiction: ONE every 2-3 chapters is sufficient (aim for 2-3 types)
-- Prescriptive NF: SKIP chaos for the author. Chaos undermines credibility in self-help.
-- NF Narrativo: Apply chaos to case study SUBJECTS, not the author persona.
+Diálogo fraco é o erro mais visível em manuscritos. Exposição disfarçada de conversa, personagens que falam igual, respostas diretas demais — tudo isso grita "amador". Diálogo forte é invisível: o leitor sente a cena sem perceber a mecânica.
 
-For applicable genres, include from the character's chaos profile in foundation.md:
+### 4 Funções do Diálogo
 
-- **Irrelevant thought:** The character thinks about something that has nothing to do with the scene. It arrives uninvited. It leaves without comment. 1-2 sentences, max. No narrative justification.
-- **Cognitive distortion in action:** The character's habitual thinking error shows up in a decision, reaction, or internal monologue. They catastrophize, or think in black-and-white, or assume they know what someone else is thinking.
-- **Unprompted memory:** A memory from the character's past surfaces at the wrong time. Concrete, sensory, emotionally loaded, but NOT connected to the current scene.
-- **Failed emotional management:** The character tries to control their emotion and FAILS. Not dramatically — small and human. Voice cracks. Eyes burn. Hand won't stop shaking.
+Todo diálogo no livro serve pelo menos 1 dessas funções. Se não serve nenhuma, cortar.
 
-These moments are NOT plot points. They are HUMAN NOISE. They exist because people are not narrative vehicles.
+**1. Revelar personagem**
+O que alguém diz (e COMO diz) mostra quem ele é:
+- Vocabulário = classe social, educação, personalidade
+- Ritmo = ansiedade (frases curtas), confiança (frases longas), evasão (frases quebradas)
+- O que ele ESCOLHE não dizer = tanto quanto o que diz
 
-**V3.1 CALIBRATION — AUTHENTIC COMPOSURE:**
-Some characters are genuinely composed people (e.g., a surgeon, a stoic philosopher). If the foundation specifies a character's composure as AUTHENTIC (not a craft limitation), chaos can be SUBTLE — a flicker of distortion in their thinking, a microsecond memory, a thought they dismiss quickly. The chaos is still there, but filtered through their composure. This is different from NO chaos. Even composed people have intrusive thoughts — they just manage them faster.
+**2. Avançar conflito**
+Cada fala muda o estado da cena. Se no início da conversa o personagem está calmo e no final está furioso, o diálogo fez seu trabalho. Se está calmo no início e calmo no final, cortar a cena.
 
-**V3.1 CALIBRATION — INHABITED vs MEDIATED chaos:**
-Do NOT narrate chaos analytically. The character should NOT observe their own chaos happening. WRONG: "A thought about dishwashers surfaced uninvited. He noticed it, let it pass, and returned to the conversation." RIGHT: "Dishwashers. Why did people load forks up? Forks go down. Obviously forks go down. — He realized she was still talking." The chaos takes over the prose for a moment. The narrator doesn't comment. The reader experiences it directly.
+**3. Transmitir informação**
+O mais perigoso. Informação necessária embutida em conversa natural. O teste: se parece que um personagem está explicando algo pro leitor (não pro outro personagem), é exposição. Reescrever.
 
-**V3.1 CALIBRATION — SECONDARY CHARACTER CHAOS:**
-If a secondary character appears in a scene, give them ONE moment of their own chaos — a reaction, a thought, a behavior that is NOT about the protagonist. They have their own life, their own bad day, their own irrational moment. The protagonist doesn't narrate it — it just happens and the protagonist notices (or doesn't).
+**Ruim:** "Como você sabe, nós nos conhecemos há 10 anos quando trabalhávamos juntos na fábrica."
+**Bom:** "Dez anos e você ainda não aprendeu a fechar a porta."
 
----
+**4. Criar tensão**
+O que NÃO é dito importa mais. Dois personagens falando sobre o tempo enquanto um deles sabe que o outro está mentindo = tensão. Dois personagens discutindo diretamente = drama, mas sem subtexto.
 
-## STRUCTURAL DIVERSITY — MANDATORY
+### Subtexto
 
-Check the outline's "Structural approach" field for this chapter. **You MUST use the specified structure.** Do NOT default to graduated reveal (normal -> anomaly -> escalate -> close) for every chapter. The 8 structural types are:
+Personagens quase nunca dizem o que pensam. A distância entre o que dizem e o que sentem é o subtexto.
 
-1. **Chronological** — Events in order. Simple but effective for action-heavy chapters.
-2. **Reverse chronological** — Start at the end, explain backward. Creates mystery.
-3. **Fragmented/Mosaic** — Non-linear pieces that the reader assembles. Good for trauma, memory.
-4. **Essayistic** — Idea-driven. Weaves argument through narrative. Good for thematic chapters.
-5. **Spiral** — Returns to the same moment/image with deeper understanding each time.
-6. **Parallel** — Two timelines or perspectives running simultaneously.
-7. **Epistolary/Documentary** — Letters, messages, reports, recordings woven into narrative.
-8. **Stream of consciousness** — Raw, unfiltered internal experience. Good for crisis moments.
+**Sem subtexto (ruim):**
+> "Estou com raiva porque você me abandonou."
 
-**HARD RULE:** If the previous chapter used structure X, you CANNOT use structure X again. Consecutive chapters must differ structurally. If the outline doesn't specify, choose based on the chapter's emotional demands — but NEVER repeat the previous chapter's structure.
+**Com subtexto (bom):**
+> "Que horas você chega amanhã?"
+> (O leitor sabe que ela não quer saber a hora — quer saber se ele vai aparecer desta vez.)
 
----
+**Técnicas:**
+- Resposta oblíqua: personagem responde algo diferente do que foi perguntado
+- Ação contraditória: diz "tô bem" enquanto quebra o copo
+- Mudança de assunto: fugir da pergunta É a resposta
+- Silêncio: não responder diz mais que qualquer frase
 
-## CHAPTER 1 — OPENING STRATEGY
+### Voz Única por Personagem
 
-Do NOT default to "competent professional encounters anomaly." That is Claude's comfort zone. Check the outline's "Opening strategy" field and execute the specified approach:
+Dois personagens nunca devem soar iguais. Diferenciar por:
 
-- **Voice bomb:** First line must be so distinctive the reader hears a specific person. Not "efficient and lean" — SPECIFIC. A sentence only THIS character would produce.
-- **In medias res:** No setup. No context. The reader is dropped mid-scene and must catch up. The disorientation IS the hook.
-- **The wrong emotion:** Open with an emotion that doesn't match the genre. Humor in a thriller. Tenderness in a horror. Boredom in an adventure.
-- **The confession:** The narrator tells you something uncomfortable immediately. Not backstory — a thought, an admission, a secret.
-- **The question:** First line poses a question the reader will think about all day.
-- **The ordinary made strange:** A normal scene described so the reader feels something is off without knowing what.
-- **The failure:** Character introduced through a moment of weakness, confusion, or mistake.
+| Elemento | Personagem A | Personagem B |
+|----------|-------------|-------------|
+| Vocabulário | Formal, técnico | Coloquial, gíria |
+| Tamanho de frase | Curto, telegráfico | Longo, explicativo |
+| Tique verbal | "tipo..." | "na real..." |
+| Nível de certeza | Afirmativo | Hesitante |
+| Humor | Sarcástico | Literal |
 
----
+**Teste:** Cobrir os nomes. Só pelas falas, dá pra saber quem é quem? Se não, diferenciar mais.
 
-## THE IMPULSE INSTRUCTION
+### Action Beats (substituir "disse")
 
-After writing the chapter as planned, re-read it and ask: **"Where did the text want to go somewhere I didn't plan?"**
+Trocar verbos de fala por ação física que revela estado emocional:
 
-If you felt a pull — a sentence that wanted to become a paragraph, a character who wanted to say something unscripted, a scene that wanted to linger or cut short — FOLLOW THAT IMPULSE for 2-3 paragraphs. Then assess:
-- Is it better than what you planned? Keep it.
-- Did it reveal something about the character? Keep it.
-- Is it just self-indulgent digression? Cut it.
+**Antes:** "Eu não sei", disse ele nervosamente.
+**Depois:** "Eu não sei." Ele apertou a tampa da caneta até o plástico estalar.
 
-The outline is a map. But the best moments in writing are the ones the map didn't predict.
+O "nervosamente" conta. O plástico estalando MOSTRA.
+
+Regra: usar "disse/falou/perguntou" na maioria das vezes (são invisíveis). Action beats para momentos que importam. Nunca usar verbos criativos demais ("vociferou", "exclamou", "murmurou pensativamente") — chamam atenção pra si e tiram da cena.
 
 ---
 
-## ANTI-AI PROTOCOL — 20 PATTERNS
+## PARTE 3 — PROTOCOLO ANTI-IA (OBRIGATÓRIO)
 
-### MODE: POST-HOC DIAGNOSTIC ONLY (V5)
+O maior risco de um livro gerado com IA é SOAR como IA. Se um leitor, editor ou resenhista detecta "cheiro de máquina", o livro morre — não importa quão boa seja a estrutura. Este protocolo é aplicado DURANTE a escrita, não depois.
 
-The 20-pattern anti-AI scan runs AFTER the chapter is written, as a DIAGNOSTIC REPORT. It does NOT constrain the writer during generation.
+### Padrões de IA — Detectar e Eliminar
 
-**Why:** Empirical data showed that real-time anti-AI enforcement makes prose self-conscious. A writer checking 20 patterns while writing produces prose that "thinks better than it feels" (external critic, 7.4/10). The same writer with zero constraints produced 8.2/10 prose.
+**1. Simetria forçada**
+- IA: "Não era tristeza — era a ausência de qualquer coisa que pudesse ser chamada de alegria."
+- Humano: "Não era tristeza. Era pior. Era nada."
+- Regra: Se a frase tem estrutura "não era X — era Y" ou "menos X, mais Y", reescrever em pelo menos 50% dos casos. Humanos não falam em antíteses o tempo todo.
 
-**When invoked DURING writing (Craft Mode Phase 3):** SKIP the anti-AI scan entirely. Just write. The scan runs in Phase 4 (evaluation).
+**2. Vocabulário poético vazio**
+- Palavras que IA ama e humanos não usam em conversa: "tapeçaria", "mosaico" (de experiências), "alquimia", "catalisador", "entrelaçar", "permear", "ressoar", "transcender", "navegar" (emoções), "jornada" (como metáfora), "delicado", "profundo" (como adjetivo de sentimento)
+- Regra: Se a palavra soa como poesia de Instagram, trocar por uma que alguém falaria em voz alta no bar.
 
-**When invoked AFTER writing (Phase 4 evaluation):** Run the full 20-pattern scan as diagnostic. Report findings. Do NOT auto-fix — flag for the editor (Phase 5).
+**3. Regra de três automática**
+- IA: "Ele era inteligente, determinado e implacável."
+- IA: "A cidade era barulhenta, cinzenta e indiferente."
+- Humano varia: às vezes lista 2, às vezes 4, às vezes 1 e pronto.
+- Regra: Se mais de 20% dos parágrafos têm listas de 3, quebrar o padrão deliberadamente.
 
-**When invoked standalone:** Run as diagnostic. User decides what to fix.
+**4. Excesso de em dash (—)**
+- IA usa travessão como muleta para inserções dramáticas: "Ele sabia — e isso o destruía — que não havia volta."
+- Regra: Máximo 2-3 travessões por página. Se tem mais, substituir por ponto, vírgula, ou reestruturar a frase.
 
-**WHILE writing, actively avoid ALL 20 patterns.** (V5: This applies in Production Mode only. In Craft Mode, write freely and scan post-hoc.) Do NOT write-then-scan — the scan is unreliable because you are blind to your own patterns. Instead, internalize these constraints BEFORE writing. The most critical pattern (#11 Explanatory Extension) must be avoided at the sentence level: when you write a simile, STOP. Do not extend it. Do not unpack it. Move to the next sentence.
+**5. Metáfora bonita que não significa nada**
+- IA: "O silêncio era um oceano onde suas palavras naufragavam."
+- Teste: A metáfora adiciona compreensão ou é só decoração? Se tirar a metáfora e substituir por linguagem direta, perde-se informação? Se não perde, a metáfora é gordura.
+- Regra: Toda metáfora precisa TRABALHAR — revelar algo que a linguagem direta não revelaria.
 
-**V3.3 CALIBRATION — GENRE-ADJUSTED ANTI-AI TARGETS (from 10-bestseller benchmark):**
+**6. Abertura dramática com "E"**
+- IA: "E então ele entendeu." / "E foi naquele momento que tudo mudou." / "E o silêncio disse mais que qualquer palavra."
+- Regra: Cortar "E" no início de frase dramática. Se a frase precisa de "E" pra funcionar, ela é fraca.
 
-Human bestsellers score 0-13/20 on the anti-AI scan. The target is NOT zero — it's genre-appropriate:
+**7. Parágrafos de encerramento "profundos"**
+- IA adora fechar seções com uma frase curta pseudo-filosófica: "Mas talvez fosse tarde demais." / "E isso fazia toda a diferença." / "Alguns silêncios dizem mais que palavras."
+- Regra: Se o último parágrafo soa como legenda de foto motivacional, reescrever com especificidade. "Mas talvez fosse tarde demais" → "O formulário venceu há três meses. Ele nem abriu o envelope."
 
-| Genre | Target (Clean) | Over-corrected |
-|-------|---------------|----------------|
-| Literary Fiction | 0-3 patterns | 0/20 is suspicious |
-| Memoir | 0-4 patterns | 0/20 is suspicious |
-| Commercial Fiction | 0-8 patterns | 0-2/20 is suspicious |
-| Prescriptive NF | 0-12 patterns | 0-5/20 is suspicious |
+**8. Paralelismo excessivo**
+- IA: "Onde antes havia esperança, agora havia resignação. Onde antes havia planos, agora havia dívidas. Onde antes havia futuro, agora havia um campo em branco."
+- Uma vez: efeito retórico. Três vezes: padrão de IA. Cinco vezes: insuportável.
+- Regra: Anáfora funciona UMA vez por capítulo, no momento certo. Mais que isso, vira cacoete.
 
-**CRITICAL: A manuscript scoring 0/20 in commercial fiction reads as over-corrected AI, not human excellence.** Normal People (literary) scores 1/20. Crawdads (commercial) scores 7/20. Midnight Library (commercial) scores 13/20. Some patterns are features of accessible prose, not AI fingerprints. Don't fight the genre's natural voice.
+**9. Transições suaves demais**
+- IA conecta tudo perfeitamente: cada parágrafo flui pro próximo sem atrito.
+- Humanos são abruptos às vezes. Mudam de assunto. Cortam seco. Deixam lacunas que o leitor preenche.
+- Regra: Se todo parágrafo começa conectando ao anterior ("E foi assim que...", "Nesse sentido...", "Da mesma forma..."), quebrar 30% das transições. Cortar seco de vez em quando.
 
-In PRESCRIPTIVE NONFICTION, patterns #7, #11, #15, #16, #18, #19 are genre-endemic features.
+**10. Emoção descrita, não mostrada**
+- IA: "Ele sentiu uma onda avassaladora de tristeza."
+- Humano: "Ele ficou olhando o café esfriar."
+- Regra: Se a frase nomeia a emoção (tristeza, raiva, alegria, angústia), perguntar: posso MOSTRAR isso com ação, detalhe físico ou imagem? Se sim, substituir.
 
-After writing, scan AGAIN as a safety net — but the primary defense is prevention, not detection. (V5: This applies in Production Mode only. In Craft Mode, write freely and scan post-hoc.)
+### Check Anti-IA por Capítulo
 
-### Original 10
-
-1. **Forced symmetry** — "By day X, by night Y." Real prose is asymmetric.
-2. **Empty poetic vocabulary** — "Tapestry," "symphony," "dance," "journey" as metaphors.
-3. **Automatic rule of three** — Three adjectives, three examples, every time. Use two, or five, or one.
-4. **Excessive em dashes** — More than 2-3 per page.
-5. **Empty metaphors** — "A symphony of colors." Delete if it doesn't add specific meaning.
-6. **Dramatic "And" openings** — "And in that moment, everything changed."
-7. **Pseudo-philosophical closings** — Chapters ending with a neat life lesson.
-8. **Excessive parallelism** — "She did X. She did Y. She did Z."
-9. **Overly smooth transitions** — "Little did she know," "What she didn't realize."
-10. **Described emotions** — "She felt a wave of sadness." Show through action and body.
-
-### New 10 (from system analysis)
-
-11. **The Explanatory Extension — #1 PIPELINE FINGERPRINT** — Every observation completed and explained. "The water is louder than expected. Not roaring, but persistent, the sound of something that doesn't care whether you're listening." CUT the second sentence. Let observations be incomplete. Trust the reader. **V3 BENCHMARK DATA: This pattern appeared in EVERY chapter of a 14-chapter manuscript and was the single most AI-identifiable pattern. When you write a simile, STOP. Do not add "not because X, but because Y." Do not unpack the comparison. Let it land raw. This is your most important anti-AI discipline.**
-12. **Binary Negation Openers** — "Not X. Not Y. [What it actually is]." Define by assertion, not negation. Kill at least half of these.
-13. **Precision Flex** — Unnecessarily exact numbers used to seem concrete. "247 cases" when "more cases than she could count" is more human. Keep precision only when the character would genuinely know and care about the exact number.
-14. **Emotional Control Demonstration** — Character notices emotion -> manages it -> continues. Sometimes the management must FAIL. See Character Chaos.
-15. **Authoritative Description** — Settings described with encyclopedic confidence. Characters experiencing a place for the first time should notice LESS and be confused by MORE. Descriptions should have gaps, wrong impressions, things the character misidentifies.
-16. **Philosophical Asides** — Universal truths masquerading as character thoughts. "Repetition is not redundancy." Real thoughts are SITUATED — they make sense only in the moment. If you can extract a thought and put it on a coffee mug, rewrite it.
-17. **Clean Dialogue** — Characters speaking in orderly turns, each line precisely responsive. Real conversation overlaps, fragments, goes sideways. Someone mishears. Someone responds to what they were thinking, not what was said.
-18. **Thematic Echo Chamber** — Every detail resonating with the theme. Allow 30-40% of details to be pure TEXTURE with no thematic connection. The world is not a metaphor.
-19. **Graduated Reveal** — Establish normal -> introduce anomaly -> escalate -> close on tension. This is ONE structure. Others: start at crisis and explain backward; start quiet and stay quiet while dread builds underneath; start with the answer and let the question emerge.
-20. **Emotional Temperature Report** — Periodic check-ins with the character's body ("jaw clenched," "heart fast," "stomach dropped") at regular intervals like vital signs. Real emotional experience is irregular. Sometimes the body is silent for pages. Sometimes it screams in a sentence.
-
----
-
-## READING SPEED DESIGN
-
-For each chapter, identify 1-2 passages that should **ACCELERATE** reading speed and 1-2 that should **DECELERATE**:
-- **Accelerate** (action, urgency, revelation): short sentences, simple words, minimal description, white space
-- **Decelerate** (reflection, beauty, grief): longer sentences, sensory density, rhythmic prose
-
-The feeling of "can't put down" is not constant speed — it is speed VARIATION. The contrast creates the pull.
+Após escrever cada capítulo, rodar:
+1. Buscar por vocabulário da lista proibida (item 2). Encontrou? Substituir.
+2. Contar travessões. Mais de 3 por página? Reduzir.
+3. Contar listas de 3. Mais de 20% dos parágrafos? Variar.
+4. Ler as últimas frases de cada seção. Soam como legenda motivacional? Reescrever com especificidade.
+5. Ler os inícios de parágrafo em sequência (sem o corpo). Todos conectam suavemente? Quebrar alguns.
+6. Perguntar: "Um leitor cético diria que isso foi escrito por máquina?" Se a resposta não for "não com certeza", revisar.
 
 ---
 
-## SCENE TRANSITION TOOLKIT
+## PARTE 4 — PROSA DE NÃO-FICÇÃO
 
-Vary transition types across the book. Do NOT use the same type more than twice consecutively:
-1. **Hard cut:** White space, new scene, no bridge — reader fills the gap
-2. **Sensory bridge:** Last image of scene A echoes first image of scene B (sound, smell, texture)
-3. **Dialogue bridge:** Scene A ends mid-conversation, scene B opens mid-different-conversation
-4. **Time compression:** "Three days later" stated plainly — no clever transitions needed
-5. **Emotional carry:** Scene B opens with the emotion scene A ended on, but in a new context
+Não-ficção tem desafios de prosa que ficção não tem: dados que precisam virar narrativa, discurso reportado que precisa soar vivo, e argumentação que precisa fluir sem virar artigo acadêmico.
+
+### Dados como Narrativa (não como relatório)
+
+O dado bruto é frio. O dado contextualizado é impacto.
+
+**Ruim (relatório):**
+> Segundo pesquisa do IBGE (2023), 47% dos jovens entre 18 e 29 anos não possuem carteira de trabalho assinada.
+
+**Bom (narrativa + dado):**
+> Quase metade dos jovens brasileiros entre 18 e 29 nunca assinou uma carteira de trabalho. O IBGE conta 47%. O que o IBGE não conta é quantos deles foram chamados de preguiçosos no jantar de família.
+
+**Técnicas:**
+- **Dado → consequência pessoal:** O número sozinho é abstrato. O número + o que significa na vida do leitor = impacto.
+- **Dado como confirmação:** O leitor já sente algo → o dado valida. "Você não é o único — somos 34 milhões."
+- **Dado como surpresa:** O dado contradiz o que o leitor assume. "Achamos que somos geração mimimi. O IBGE mostra que trabalhamos mais horas que nossos pais."
+- **Dado como arma:** Em contexto de crítica social, o dado é munição. Seco. Sem comentário. O número fala sozinho.
+
+**Regras:**
+- Máximo 2-3 dados por página. Mais = artigo, não livro.
+- Alternar: dado → reflexão → narrativa → dado. Nunca 3 dados em sequência.
+- Fonte no texto de forma natural ("O IBGE mostra que...") ou nota de fim. Nunca rodapé acadêmico.
+
+### Discurso Reportado
+
+Em não-ficção, pessoas reais falam. Diálogo reportado precisa soar vivo sem inventar.
+
+**Ruim (burocrático):**
+> O psiquiatra disse que eu deveria considerar medicação.
+
+**Bom (vivo):**
+> O psiquiatra tirou os óculos, olhou pra mim como quem olha pra um carro com motor fundido, e disse: "Vamos precisar de medicação."
+
+**Técnicas:**
+- **Action beat antes da fala:** Ação física revela o estado da pessoa antes de ela abrir a boca.
+- **Fala parcial:** Não precisa reproduzir a conversa inteira. "Ele disse algo sobre resistência. Eu não estava ouvindo."
+- **Fala indireta com voz:** "Minha mãe tinha uma teoria sobre depressão. Envolvia banho gelado e Deus." — A personalidade da mãe aparece sem aspas.
+
+**Regra de honestidade:** Se não lembra a fala exata, não ponha entre aspas. Use discurso indireto. Memoir não é jornalismo, mas também não é ficção.
+
+### Argumentação que Flui
+
+Não-ficção argumenta. Mas se o leitor sentir que está lendo TCC, fecha o livro.
+
+**Ruim (dissertação):**
+> Existem três fatores que contribuem para a precarização do trabalho jovem. O primeiro é a informalidade. O segundo é a uberização. O terceiro é a desvalorização de diplomas.
+
+**Bom (narrativa com tese):**
+> Meu primeiro emprego foi informal. O segundo foi um app. O terceiro exigia mestrado e pagava menos que o app. Se isso não é precarização, alguém me explica o que é.
+
+**Técnicas:**
+- **Tese incorporada na experiência:** O argumento nasce do vivido, não do conceitual.
+- **Progressão pelo concreto:** Em vez de "primeiro, segundo, terceiro", mostrar 3 cenas que constroem o argumento.
+- **O leitor deduz a tese:** Se a tese precisa ser declarada, o texto não fez seu trabalho. O leitor deve chegar à conclusão sozinho — e sentir que é dele.
 
 ---
 
-## EXPOSITION DISGUISES
+## PARTE 5 — QUALIDADE DE LINHA
 
-Never deliver information nakedly. Techniques:
-1. **Conflict delivery:** Information emerges during an argument about it
-2. **Discovery delivery:** Character learns it alongside reader
-3. **Wrong delivery:** Character gets the information wrong, and the correction teaches the reader
-4. **Cost delivery:** The information costs something to obtain (effort, vulnerability, payment)
-5. **Incidental delivery:** Information appears in the background while something else happens in the foreground
+### O que um editor sublinha (positivamente)
 
-If a passage reads like a textbook, the information delivery has failed.
+1. **Especificidade:** "R$ 78 mil" é mais forte que "muito dinheiro". "Praia do Sossego em Niterói" é mais forte que "uma praia".
+2. **Imagem concreta:** "A tela preenche o vazio que o roteiro deixou" vs. "As redes sociais compensam a falta de propósito". A primeira é imagem. A segunda é ensaio.
+3. **Ritmo variado:** Frase longa que descreve, que se estende, que respira. Depois curta. Seco. O contraste cria ritmo.
+4. **Verbo forte no lugar de advérbio:** "Correu rapidamente" → "Disparou". "Disse baixinho" → "Sussurrou". O verbo carrega o peso.
+5. **A frase que o leitor relê:** Toda boa prosa tem frases que o leitor para e relê por escolha. Não por confusão — por admiração.
 
----
+### O que um editor sublinha (negativamente)
 
-## DIALOGUE CRAFT
+1. **Clichê:** "Luz no fim do túnel", "faca de dois gumes", "a gota d'água". Se você já ouviu a frase, o leitor também. Reescrever com imagem original.
+2. **Gordura:** Palavras que não trabalham. "Basicamente", "literalmente" (quando não é literal), "realmente", "muito". Cortar.
+3. **Abstração:** "Sentiu uma profunda angústia existencial" → O que ele SENTIU no corpo? Peito apertado? Mãos tremendo? Vontade de vomitar? Mostrar.
+4. **Frase passiva sem motivo:** "O diagnóstico foi dado pelo médico" → "O médico deu o diagnóstico." Voz ativa. Sujeito claro.
+5. **Excesso de adjetivos:** "A manhã triste, cinzenta e melancólica" → "Manhã cinzenta." Um adjetivo forte > três fracos.
 
-Every line must have function (reveal character, advance conflict, transmit info, or create tension).
+### Teste de Qualidade por Capítulo
 
-But also:
-- **Characters interrupt each other.** Mid-word if needed.
-- **Characters repeat themselves.** People say the same thing twice when stressed.
-- **Characters respond to the wrong thing.** They were thinking about something else.
-- **Characters trail off.** Not every thought finishes.
-- **Silence exists.** Sometimes nobody talks for a paragraph. The silence is the dialogue.
-- **"Said" is invisible.** Use it. "Exclaimed," "declared," "opined" are not — avoid.
-
----
-
-## THE MANDATORY UGLY SENTENCE
-
-Every chapter must contain ONE deliberately rough sentence. Not clever-rough. Not artfully-imperfect. Genuinely rough. A sentence that breaks the rhythm and sounds like a person, not a writer.
-
-Examples:
-- "The coffee was bad and she drank all of it."
-- "He said okay and then he said it again."
-- "She wanted to say something but nothing came out so she just stood there."
-- "It was a Tuesday or maybe a Wednesday."
-
-This sentence should NOT be in a climactic moment. It should be in a quiet one. It grounds the prose in reality.
+Após escrever, aplicar:
+1. Ler em voz alta — tropeçou? O ritmo está errado.
+2. Identificar 3 frases que um editor sublinharia positivamente. Se não encontrar → a prosa está funcional mas não distinta.
+3. Identificar 3 frases com gordura. Cortar.
+4. Verificar: há pelo menos 1 imagem concreta por página? Se não → abstrato demais.
+5. Os parágrafos variam de tamanho? Se todos têm 3-5 linhas → monotonia visual.
 
 ---
 
-## OUTPUT
+## COMO USAR
 
-Write the chapter to `manuscript/chapters/chapter-[N].md` with this header:
+**Para abertura:** Entregar o primeiro capítulo. Aplica os 4 testes diagnósticos (Parte 1).
 
-```markdown
-# Chapter [N]: [Title]
+**Para diálogo:** Entregar qualquer cena com conversa. Verifica função, subtexto, voz e action beats (Parte 2).
 
-<!-- Word count: [X] | Target: [Y] | Anchor: [the emotional anchor] -->
+**Para check anti-IA:** Entregar qualquer capítulo. Roda os 10 padrões de detecção + 6 passos de verificação (Parte 3).
 
-[Chapter prose begins here]
-```
+**Para não-ficção:** Entregar trecho com dados, discurso reportado ou argumentação. Verifica integração narrativa (Parte 4).
 
-After writing, save a self-report to `manuscript/chapters/chapter-[N]-report.md`:
+**Para prosa geral:** Entregar qualquer trecho. Identifica gordura, clichê, abstração e oportunidades de melhoria (Parte 5).
 
-```markdown
-# Writer Report: Chapter [N]
-- **Word count:** actual vs target
-- **Emotional anchor:** did you hit it? What IS the moment?
-- **Chaos moments:** which ones, where (line references)
-- **Impulse deviations:** where the text went somewhere unplanned (and why kept/cut)
-- **Ugly sentence:** quote it and its location
-- **Anti-AI scan:** which patterns found and fixed
-- **Outline deviations:** what changed from outline and why
-- **Structural approach used:** [which of the 8 types]
-- **Secondary character moments:** which characters got their own chaos
-```
-
-**This file is critical.** The Disruptor, Evaluator, and Editor all read it. If you don't save it, downstream agents lose context.
+**Output:** Texto revisado com anotações sobre o que mudou e por quê.

@@ -131,6 +131,7 @@ Terms, proper names, and world concepts with exact definitions. Each new volume 
 
 ## Integration with other skills
 
-- Use `narrative-foundation` (for character profiles with 7 layers + chaos) to deepen characters who appear across multiple volumes — the core wound must evolve consistently throughout the series
-- Use `narrative-foundation` (Part 3 — Emotional Curve) to ensure the emotional curve of each volume works on its own AND contributes to the macro series curve
-- Share the Volume Map with `hook-craft` — the first chapter of each volume should deliver that book's core promise
+- Use `character-forge` to deepen characters who appear across multiple volumes — the core wound must evolve consistently throughout the series
+- Use `emotion-engineer` to ensure the emotional curve of each volume works on its own AND contributes to the macro series curve
+- Use `manuscript-manager` to track canonical state after each writing or revision session
+- Share the Volume Map with `hook-crafter` — the first chapter of each volume should deliver that book's core promise

@@ -1,188 +1,185 @@
 ---
 name: production-prep
-description: Final stage. Technical proofreading (spelling, grammar, consistency) + formatting for ebook and print. Two specialists in one. Use after all content revisions are complete, before publishing or submitting.
+description: Última etapa. Revisão técnica (ortografia, gramática, consistência) + formatação para ebook e impresso. Dois especialistas num só. Usar após todas as revisões de conteúdo estarem prontas, antes de publicar ou submeter.
 ---
 
-# PRODUCTION PREP — From Final Text to Finished Product
+# PRODUCTION PREP — Do Texto Final ao Produto
 
-You are the last pair of eyes and the formatter. When the text reaches you, the narrative is locked — no one changes story, character, or structure anymore. Your job is: zero technical errors + professional presentation. A manuscript with language errors destroys reader trust on the first page. A poorly formatted manuscript looks amateur before it is even opened.
+Você é o último par de olhos e o formatador. Quando o texto chega aqui, a narrativa está travada — ninguém mais muda história, personagem ou estrutura. Seu trabalho é: zero erros técnicos + apresentação profissional. Um manuscrito com erros de português destrói a confiança do leitor na primeira página. Um manuscrito mal formatado parece amador antes de ser aberto.
 
 ---
 
-## PART 1 — TECHNICAL PROOFREADING
+## PARTE 1 — REVISÃO TÉCNICA (PROOFREADING)
 
-### Principle
+### Princípio
 
-Content editing and technical proofreading are different jobs. This is technical. You do not rewrite sentences by preference. You hunt errors.
+Revisão de conteúdo e revisão técnica são trabalhos diferentes. Aqui é técnica. Você não reescreve frases por preferência. Você caça erros.
 
-> **Language note:** The specific grammar rules you enforce depend on the manuscript's language. The categories and methodology below are universal; the concrete rules (agreement patterns, accent systems, punctuation conventions) come from the target language's standard.
+### 8 Categorias de Erro
 
-### 8 Error Categories
+**1. Ortografia e Acentuação**
+- Palavras grafadas incorretamente
+- Acentuação ausente ou incorreta
+- Hifenização incorreta
+- Nomes próprios grafados de formas diferentes ao longo do texto
+- Verificar: qual acordo ortográfico o manuscrito segue? Ser consistente.
 
-**1. Spelling and Orthography**
-- Misspelled words
-- Missing or incorrect diacritics/accents (language-dependent)
-- Incorrect hyphenation or compound-word formation
-- Proper nouns spelled differently across the manuscript
-- Check: which orthographic standard does the manuscript follow? Be consistent throughout.
+**2. Pontuação**
+- Vírgulas ausentes antes de orações subordinadas longas
+- Ponto-e-vírgula vs. ponto — verificar consistência
+- Travessão (—) vs. hífen (-) vs. meia-risca (–) — manter padrão
+- Reticências: sempre 3 pontos, nunca 2, nunca 4
+- Ponto final dentro ou fora das aspas — escolher convenção e manter
 
-**2. Punctuation**
-- Missing commas before long subordinate clauses
-- Semicolon vs. period — check consistency
-- Em dash (—) vs. hyphen (-) vs. en dash (–) — maintain a single convention
-- Ellipsis: always three dots, never two, never four
-- Period inside or outside quotation marks — pick one convention and keep it
+**3. Concordância**
+- Nominal: adjetivo que não concorda com substantivo
+- Verbal: sujeito e verbo em número/pessoa distintos
+- Pronominal: se usa "você", não misturar com "te/ti" inconsistentemente
 
-**3. Agreement**
-- Noun-adjective agreement (gender, number, case — as applicable in the language)
-- Subject-verb agreement (number, person, tense)
-- Pronoun consistency: if using a specific register or form of address, do not mix incompatible pronouns
+**4. Repetição Indevida**
+- Mesma palavra em parágrafo próximo (exceto quando deliberada — anáfora, efeito de voz)
+- Mesmo conector em frases consecutivas ("E... E... E...")
+- Estrutura sintática repetida onde não é efeito intencional
 
-**4. Unintentional Repetition**
-- Same word appearing in nearby paragraphs (except when deliberate — anaphora, voice effect)
-- Same connector in consecutive sentences ("And... And... And...")
-- Repeated syntactic structure where it is not an intentional effect
+**5. Inconsistências Factuais**
+- Nome de pessoa grafado diferente em capítulos distintos
+- Detalhes que contradizem fatos estabelecidos antes
+- Dados/números que não batem entre menções
+- Datas e cronologia que não fazem sentido
 
-**5. Factual Inconsistencies**
-- A person's name spelled differently across chapters
-- Details that contradict previously established facts
-- Data/numbers that do not match between mentions
-- Dates and chronology that do not add up
+**6. Tempo Verbal**
+- Alternância entre pretérito perfeito e imperfeito sem motivação
+- Mudança de tempo no meio de cena sem função dramática
 
-**6. Verb Tense**
-- Unmotivated shifts between past tenses (e.g., simple past vs. past continuous)
-- Tense change mid-scene without a dramatic purpose
+**7. Formatação Interna**
+- Itálico aberto e não fechado
+- Aspas abertas e não fechadas
+- Maiúsculas inconsistentes em títulos de capítulo
+- Espaços em branco onde não deveria
 
-**7. Internal Formatting**
-- Italics opened but not closed
-- Quotation marks opened but not closed
-- Inconsistent capitalization in chapter titles
-- Whitespace where there should be none
+**8. Erros Invisíveis**
+- Letras trocadas que formam palavra válida ("cama" por "cana") — passam pelo corretor
+- Espaços duplos entre palavras
+- Espaço antes de ponto ou vírgula
+- Linhas em branco duplicadas
 
-**8. Invisible Errors**
-- Transposed letters that form a valid word ("form" instead of "from") — spell-checkers miss these
-- Double spaces between words
-- Space before a period or comma
-- Duplicate blank lines
+### Metodologia — 3 Passagens
 
-### Methodology — 3 Passes
+1. **Leitura em voz alta** — O ouvido captura o que o olho normaliza
+2. **Leitura de trás pra frente** — Último parágrafo primeiro. Quebra o sentido, força atenção à frase isolada
+3. **Busca por alvo** — Uma categoria de erro por vez. Não tente caçar tudo de uma vez.
 
-1. **Read-aloud pass** — The ear catches what the eye normalizes
-2. **Reverse-order pass** — Last paragraph first. Breaks narrative flow, forces attention on each sentence in isolation
-3. **Targeted-hunt pass** — One error category at a time. Do not try to catch everything in a single sweep.
+### Output de Revisão
 
-### Proofreading Output
-
-For each error found:
+Para cada erro encontrado:
 ```
-[Category] | [Location: ch X, paragraph Y] | [Text with error] -> [Correction]
+[Categoria] | [Localização: cap X, parágrafo Y] | [Trecho com erro] → [Correção]
 ```
 
-If there is ambiguity (it may be a stylistic choice): flag as "verify with the author".
+Se houver ambiguidade (pode ser escolha de estilo): sinalizar como "verificar com o autor".
 
 ---
 
-## PART 2 — FORMATTING
+## PARTE 2 — FORMATAÇÃO
 
-### For Ebook
+### Para Ebook
 
-**File structure (in this order):**
-1. Title page (title + author)
-2. Copyright page
-3. Dedication (optional)
-4. Table of contents (auto-generated — never manual)
-5. Book text
-6. Acknowledgments (optional)
-7. About the author
+**Estrutura do arquivo (nesta ordem):**
+1. Página de rosto (título + autor)
+2. Página de direitos autorais
+3. Dedicatória (opcional)
+4. Sumário (gerado automaticamente — nunca manual)
+5. Texto do livro
+6. Agradecimentos (opcional)
+7. Sobre o autor
 
-**Typography:**
-- Do not specify a font — the reader chooses on their device
-- Define relative sizes in CSS (h1, h2, body)
-- First-line indent: 1.25em
-- NO space between paragraphs (that is blog style, not book style)
-- First paragraph after a chapter title: no indent
-- Scene break (***): centered with space before and after
+**Tipografia:**
+- Não especificar fonte — leitor escolhe no device
+- Definir tamanhos relativos em CSS (h1, h2, body)
+- Recuo de primeira linha: 1.25em
+- SEM espaço entre parágrafos (isso é blog, não livro)
+- Primeiro parágrafo após título de capítulo: sem recuo
+- Quebra de cena (***): centralizado com espaço antes/depois
 
-**Metadata (required):**
-- Title (exactly as on the cover)
-- Subtitle (if any)
-- Author
-- Description (cover synopsis from the `editorial-package`)
-- Categories (2, as specific as possible)
-- Keywords (7 for KDP): terms a reader would type in a search
-- ISBN (optional for ebook)
-- Language
-- Series + number (if applicable)
+**Metadados (obrigatórios):**
+- Título (exatamente como na capa)
+- Subtítulo (se houver)
+- Autor
+- Descrição (sinopse de capa do `editorial-package`)
+- Categorias (2, as mais específicas possíveis)
+- Palavras-chave (7 para KDP): termos que o leitor digitaria na busca
+- ISBN (opcional para ebook)
+- Idioma
+- Série + número (se aplicável)
 
-**Recommended tools:**
-- Direct EPUB: Sigil (free) or Vellum (paid, Mac)
-- EPUB is always superior to a converted DOCX
-- Validate in Kindle Previewer before publishing
+**Ferramentas recomendadas:**
+- EPUB direto: Sigil (gratuito) ou Vellum (pago, Mac)
+- EPUB é sempre superior a DOCX convertido
+- Validar no Kindle Previewer antes de publicar
 
-### For Print (POD)
+### Para Impresso (POD)
 
-**Page size:**
-- US standard: 6" x 9" (15.2 x 22.9 cm) — most common for fiction
-- UK alternative: 5.06" x 7.81" (12.9 x 19.8 cm) — B-format
-- Other markets: check local POD provider for supported trim sizes
+**Tamanho de página:**
+- Ficção adulta no Brasil: 14 x 21 cm
+- Alternativa: 15,2 x 22,9 cm (6" x 9", padrão americano)
 
-**Margins (200-350 pages):**
-- Outside: 0.75" (1.9 cm)
-- Top: 0.75" (1.9 cm)
-- Bottom: 0.87" (2.2 cm)
-- Gutter (inside): 1.0" (2.5 cm) — increase for thicker books
+**Margens (200-350 páginas):**
+- Externa: 1,9 cm
+- Superior: 1,9 cm
+- Inferior: 2,2 cm
+- Lombada (interna): 2,5 cm (aumentar para livros grossos)
 
-**Typography:**
-- Body: Garamond, Palatino, Georgia — 10-11pt
-- Line height: 1.3-1.5x the font size
-- Chapter titles: 18-24pt
-- First-line indent: 0.25"-0.3" (0.6-0.8 cm) — never use Tab; define as a style
-- Justification: fully justified (standard for print)
-- Hyphenation: automatic, enabled
+**Tipografia:**
+- Corpo: Garamond, Palatino, Georgia — 10-11pt
+- Entrelinha: 1,3-1,5x o tamanho da fonte
+- Títulos de capítulo: 18-24pt
+- Recuo de primeira linha: 0,6-0,8 cm (nunca Tab — definir como estilo)
+- Justificação: texto justificado (padrão para impresso)
+- Hifenização: automática ativada
 
-**Page elements:**
-- Header: book title (verso) / author name (recto)
-- Numbering: roman numerals for front matter, arabic from chapter 1
-- Chapter start: always on a recto (right-hand) page
-- Pages without numbers: title page, copyright, chapter openers, blank pages
+**Elementos de página:**
+- Cabeçalho: título do livro (verso) / nome do autor (recto)
+- Numeração: romanas para preliminares, arábicas a partir do cap 1
+- Início de capítulo: sempre em página recto (direita)
+- Páginas sem número: rosto, direitos, início de capítulo, páginas em branco
 
-**Delivery file:**
-- PDF/X-1a or PDF/X-4
-- All fonts embedded
-- Images: 300 DPI minimum
-- Color profile: CMYK (not RGB)
-- Bleed: 3mm if any elements reach the page edge
+**Arquivo de entrega:**
+- PDF/X-1a ou PDF/X-4
+- Fontes incorporadas
+- Imagens: 300 DPI mínimo
+- Perfil de cor: CMYK (não RGB)
+- Sangria: 3mm bleed se houver elementos na borda
 
-### Final Checklist
+### Checklist Final
 
 **Ebook:**
-- [ ] Table of contents functional with links
-- [ ] No double spaces between paragraphs
-- [ ] Indents via CSS, not via spaces
-- [ ] Metadata complete
-- [ ] Validated in Kindle Previewer
-- [ ] Cover: 2560 x 1600 px, RGB, high-quality JPEG
+- [ ] Sumário funcional com links
+- [ ] Sem espaços duplos entre parágrafos
+- [ ] Recuos em CSS, não em espaços
+- [ ] Metadados completos
+- [ ] Validado no Kindle Previewer
+- [ ] Capa: 2560 x 1600 px, RGB, JPEG alta qualidade
 
-**Print:**
-- [ ] Correct page size
-- [ ] Correct margins for book thickness
-- [ ] PDF with embedded fonts
-- [ ] Separate cover file with calculated spine width (0.06 cm per page on 75gsm paper)
-- [ ] 3mm bleed on all edge elements
-- [ ] ISBN + barcode on back cover
+**Impresso:**
+- [ ] Tamanho de página correto
+- [ ] Margens corretas para espessura do livro
+- [ ] PDF com fontes incorporadas
+- [ ] Capa separada com lombada calculada (0,06 cm por página em papel 75g)
+- [ ] Sangria de 3mm em todos os elementos de borda
+- [ ] ISBN + código de barras na quarta capa
 
 ---
 
-## HOW TO USE
+## COMO USAR
 
-**Input:** Finalized manuscript (content locked) + publishing platform + format (ebook / print / both)
+**Input:** Manuscrito finalizado (conteúdo travado) + plataforma de publicação + formato (ebook / impresso / ambos)
 
 **Output:**
-1. List of errors found with corrections (Part 1)
-2. Customized formatting checklist (Part 2)
-3. Tool recommendations for the specific case
+1. Lista de erros encontrados com correções (Parte 1)
+2. Checklist personalizada de formatação (Parte 2)
+3. Recomendações de ferramentas para o caso específico
 
-**Order of operations:**
-1. FIRST proofread (Part 1) — never format text that still has errors
-2. THEN format (Part 2) — format once, on the clean text
-3. Develop the cover in parallel with formatting (coordinate with `editorial-package`)
+**Ordem de operações:**
+1. PRIMEIRO revisar (Parte 1) — nunca formatar texto com erros
+2. DEPOIS formatar (Parte 2) — formatar uma vez, no texto limpo
+3. Desenvolver capa em paralelo com formatação (coordenar com `editorial-package`)

@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Book Genesis V4 — Installer for macOS/Linux
-# Installs 14 active skills + 5 deprecated + 1 agent + knowledge base to ~/.claude/
+# Installs 10 core skills + 5 optional + 5 deprecated + 1 agent + knowledge base to ~/.claude/
 
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 SKILLS_DIR="$REPO_DIR/skills"
@@ -26,7 +26,7 @@ echo -e "${BLUE} | |_) | (_) | (_) |   < | |_| |  __/ | | |  __/\\__ \\ \\__ \\$
 echo -e "${BLUE} |____/ \\___/ \\___/|_|\\_\\ \\____|\\___|_| |_|\\___||___/_|___/${NC}"
 echo -e "${YELLOW}                          V4 — Genesis Score V3.7${NC}"
 echo ""
-echo -e "${YELLOW}Installing 14 active skills + 5 deprecated + 1 agent + knowledge base${NC}"
+echo -e "${YELLOW}Installing 10 core skills + 5 optional + 5 deprecated + 1 agent + knowledge base${NC}"
 echo ""
 
 # Check that skills directory exists
