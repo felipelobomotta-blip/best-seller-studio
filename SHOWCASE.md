@@ -1,6 +1,8 @@
 # Book Genesis Casebook
 
-This showcase documents six books used to stress-test Book Genesis across genres, languages, and pipeline versions. Some cases have public artifacts in this repository. Others are local production cases summarized without private manuscript text.
+This showcase documents 10 book projects used to stress-test Book Genesis across genres, languages, and pipeline versions. Some cases have public artifacts in this repository. Others are local production cases summarized without private manuscript text.
+
+See the visual proof layer in [docs/book-gallery.md](docs/book-gallery.md).
 
 ## Summary
 
@@ -12,6 +14,10 @@ This showcase documents six books used to stress-test Book Genesis across genres
 | 4 | The Source Code / v2 | literary sci-fi thriller | EN | Codex-era revision | audit-first revision prevents infinite polishing |
 | 5 | The Trumpet Protocol | apocalyptic literary thriller | EN | V5/Codex-style production | custom dimension scoring works when genre has special obligations |
 | 6 | The Seventh Manuscript | dark academia literary thriller | EN | Codex-era foundation and drafting | meta-genre projects need reader-risk control from Phase 1 |
+| 7 | Iron Core | LitRPG / dungeon core | EN | V5 production | custom SRE-methodology constraint creates a real market wedge |
+| 8 | The Saltwater Loaf | cozy mystery | EN | V5 production | fair-play cluing can be designed as a testable system |
+| 9 | Agenda 2030 | apocalyptic sci-fi/fantasy | EN | Codex-era foundation | large-scale concept needs RAG/foundation calibration before drafting |
+| 10 | The Source Code | literary sci-fi thriller | EN | V4/V5 production | long revision loops revealed diminishing returns |
 
 ## Public Artifact Sets
 
@@ -42,6 +48,9 @@ The newer production cases are summarized in [examples/cases/](examples/cases/):
 - [The Source Code / v2](examples/cases/the-source-code.md)
 - [The Trumpet Protocol](examples/cases/the-trumpet-protocol.md)
 - [The Seventh Manuscript](examples/cases/the-seventh-manuscript.md)
+- [Iron Core](examples/cases/iron-core.md)
+- [The Saltwater Loaf](examples/cases/saltwater-loaf.md)
+- [Agenda 2030](examples/cases/agenda-2030.md)
 
 ## What The Cases Changed
 

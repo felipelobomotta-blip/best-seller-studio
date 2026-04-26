@@ -9,6 +9,17 @@ The repository now keeps both:
 
 The core operating principle did not change: a book run should leave durable files, not just chat output.
 
+## Proof Gallery
+
+10 book projects were pushed through the system in under 30 days. The manuscripts are private, but the repo includes the pipeline, covers/cover concepts, public artifacts, and case studies.
+
+| | | | | |
+|---|---|---|---|---|
+| <img src="assets/covers/protocolo-nao-encontrado.jpeg" width="130" alt="Protocolo Nao Encontrado cover"> | <img src="assets/covers/age-of-aquarius.svg" width="130" alt="Age of Aquarius cover concept"> | <img src="assets/covers/protocolo-vermelho.svg" width="130" alt="Protocolo Vermelho cover concept"> | <img src="assets/covers/the-source-code.png" width="130" alt="The Source Code cover"> | <img src="assets/covers/the-trumpet-protocol.svg" width="130" alt="The Trumpet Protocol cover concept"> |
+| Protocolo Nao Encontrado | Age of Aquarius | Protocolo Vermelho | The Source Code | The Trumpet Protocol |
+
+See the full 10-book wall in [docs/book-gallery.md](docs/book-gallery.md).
+
 ## Current Default
 
 Use the Codex edition for new projects:
@@ -111,7 +122,7 @@ The Codex score uses 10 dimensions:
 
 Approval requires a strong weighted average, no weak floor dimension, evidence for every score, and a passed adversarial audit. The floor principle remains central: the book is only as strong as its weakest major dimension.
 
-## Six Case Studies
+## Case Studies
 
 The casebook documents how the system behaved across different genres and maturity levels:
 
@@ -120,11 +131,15 @@ The casebook documents how the system behaved across different genres and maturi
 | Protocolo Nao Encontrado | memoir / generational essay | early simpler pipeline, strong external response | documented artifact set |
 | Age of Aquarius | hermetic fantasy | high internal Genesis Score after iterative evaluation | documented artifact set |
 | Protocolo Vermelho | vigilante thriller | V4 to V5 calibration showed score inflation and pacing limits | local production case |
-| The Source Code / v2 | literary sci-fi thriller | Codex-era revision proved audit-first scoring is safer than endless polishing | local production case |
+| The Source Code | literary sci-fi thriller | long revision loops revealed diminishing returns | local production case |
+| The Source Code v2 | literary sci-fi thriller rewrite | Codex-era revision proved audit-first scoring is safer than endless polishing | local production case |
 | The Trumpet Protocol | apocalyptic literary thriller | custom theological-prophetic coherence dimension | local production case |
 | The Seventh Manuscript | dark academia literary thriller | Codex-era foundation for unreliable narration and meta-genre risk | local production case |
+| Iron Core | LitRPG / dungeon core | genre-specific SRE-methodology constraint | local production case |
+| The Saltwater Loaf | cozy mystery | fair-play clue system and cozy-market constraints | local production case |
+| Agenda 2030 | apocalyptic sci-fi/fantasy | large-scale RAG/foundation calibration | local production case |
 
-Read the full summaries in [SHOWCASE.md](SHOWCASE.md) and [examples/cases/](examples/cases/).
+Read the full summaries in [SHOWCASE.md](SHOWCASE.md), [docs/book-gallery.md](docs/book-gallery.md), and [examples/cases/](examples/cases/).
 
 Private manuscripts are not included. Public examples contain summaries, outlines, synopses, score reports, and case notes only.
 

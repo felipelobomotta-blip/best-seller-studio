@@ -1,6 +1,6 @@
 # Case Studies
 
-These six case studies explain how Book Genesis behaved across real book projects. They are process notes, not public manuscript releases.
+These case studies explain how Book Genesis behaved across real book projects. They are process notes, not public manuscript releases.
 
 | Case | File |
 |------|------|
@@ -10,6 +10,9 @@ These six case studies explain how Book Genesis behaved across real book project
 | The Source Code / v2 | [the-source-code.md](the-source-code.md) |
 | The Trumpet Protocol | [the-trumpet-protocol.md](the-trumpet-protocol.md) |
 | The Seventh Manuscript | [the-seventh-manuscript.md](the-seventh-manuscript.md) |
+| Iron Core | [iron-core.md](iron-core.md) |
+| The Saltwater Loaf | [saltwater-loaf.md](saltwater-loaf.md) |
+| Agenda 2030 | [agenda-2030.md](agenda-2030.md) |
 
 The goal is to show what changed in the system:
 
