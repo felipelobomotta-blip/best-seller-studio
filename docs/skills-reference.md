@@ -1,6 +1,6 @@
 # Skills Reference -- Book Genesis V4
 
-> Current note: this is the legacy V4/V5 skill reference. For the portable Codex edition, see `skills/book-genesis-codex/` and `docs/book-genesis-codex.md`.
+> Current note: this is the legacy V4/V5 skill reference. For the portable agent-agnostic core, see `skills/book-genesis-codex/` and `docs/book-genesis-codex.md`.
 
 Book Genesis V4 contains **19 skills** organized into a 17-phase pipeline (with sub-phases). Each skill is a standalone specialist that also works as part of the orchestrated pipeline. V4 adds 3 skills (chaos-engine, book-editor, book-researcher). V4.1 adds skills focused on automation, voice quality, and scaling. V4.1.1 adds entity-tracker for persistent state.
 

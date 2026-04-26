@@ -18,5 +18,5 @@ The goal is to show what changed in the system:
 
 - simple pipelines often produced more human prose
 - heavy pipelines found more errors but could over-polish
-- Codex shifted the process toward file-backed state, fewer active constraints, and audit-before-score
+- the portable core shifted the process toward file-backed state, fewer active constraints, and audit-before-score
 - custom Genesis Score dimensions helped genre-specific projects

@@ -1,11 +1,13 @@
 ---
 name: book-genesis-codex
-description: Use when the user wants the portable Codex-era Book Genesis pipeline: intake, foundation, architecture, drafting, adversarial audit, Genesis Score Codex, and editorial package with durable project files.
+description: Use when the user wants the portable Book Genesis pipeline for Claude Code, Codex, Antigravity, Kimi, or another file-aware agent: intake, foundation, architecture, drafting, adversarial audit, Genesis Score, and editorial package with durable project files.
 ---
 
-# Book Genesis Codex
+# Book Genesis Universal Core
 
-Book Genesis Codex is Felipe's portable book-production pipeline adapted in Codex. It is the canonical lightweight workflow for new runs, separate from the legacy V4/V5 multi-skill system kept elsewhere in this repository.
+Book Genesis Universal Core is Felipe's portable book-production pipeline for file-aware AI agents. It works in Claude Code, Codex, Antigravity, Kimi, and similar tools that can read project files and write artifacts.
+
+The skill folder is still named `book-genesis-codex` for compatibility with existing installs and slash commands. The workflow is not Codex-only. It is the canonical lightweight workflow for new runs, separate from the legacy V4/V5 multi-skill system kept elsewhere in this repository.
 
 Use this skill for:
 

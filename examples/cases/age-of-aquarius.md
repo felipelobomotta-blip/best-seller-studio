@@ -22,7 +22,7 @@ Age of Aquarius showed the upside and the danger of internal scoring. The system
 
 ## What It Taught The System
 
-This case helped separate "passes the rubric" from "lands with readers." It became part of the evidence behind the later Codex rule: audit first, score second, and do not let score-chasing dominate drafting.
+This case helped separate "passes the rubric" from "lands with readers." It became part of the evidence behind the later universal-core rule: audit first, score second, and do not let score-chasing dominate drafting.
 
 ## Public Files
 

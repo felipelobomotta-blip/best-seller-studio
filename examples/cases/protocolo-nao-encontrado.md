@@ -24,7 +24,7 @@ The result scored strongly with external readers compared with later, heavier pi
 
 ## What It Taught The System
 
-The case became evidence against the assumption that more agents always improve a book. It directly influenced the later V5 Craft Mode and the Codex move toward drafting first, judging later.
+The case became evidence against the assumption that more agents always improve a book. It directly influenced the later V5 Craft Mode and the portable core's move toward drafting first, judging later.
 
 ## Public Files
 

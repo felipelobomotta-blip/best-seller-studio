@@ -6,7 +6,7 @@
 - Language: EN
 - Target length: 95k words
 - Planned chapters: 26
-- Pipeline: Codex-era foundation and drafting
+- Pipeline: portable-agent foundation and drafting
 - Public manuscript: no
 
 ## Custom Scoring Dimension
@@ -41,4 +41,4 @@ The Seventh Manuscript is a meta-genre stress test. It uses dark academia while 
 
 ## What It Taught The System
 
-For high-risk literary concepts, Phase 1 and Phase 2 matter more than drafting speed. Reader-risk modeling belongs in the foundation, not after the manuscript is complete. This is one of the strongest arguments for the Codex pipeline's explicit `ASSUMPTIONS.md` and early architecture artifacts.
+For high-risk literary concepts, Phase 1 and Phase 2 matter more than drafting speed. Reader-risk modeling belongs in the foundation, not after the manuscript is complete. This is one of the strongest arguments for the universal core's explicit `ASSUMPTIONS.md` and early architecture artifacts.

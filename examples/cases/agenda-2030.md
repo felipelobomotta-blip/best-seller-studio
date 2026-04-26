@@ -5,7 +5,7 @@
 - Genre: epic fantasy / sci-fi hybrid / apocalyptic thriller
 - Language: EN
 - Target length: 135k-150k words
-- Pipeline: Codex-era foundation and RAG calibration
+- Pipeline: portable-agent foundation and RAG calibration
 - Public manuscript: no
 
 ## Custom Scoring Dimension

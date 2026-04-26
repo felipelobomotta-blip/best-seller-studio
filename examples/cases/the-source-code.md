@@ -6,7 +6,7 @@
 - Language: EN
 - Approximate length: 80k-90k words depending on revision pass
 - Chapters: 25
-- Pipeline: V4/V5 production followed by Codex-era revision discipline
+- Pipeline: V4/V5 production followed by portable-agent revision discipline
 - Public manuscript: no
 
 ## Why It Matters
@@ -38,4 +38,4 @@ The first version hit a ceiling: the system could keep polishing, but some weakn
 
 ## What It Taught The System
 
-This case is the main reason Codex emphasizes adversarial audit and explicit intervention scope. Not every low score should trigger another rewrite. Sometimes the correct action is to document the cap, protect the strengths, and ship or rebuild deliberately.
+This case is the main reason the universal core emphasizes adversarial audit and explicit intervention scope. Not every low score should trigger another rewrite. Sometimes the correct action is to document the cap, protect the strengths, and ship or rebuild deliberately.

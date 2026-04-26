@@ -1,14 +1,16 @@
 # Agent Instructions
 
-This repository contains Book Genesis, a book-production workflow made of markdown skills and reference files.
+This repository contains Book Genesis, an agent-agnostic book-production workflow made of markdown skills, manifests, prompts, scoring rules, and reference files.
 
 ## Default Behavior
 
-When asked to create, plan, draft, audit, score, revise, or package a book, use the portable Codex edition unless the user explicitly asks for legacy V4/V5:
+When asked to create, plan, draft, audit, score, revise, or package a book, use the Universal Book Genesis Core unless the user explicitly asks for legacy V4/V5:
 
 ```text
 skills/book-genesis-codex/SKILL.md
 ```
+
+The folder name is historical. Treat this as the current universal pipeline for Claude Code, Codex, Antigravity, Kimi, and other file-aware agents.
 
 Load the manifest before advancing phases:
 
@@ -27,16 +29,24 @@ skills/book-genesis-codex/references/pipeline/manifest.yaml
 - Write Portuguese artifacts and prose in Portuguese when the book is in Portuguese.
 - Treat legacy V4 material as historical reference unless the user asks for it.
 
+## Agent-Specific Notes
+
+- Claude Code can run `/book-genesis-codex` after installing the full skill folder.
+- Codex can use this repo directly through `AGENTS.md` and the skill folder.
+- Antigravity can use this file as the repo-level playbook.
+- Kimi can use the full skill folder or the active phase prompt plus project state files.
+
 ## Legacy Commands
 
 - `/book-genesis`: V5 Craft Mode legacy orchestrator.
 - `/book-genesis-full`: full legacy production pipeline.
-- `/book-genesis-codex`: portable Codex-era pipeline.
+- `/book-genesis-codex`: current portable command name kept for compatibility.
 
 ## Public Documentation
 
-- `README.md`: public overview.
-- `docs/book-genesis-codex.md`: Codex migration and current architecture.
-- `docs/portability.md`: Codex, Claude Code, and Antigravity usage notes.
+- `README.md`: public overview and commercial positioning.
+- `docs/book-genesis-codex.md`: universal core architecture.
+- `docs/portability.md`: Claude Code, Codex, Antigravity, Kimi, and generic agent usage notes.
+- `docs/book-gallery.md`: 10-book proof gallery.
 - `SHOWCASE.md`: casebook summary.
-- `examples/cases/`: six case studies.
+- `examples/cases/`: case studies.

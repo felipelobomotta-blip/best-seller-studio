@@ -1,8 +1,8 @@
-# Genesis Score Codex
+# Genesis Score
 
 ## Purpose
 
-Genesis Score Codex is the single scoring contract for `book-genesis-codex`.
+Genesis Score is the single scoring contract for the Universal Book Genesis Core in `book-genesis-codex`.
 It must be used consistently across prompts, adapters, examples, reports, and manual review.
 
 The score exists to answer one question:
@@ -133,7 +133,7 @@ If the manuscript fails:
 
 ## Output Contract
 
-The final report saved to `artifacts/09-genesis-score-codex.md` must include:
+The final report saved to `artifacts/09-genesis-score.md` or `artifacts/09-genesis-score-codex.md` must include:
 
 - project and runtime context
 - Dimension Scores table

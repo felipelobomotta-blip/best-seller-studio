@@ -1,8 +1,8 @@
-# Book Genesis Codex
+# Universal Book Genesis Core
 
-Book Genesis Codex is the portable, reduced-pressure version of Book Genesis created during the Codex migration. It keeps the parts that proved durable across books and removes the brittle orchestration that made earlier versions overfit their own rubrics.
+The Universal Book Genesis Core is the portable, reduced-pressure version of Book Genesis. It works in Claude Code, Codex, Antigravity, Kimi, and other agents that can read files and maintain project state.
 
-The core is available as a multi-file skill at:
+The implementation lives at:
 
 ```text
 skills/book-genesis-codex/
@@ -16,11 +16,13 @@ skills/book-genesis-codex/
     legacy-v4-book-genesis.md
 ```
 
+The folder name `book-genesis-codex` is historical and preserved so existing commands and installs keep working. The product positioning is broader: **Book Genesis is a universal book pipeline for AI agents.**
+
 ## Why It Exists
 
 V4/V5 were powerful but heavy. The system grew into 17 phases, 19 skills, multiple mid-draft gates, quality loops, chaos passes, mechanical preprocessors, and entity tracking. That helped catch problems, but it also trained the writer to satisfy the evaluator while drafting.
 
-The Codex version makes a different bet:
+The universal core makes a different bet:
 
 - persist decisions to files
 - keep the active phase small
@@ -28,6 +30,17 @@ The Codex version makes a different bet:
 - audit structurally before scoring
 - score with evidence, not vibes
 - package only after the audit and score are clear
+- make the workflow portable across agents instead of tied to one tool
+
+## Runtime Targets
+
+| Agent | Status | Notes |
+|-------|--------|-------|
+| Claude Code | Native skill | Install the full folder and run `/book-genesis-codex` |
+| Codex | Native repo workflow | Use `AGENTS.md` or the skill folder directly |
+| Antigravity | Agent playbook | Open the repo and follow `AGENTS.md` |
+| Kimi | File-backed workflow | Provide the skill folder or paste the active phase contract |
+| Generic coding agents | Portable | Must read files, write artifacts, and update state |
 
 ## Canonical Pipeline
 
@@ -38,7 +51,7 @@ The Codex version makes a different bet:
 | 2 | Architecture | outline, tension map, opening strategy |
 | 3 | Drafting | chapter files in `manuscript/chapters/` |
 | 4 | Adversarial Audit | structural criticism before score |
-| 5 | Final Score | Genesis Score Codex report |
+| 5 | Final Score | Genesis Score report |
 | 6 | Editorial Package | logline, blurb, synopsis, cover brief, query strategy |
 
 Default project tree:
@@ -53,9 +66,9 @@ evaluations/
 delivery/
 ```
 
-## Genesis Score Codex
+## Genesis Score
 
-The Codex score uses 10 dimensions:
+The current score uses 10 dimensions:
 
 1. Originality
 2. Theme
@@ -80,44 +93,51 @@ The floor principle remains the most important rule: the manuscript is only as s
 
 ## What Changed From V4/V5
 
-| Earlier system | Codex edition |
-|----------------|---------------|
+| Earlier system | Universal core |
+|----------------|----------------|
 | Many active skills at once | One active phase prompt at a time |
 | `STATE.yaml` plus specialized state files | `PROJECT_STATE.yaml` plus explicit assumptions |
 | Mid-draft scoring pressure | Draft first, audit and score after |
 | Chaos and mechanical passes inside drafting | Structural variety during drafting, repair after |
-| Claude Code first | Portable skill package for Codex, Claude Code, and agent IDEs |
+| Claude Code first | Portable package for Claude Code, Codex, Antigravity, Kimi, and agent IDEs |
 | V4 legacy as default | V4 legacy kept as reference only |
 
-## How It Has Behaved In Codex
+## How It Has Behaved
 
-The Codex port has been most reliable when treated as a project-file workflow, not as a chat-only prompt. Its strongest behavior so far:
+The portable core has been most reliable when treated as a project-file workflow, not as a chat-only prompt. Its strongest behavior so far:
 
 - it resumes cleanly because state is explicit
 - it separates assumption, drafting, audit, and score
 - it avoids the earlier "19 constraints while writing" failure mode
 - it makes migration between agents easier because every phase is a file contract
+- it gives a cleaner commercial story: a reproducible pipeline, not a prompt dump
 
 The remaining risk is not technical. It is editorial: any AI writing system can inflate its own assessment if audit and scoring are not adversarial. That is why Phase 4 is mandatory and cannot be skipped.
 
 ## Usage Notes
 
-For a new project:
+For Claude Code:
 
 ```text
 /book-genesis-codex pt-br "memoir sobre burnout e reconstrucao profissional"
 ```
 
+For Codex, Antigravity, Kimi, or another repo-aware agent:
+
+```text
+Use Book Genesis. Read AGENTS.md, then run the manifest in skills/book-genesis-codex/references/pipeline/manifest.yaml one phase at a time.
+```
+
 For an existing manuscript:
 
 ```text
-/book-genesis-codex audit this manuscript and continue from Phase 4
+Use Book Genesis to audit this manuscript and continue from Phase 4.
 ```
 
 For packaging only:
 
 ```text
-/book-genesis-codex create the editorial package from this approved manuscript
+Use Book Genesis to create the editorial package from this approved manuscript.
 ```
 
 Use the old `/book-genesis` or `/book-genesis-full` only when you explicitly want the legacy Claude Code pipeline.

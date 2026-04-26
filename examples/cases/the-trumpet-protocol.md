@@ -6,7 +6,7 @@
 - Language: EN
 - Target length: 85k words, hard ceiling 95k
 - Structure: 26 chapters + epilogue
-- Pipeline: V5/Codex-style production
+- Pipeline: V5/universal-core production
 - Public manuscript: no
 
 ## Custom Scoring Dimension
@@ -51,4 +51,4 @@ After the first revision cycle:
 
 ## What It Taught The System
 
-Book Genesis can handle a project-specific scoring dimension when the dimension is concrete and testable. The Codex scoring contract should allow custom dimensions for genre promises, but only when they are defined before drafting.
+Book Genesis can handle a project-specific scoring dimension when the dimension is concrete and testable. The scoring contract should allow custom dimensions for genre promises, but only when they are defined before drafting.

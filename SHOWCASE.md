@@ -11,12 +11,12 @@ See the visual proof layer in [docs/book-gallery.md](docs/book-gallery.md).
 | 1 | Protocolo Nao Encontrado | memoir / generational essay | PT-BR | early simple pipeline | fewer constraints produced stronger human response |
 | 2 | Age of Aquarius | hermetic fantasy | EN | V3/V4 evaluation loop | internal score can rise fast, but external taste still matters |
 | 3 | Protocolo Vermelho | vigilante thriller | PT-BR | V4 -> V5 recalibration | pacing and voice were harder than action concept |
-| 4 | The Source Code / v2 | literary sci-fi thriller | EN | Codex-era revision | audit-first revision prevents infinite polishing |
-| 5 | The Trumpet Protocol | apocalyptic literary thriller | EN | V5/Codex-style production | custom dimension scoring works when genre has special obligations |
-| 6 | The Seventh Manuscript | dark academia literary thriller | EN | Codex-era foundation and drafting | meta-genre projects need reader-risk control from Phase 1 |
+| 4 | The Source Code / v2 | literary sci-fi thriller | EN | portable-agent revision | audit-first revision prevents infinite polishing |
+| 5 | The Trumpet Protocol | apocalyptic literary thriller | EN | V5/universal-core production | custom dimension scoring works when genre has special obligations |
+| 6 | The Seventh Manuscript | dark academia literary thriller | EN | portable-agent foundation and drafting | meta-genre projects need reader-risk control from Phase 1 |
 | 7 | Iron Core | LitRPG / dungeon core | EN | V5 production | custom SRE-methodology constraint creates a real market wedge |
 | 8 | The Saltwater Loaf | cozy mystery | EN | V5 production | fair-play cluing can be designed as a testable system |
-| 9 | Agenda 2030 | apocalyptic sci-fi/fantasy | EN | Codex-era foundation | large-scale concept needs RAG/foundation calibration before drafting |
+| 9 | Agenda 2030 | apocalyptic sci-fi/fantasy | EN | portable-agent foundation | large-scale concept needs RAG/foundation calibration before drafting |
 | 10 | The Source Code | literary sci-fi thriller | EN | V4/V5 production | long revision loops revealed diminishing returns |
 
 ## Public Artifact Sets
@@ -40,7 +40,7 @@ Existing public artifacts:
 - [Outline](examples/age-of-aquarius/outline.md)
 - [Synopses](examples/age-of-aquarius/synopses.md)
 
-## Codex-Era Case Notes
+## Portable-Agent Case Notes
 
 The newer production cases are summarized in [examples/cases/](examples/cases/):
 

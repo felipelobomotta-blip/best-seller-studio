@@ -1,16 +1,24 @@
 # Changelog
 
-## 2026-04-25 -- Codex Edition + Casebook
+## 2026-04-26 -- Agent-Agnostic Positioning
+
+### Changed
+- Repositioned Book Genesis as a universal file-backed pipeline for Claude Code, Codex, Antigravity, Kimi, and generic agent IDEs.
+- Updated README, portability docs, AGENTS.md, launch copy, and casebook language so Codex is one supported runtime, not the product boundary.
+- Clarified that `skills/book-genesis-codex/` keeps its historical folder name for compatibility while serving as the current universal core.
+- Strengthened commercial proof: 10+ book projects in under 30 days, cover wall, case studies, and public process artifacts.
+
+## 2026-04-25 -- Portable Core + Casebook
 
 ### Added
-- Added `skills/book-genesis-codex/`, the portable Codex-era pipeline.
+- Added `skills/book-genesis-codex/`, the portable pipeline that later became the universal agent core.
 - Added `docs/book-genesis-codex.md` explaining the migration from the legacy V4/V5 system.
-- Added `docs/portability.md` for Codex, Claude Code, and Antigravity-style agent IDEs.
+- Added `docs/portability.md` for Claude Code, Codex, and Antigravity-style agent IDEs.
 - Added root `AGENTS.md` so agent IDEs can discover the default workflow.
 - Added six process case studies under `examples/cases/`.
 
 ### Changed
-- Rewrote `README.md` around the current state of the project: Codex edition as default, legacy V4/V5 preserved.
+- Rewrote `README.md` around the current state of the project: portable core as default, legacy V4/V5 preserved.
 - Rewrote `SHOWCASE.md` into a six-book casebook summary.
 - Updated install scripts to copy full skill directories, not just `SKILL.md`, so multi-file skills keep their `references/`.
 

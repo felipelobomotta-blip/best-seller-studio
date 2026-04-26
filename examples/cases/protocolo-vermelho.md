@@ -38,4 +38,4 @@ This case showed that V4 could overstate readiness. The vigilante concept had a 
 
 ## What It Taught The System
 
-Protocolo Vermelho reinforced the floor principle. A strong commercial hook cannot compensate for weak pacing or prose. It also validated the Codex choice to score after a hard audit rather than trusting a self-approving evaluator.
+Protocolo Vermelho reinforced the floor principle. A strong commercial hook cannot compensate for weak pacing or prose. It also validated the portable core's choice to score after a hard audit rather than trusting a self-approving evaluator.

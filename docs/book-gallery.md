@@ -2,6 +2,8 @@
 
 This gallery is the public proof layer for Book Genesis: 10 book projects pushed through the system in under 30 days, across memoir, fantasy, thriller, sci-fi, LitRPG, cozy mystery, and dark academia.
 
+The broader local run is now above 10 ready or near-ready books in under a month. This page keeps the public proof layer focused on 10 projects with covers, cover concepts, and case notes.
+
 The manuscripts remain private. The repository shows covers, cover concepts, status, case notes, and process artifacts so people can evaluate the pipeline without requiring the books themselves to be open-sourced.
 
 ## Cover Wall
@@ -39,7 +41,7 @@ Short version:
 More precise version:
 
 ```text
-I used Book Genesis to push 10 book projects through planning, drafting, scoring, revision, packaging, or case-study stages in under 30 days. The repo includes the pipeline, the Codex port, and the public proof layer.
+I used Book Genesis to push 10+ book projects through planning, drafting, scoring, revision, packaging, or case-study stages in under 30 days. The repo includes the universal agent pipeline, portability notes for Claude Code/Codex/Antigravity/Kimi, and the public proof layer.
 ```
 
 Use the precise version in technical communities. Use the short version on X/Twitter when a screenshot of the cover wall carries the nuance.

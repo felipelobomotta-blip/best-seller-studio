@@ -1,4 +1,4 @@
-# Book Genesis Codex Pipeline
+# Book Genesis Universal Pipeline
 
 ## Phase 0: Intake
 
@@ -33,7 +33,7 @@
 
 ## Phase 5: Final Score
 
-- run Genesis Score Codex
+- run Genesis Score
 - record gate verdict and next action
 
 ## Phase 6: Editorial Package
