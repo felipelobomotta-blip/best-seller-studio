@@ -1,4 +1,6 @@
-# FAQ -- Book Genesis V4.1
+# FAQ -- Book Genesis
+
+> Current note: the default workflow for new projects is Book Genesis Codex. The older V4/V5 answers below are kept for historical and legacy Claude Code usage.
 
 ---
 
@@ -6,7 +8,9 @@
 
 ### What is Book Genesis?
 
-A set of 21 specialized skills (prompt modules) for Claude Code that form a complete 17-phase literary production pipeline. From a one-sentence idea to a publish-ready manuscript with editorial package. It includes a 7-dimension quality scoring system, commercial viability prediction, 20-pattern AI-detection protocol, character chaos system, and automated revision loops.
+Book Genesis is a file-backed book production system. The current default is `book-genesis-codex`, a portable 7-phase pipeline for Codex, Claude Code, and agent IDEs. The repository also preserves the older V4/V5 Claude Code skill network: 17 phases, specialized skills, Genesis Score, commercial viability prediction, anti-AI pattern checks, and automated revision loops.
+
+For the current architecture, start with `docs/book-genesis-codex.md`.
 
 ### What changed from V2 to V4?
 
@@ -163,17 +167,17 @@ V4 requires the voice bank to include 3+ samples of the voice FAILING under pres
 
 ### How do I install it?
 
-One command. On macOS/Linux:
+From a local checkout. On macOS/Linux:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/PhilipStark/book-genesis/main/install.sh | bash
+./install.sh
 ```
 
 On Windows PowerShell:
 ```powershell
-irm https://raw.githubusercontent.com/PhilipStark/book-genesis/main/install.ps1 | iex
+.\install.ps1
 ```
 
-Skills are installed to `~/.claude/skills/`. Each skill is a directory with a single `SKILL.md` file.
+Skills are installed to `~/.claude/skills/`. Modern multi-file skills, including `book-genesis-codex`, must be copied as full directories because their references live outside `SKILL.md`.
 
 ### Can I use individual skills without the full pipeline?
 
@@ -181,4 +185,4 @@ Yes. Every skill works standalone. Use `/narrative-foundation` to build characte
 
 ### Does it use external APIs?
 
-No. Book Genesis is pure markdown. No external APIs, no databases, no build step. Just SKILL.md files that Claude Code loads as prompt modules. The only external calls are WebSearch (for research in Phase 1), which is a built-in Claude Code capability.
+No. Book Genesis is markdown and file contracts. No external APIs, no databases, no build step. Research phases may use the host agent's web/search capability when the active tool supports it.

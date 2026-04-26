@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-04-25 -- Codex Edition + Casebook
+
+### Added
+- Added `skills/book-genesis-codex/`, the portable Codex-era pipeline.
+- Added `docs/book-genesis-codex.md` explaining the migration from the legacy V4/V5 system.
+- Added `docs/portability.md` for Codex, Claude Code, and Antigravity-style agent IDEs.
+- Added root `AGENTS.md` so agent IDEs can discover the default workflow.
+- Added six process case studies under `examples/cases/`.
+
+### Changed
+- Rewrote `README.md` around the current state of the project: Codex edition as default, legacy V4/V5 preserved.
+- Rewrote `SHOWCASE.md` into a six-book casebook summary.
+- Updated install scripts to copy full skill directories, not just `SKILL.md`, so multi-file skills keep their `references/`.
+
+### Fixed
+- Fixed the copied Codex manifest paths from `core/...` to `references/...`.
+- Renamed the portable skill metadata to `book-genesis-codex` so it does not collide with the legacy `/book-genesis` command.
+
 ## V4.1.1 — Entity Tracking + English Standardization (2026-03-21)
 
 ### New Skill: entity-tracker

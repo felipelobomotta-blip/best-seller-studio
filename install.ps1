@@ -1,10 +1,11 @@
-# Book Genesis V4 — Installer for Windows (PowerShell)
-# Installs 10 core skills + 5 optional + 5 deprecated + 1 agent + knowledge base to ~/.claude/
+# Book Genesis installer for Windows PowerShell.
+# Installs full skill folders, including supporting references, to ~/.claude/.
 
 $ErrorActionPreference = "Stop"
 
 $RepoDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 if (-not $RepoDir) { $RepoDir = Get-Location }
+
 $SkillsDir = Join-Path $RepoDir "skills"
 $KnowledgeDir = Join-Path $RepoDir "knowledge"
 $AgentsDir = Join-Path $RepoDir "agents"
@@ -13,48 +14,39 @@ $TargetKnowledge = Join-Path $env:USERPROFILE ".claude\knowledge"
 $TargetAgents = Join-Path $env:USERPROFILE ".claude\agents"
 
 Write-Host ""
-Write-Host "  ____              _      ____                      _     " -ForegroundColor Blue
-Write-Host " | __ )  ___   ___ | | __ / ___| ___ _ __   ___  ___(_)___ " -ForegroundColor Blue
-Write-Host " |  _ \ / _ \ / _ \| |/ /| |  _ / _ \ '_ \ / _ \/ __| / __|" -ForegroundColor Blue
-Write-Host " | |_) | (_) | (_) |   < | |_| |  __/ | | |  __/\__ \ \__ \" -ForegroundColor Blue
-Write-Host " |____/ \___/ \___/|_|\_\ \____|\___| |_| |_|\___||___/_|___/" -ForegroundColor Blue
-Write-Host "                          V4 - Genesis Score V3.7" -ForegroundColor Yellow
+Write-Host "Book Genesis" -ForegroundColor Blue
+Write-Host "V4/V5 legacy system + portable Codex edition" -ForegroundColor Yellow
 Write-Host ""
-Write-Host "Installing 10 core skills + 5 optional + 5 deprecated + 1 agent + knowledge base" -ForegroundColor Yellow
+Write-Host "Installing skills, supporting references, agents, and knowledge base" -ForegroundColor Yellow
 Write-Host ""
 
-# Check that skills directory exists
 if (-not (Test-Path $SkillsDir)) {
-    Write-Host "Error: skills\ directory not found. Run this script from the book-genesis repository root." -ForegroundColor Red
+    Write-Host "Error: skills\ directory not found. Run this script from the repository root." -ForegroundColor Red
     exit 1
 }
 
-# Create target directories
 foreach ($dir in @($TargetSkills, $TargetKnowledge, $TargetAgents)) {
     if (-not (Test-Path $dir)) {
         New-Item -ItemType Directory -Path $dir -Force | Out-Null
     }
 }
 
-# Copy each skill
 $count = 0
 Get-ChildItem -Path $SkillsDir -Directory | ForEach-Object {
     $skillName = $_.Name
     $skillFile = Join-Path $_.FullName "SKILL.md"
     if (Test-Path $skillFile) {
         $destDir = Join-Path $TargetSkills $skillName
-        if (-not (Test-Path $destDir)) {
-            New-Item -ItemType Directory -Path $destDir -Force | Out-Null
+        if (Test-Path $destDir) {
+            Remove-Item -LiteralPath $destDir -Recurse -Force
         }
-        Copy-Item $skillFile (Join-Path $destDir "SKILL.md") -Force
+        New-Item -ItemType Directory -Path $destDir -Force | Out-Null
+        Copy-Item -Path (Join-Path $_.FullName "*") -Destination $destDir -Recurse -Force
         Write-Host "  + $skillName" -ForegroundColor Green
         $count++
     }
 }
 
-Write-Host ""
-
-# Copy knowledge base
 $kbCount = 0
 if (Test-Path $KnowledgeDir) {
     Get-ChildItem -Path $KnowledgeDir -Filter "*.md" | ForEach-Object {
@@ -64,7 +56,6 @@ if (Test-Path $KnowledgeDir) {
     }
 }
 
-# Copy agents
 $agentCount = 0
 if (Test-Path $AgentsDir) {
     Get-ChildItem -Path $AgentsDir -Filter "*.md" | ForEach-Object {
@@ -75,11 +66,11 @@ if (Test-Path $AgentsDir) {
 }
 
 Write-Host ""
-Write-Host "Done! $count skills + $agentCount agents + $kbCount knowledge files installed" -ForegroundColor Green
+Write-Host "Done. $count skills + $agentCount agents + $kbCount knowledge files installed" -ForegroundColor Green
 Write-Host ""
 Write-Host "Skills:    $TargetSkills" -ForegroundColor Blue
 Write-Host "Agents:    $TargetAgents" -ForegroundColor Blue
 Write-Host "Knowledge: $TargetKnowledge" -ForegroundColor Blue
 Write-Host ""
-Write-Host "Open Claude Code and type /book-genesis to start writing."
+Write-Host "Open Claude Code and type /book-genesis or /book-genesis-codex to start writing."
 Write-Host ""

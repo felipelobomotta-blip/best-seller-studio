@@ -1,5 +1,7 @@
 # Genesis V5 Philosophy -- Why Fewer Skills Produce Better Books
 
+> Current note: this philosophy directly informed Book Genesis Codex. The Codex edition keeps the "fewer active constraints while drafting" lesson and makes it portable across agent tools.
+
 ## The Data
 
 We benchmarked 3 books written with different versions of the pipeline against external literary critics:
