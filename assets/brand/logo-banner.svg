@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 360" width="1440" height="360">
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0E27"/>
+      <stop offset="100%" stop-color="#1A1F3A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#B8884F"/>
+      <stop offset="50%" stop-color="#E8C896"/>
+      <stop offset="100%" stop-color="#B8884F"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4A574" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#D4A574" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#D4A574" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="360" fill="url(#ink)"/>
+  <rect width="1440" height="360" fill="url(#grid)"/>
+  <ellipse cx="720" cy="180" rx="600" ry="200" fill="url(#glow)"/>
+
+  <!-- Decorative top rule -->
+  <line x1="120" y1="60" x2="1320" y2="60" stroke="#D4A574" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="120" y1="64" x2="1320" y2="64" stroke="#D4A574" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Open book mark (left) -->
+  <g transform="translate(180, 130)" stroke="url(#gold)" stroke-width="2.5" fill="none">
+    <path d="M 0 60 Q 50 30 100 60 L 100 100 Q 50 70 0 100 Z"/>
+    <path d="M 100 60 Q 150 30 200 60 L 200 100 Q 150 70 100 100 Z"/>
+    <line x1="100" y1="60" x2="100" y2="100"/>
+    <!-- Spine sparkle -->
+    <circle cx="100" cy="50" r="3" fill="url(#gold)"/>
+    <line x1="92" y1="42" x2="108" y2="58" stroke-width="1" stroke-opacity="0.5"/>
+    <line x1="108" y1="42" x2="92" y2="58" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="720" y="195"
+        font-family="Cormorant Garamond, Garamond, 'Times New Roman', serif"
+        font-size="96" font-weight="500"
+        text-anchor="middle"
+        fill="#F5F0E8"
+        letter-spacing="6">
+    BOOK GENESIS
+  </text>
+
+  <!-- Tagline -->
+  <text x="720" y="245"
+        font-family="'Inter', 'Helvetica Neue', sans-serif"
+        font-size="20" font-weight="400"
+        text-anchor="middle"
+        fill="#D4A574"
+        letter-spacing="8">
+    AGENT-AGNOSTIC · FILE-NATIVE · BOOK-FIRST
+  </text>
+
+  <!-- Decorative bottom rule with diamond -->
+  <line x1="120" y1="295" x2="700" y2="295" stroke="#D4A574" stroke-opacity="0.3" stroke-width="1"/>
+  <g transform="translate(720, 295) rotate(45)">
+    <rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#D4A574" stroke-width="1.5"/>
+  </g>
+  <line x1="740" y1="295" x2="1320" y2="295" stroke="#D4A574" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- Phase pips (right ornament) -->
+  <g transform="translate(1180, 175)" fill="none" stroke="url(#gold)" stroke-width="2">
+    <circle cx="0"   cy="0" r="6"/>
+    <circle cx="20"  cy="0" r="5"/>
+    <circle cx="38"  cy="0" r="4"/>
+    <circle cx="54"  cy="0" r="3.2"/>
+    <circle cx="68"  cy="0" r="2.6"/>
+    <circle cx="80"  cy="0" r="2"/>
+    <circle cx="90"  cy="0" r="1.4"/>
+  </g>
+</svg>
