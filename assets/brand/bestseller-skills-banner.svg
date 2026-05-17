@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Book Genesis Bestseller Skills Suite</title>
+  <desc id="desc">GitHub hero image for the Book Genesis bestseller-focused AI book production skills.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111f"/>
+      <stop offset="0.52" stop-color="#122238"/>
+      <stop offset="1" stop-color="#241a10"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f7d77a"/>
+      <stop offset="1" stop-color="#c38b31"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <path d="M0 510 C210 450 340 575 560 520 C770 468 920 395 1200 455 L1200 630 L0 630 Z" fill="#0e1a2b" opacity="0.72"/>
+  <g filter="url(#shadow)" transform="translate(720 112)">
+    <rect x="0" y="50" width="78" height="342" rx="8" fill="#d44b4b"/>
+    <rect x="92" y="15" width="76" height="377" rx="8" fill="#d49d3f"/>
+    <rect x="184" y="86" width="72" height="306" rx="8" fill="#4d8f77"/>
+    <rect x="272" y="0" width="78" height="392" rx="8" fill="#e5d7b5"/>
+    <rect x="364" y="74" width="74" height="318" rx="8" fill="#5f6fae"/>
+    <rect x="456" y="28" width="74" height="364" rx="8" fill="#bb5b88"/>
+    <g fill="#08111f" opacity="0.9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="800">
+      <text transform="translate(45 345) rotate(-90)" text-anchor="middle">GENESIS</text>
+      <text transform="translate(130 345) rotate(-90)" text-anchor="middle">EDITOR</text>
+      <text transform="translate(220 345) rotate(-90)" text-anchor="middle">SWARM</text>
+      <text transform="translate(312 345) rotate(-90)" text-anchor="middle">AGENTS</text>
+      <text transform="translate(402 345) rotate(-90)" text-anchor="middle">PACKAGE</text>
+      <text transform="translate(494 345) rotate(-90)" text-anchor="middle">HUMANIZER</text>
+    </g>
+  </g>
+  <g transform="translate(72 92)">
+    <rect x="0" y="0" width="156" height="34" rx="17" fill="#f7d77a" opacity="0.95"/>
+    <text x="78" y="23" text-anchor="middle" fill="#08111f" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="900">OPEN SOURCE</text>
+    <text x="0" y="104" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="68" font-weight="900">Book Genesis</text>
+    <text x="0" y="172" fill="url(#gold)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="56" font-weight="900">Bestseller Skills Suite</text>
+    <text x="4" y="236" fill="#dbe7f5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="26" font-weight="600">Agent-agnostic AI book studio for drafting, editing,</text>
+    <text x="4" y="272" fill="#dbe7f5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="26" font-weight="600">reader swarms, market gates, and editorial packages.</text>
+    <g transform="translate(0 334)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="800">
+      <rect x="0" y="0" width="142" height="44" rx="8" fill="#ffffff" opacity="0.1"/>
+      <rect x="158" y="0" width="128" height="44" rx="8" fill="#ffffff" opacity="0.1"/>
+      <rect x="302" y="0" width="146" height="44" rx="8" fill="#ffffff" opacity="0.1"/>
+      <text x="22" y="29" fill="#f7d77a">9 skills</text>
+      <text x="180" y="29" fill="#f7d77a">8.5+ gate</text>
+      <text x="324" y="29" fill="#f7d77a">MiroFish-style</text>
+    </g>
+  </g>
+</svg>

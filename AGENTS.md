@@ -12,6 +12,18 @@ skills/book-genesis-codex/SKILL.md
 
 The folder name is historical. Treat this as the current universal pipeline for Claude Code, Codex, Antigravity, Kimi, and other file-aware agents.
 
+When the user asks for bestseller-level, market-ready, agent/editor-ready, or launch-ready work, layer the market umbrella skill on top of the universal core:
+
+```text
+skills/book-bestseller-studio/SKILL.md
+```
+
+When the user asks for MiroFish-style reader swarms, public-opinion simulation, niche-risk scouting, or many simulated readers, use:
+
+```text
+skills/book-swarm-panel/SKILL.md
+```
+
 Load the manifest before advancing phases:
 
 ```text
@@ -35,6 +47,7 @@ skills/book-genesis-codex/references/pipeline/manifest.yaml
 - Codex can use this repo directly through `AGENTS.md` and the skill folder.
 - Antigravity can use this file as the repo-level playbook.
 - Kimi can use the full skill folder or the active phase prompt plus project state files.
+- The optional local runner in `runner/cli.py` can scaffold projects and prepare phase packets, but it does not call a model or write literary output.
 
 ## Legacy Commands
 
@@ -46,6 +59,7 @@ skills/book-genesis-codex/references/pipeline/manifest.yaml
 
 - `README.md`: public overview and commercial positioning.
 - `docs/book-genesis-codex.md`: universal core architecture.
+- `docs/runner.md`: local runner and mechanical demo.
 - `docs/portability.md`: Claude Code, Codex, Antigravity, Kimi, and generic agent usage notes.
 - `docs/book-gallery.md`: 10-book proof gallery.
 - `SHOWCASE.md`: casebook summary.

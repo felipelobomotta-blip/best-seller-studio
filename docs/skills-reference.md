@@ -2,6 +2,18 @@
 
 > Current note: this is the legacy V4/V5 skill reference. For the portable agent-agnostic core, see `skills/book-genesis-codex/` and `docs/book-genesis-codex.md`.
 
+Market-level add-ons live beside the universal core. The current public positioning is the **Book Genesis Bestseller Skills Suite**:
+
+- `skills/book-bestseller-studio/`: commercial-readiness umbrella for Book Genesis runs.
+- `skills/book-swarm-panel/`: MiroFish-style clean-room simulated reader swarms, public-opinion diagnostics, niche-risk scouting, and revision tickets.
+- `skills/literary-agent-panel/`: simulated literary agent, acquiring editor, bookseller, and target-reader review.
+- `skills/copy-editing/`: prose clarity, grammar, repetition, consistency, and final polish.
+- `skills/humanizer/`: voice texture, cadence variation, emotional specificity, and anti-mechanical prose.
+
+Book Bestseller Studio includes `references/agent-registry.yaml`, a specialist team covering market research, worldbuilding, character architecture, theme, plot, pacing, prose writing, continuity, swarm, adversarial audit, revision, scoring, package, viral framing, and launch.
+
+For the new public suite overview, see [`docs/bestseller-skills-suite.md`](bestseller-skills-suite.md).
+
 Book Genesis V4 contains **19 skills** organized into a 17-phase pipeline (with sub-phases). Each skill is a standalone specialist that also works as part of the orchestrated pipeline. V4 adds 3 skills (chaos-engine, book-editor, book-researcher). V4.1 adds skills focused on automation, voice quality, and scaling. V4.1.1 adds entity-tracker for persistent state.
 
 ---

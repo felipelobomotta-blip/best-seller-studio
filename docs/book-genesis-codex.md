@@ -16,6 +16,18 @@ skills/book-genesis-codex/
     legacy-v4-book-genesis.md
 ```
 
+The optional local runner lives at:
+
+```text
+runner/
+  cli.py
+  filesystem.py
+tests/
+  test_runner.py
+```
+
+The runner scaffolds projects, prepares phase packets, validates required files, advances gates, prepares optional Book Swarm Panel/MiroFish bridge folders, and writes specialist agent packets for Book Bestseller Studio. It does not call a model or generate real prose.
+
 The folder name `book-genesis-codex` is historical and preserved so existing commands and installs keep working. The product positioning is broader: **Book Genesis is a universal book pipeline for AI agents.**
 
 ## Why It Exists
@@ -126,6 +138,15 @@ For Codex, Antigravity, Kimi, or another repo-aware agent:
 
 ```text
 Use Book Genesis. Read AGENTS.md, then run the manifest in skills/book-genesis-codex/references/pipeline/manifest.yaml one phase at a time.
+```
+
+For a local mechanical check:
+
+```bash
+python runner/cli.py demo .tmp-book-genesis-demo
+python runner/cli.py validate .tmp-book-genesis-demo
+python runner/cli.py prepare-swarm .tmp-book-genesis-demo --mode hybrid --slug launch-reaction
+python runner/cli.py prepare-agent-packet .tmp-book-genesis-demo pacing_engineer
 ```
 
 For an existing manuscript:

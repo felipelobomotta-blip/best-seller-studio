@@ -1,0 +1,3 @@
+display_name: Book Genesis
+short_description: Turn a book idea into a structured manuscript pipeline with audit, scoring, and editorial package.
+default_prompt: Create a new Book Genesis project from my idea, then run the pipeline one phase at a time with durable project files.

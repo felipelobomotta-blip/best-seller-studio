@@ -1,206 +1,265 @@
 ---
 name: editorial-package
-description: Tudo que o livro precisa para chegar ao mercado — logline, sinopse de capa, sinopse editorial, query letter para editoras/agentes, e cover brief para designer. Três especialistas num só. Usar na Fase 6 do book-genesis ou quando o manuscrito estiver pronto para submissão.
+description: Creates the complete market-facing package a finished manuscript needs: logline, back-cover copy, editorial synopsis, query letter, and cover brief. Use in Book Genesis delivery phases or whenever a manuscript is ready for agent, publisher, beta-reader, ARC, or launch preparation.
 ---
 
-# EDITORIAL PACKAGE — Do Manuscrito ao Mercado
+# Editorial Package
 
-Você produz tudo que o manuscrito precisa para sair do computador e chegar à mesa de um editor, à tela de um agente literário, ou à prateleira de uma livraria. Sinopse, carta de submissão, briefing de capa — tudo num pacote coerente.
+You produce the materials that move a manuscript from private draft to professional review: pitch, synopsis, query, cover direction, and submission framing.
 
----
+The package must be coherent. Same title, same author name, same genre promise, same reader promise, same positioning.
 
-## PARTE 1 — SINOPSES (3 FORMATOS)
+## Inputs
 
-### Formato 1: Logline (~25 palavras)
+Minimum:
 
-Uma frase que vende o livro. Deve funcionar em: pitch oral, bio de redes sociais, primeira linha de email.
+- completed manuscript or detailed synopsis
+- genre/category
+- target reader
+- author name or pen name
 
-**Estrutura:**
-> [Protagonista] + [situação/conflito] + [o que está em jogo]
+Ideal:
 
-**Exemplos por gênero:**
+- manuscript
+- Genesis Score or critique report
+- beta-reader or swarm report
+- comp titles
+- author bio
+- rights/submission status
+- visual preferences
 
-> **Memoir/não-ficção pessoal:** Um millennial brasileiro conta como gastou oito anos e R$ 78 mil tentando se consertar — e o que descobriu quando parou de procurar cura.
+## Output
 
-> **Thriller:** Uma promotora descobre que o serial killer que ela persegue há 3 anos é o marido — e que ele sabe que ela sabe.
+Create:
 
-> **Fantasia:** Na última cidade flutuante, uma mecânica de motores mágicos descobre que consertar o motor central vai matar todos que ela ama.
+1. logline
+2. back-cover copy
+3. editorial synopsis
+4. query letter
+5. cover brief
+6. submission checklist
+7. package risk notes
 
-> **Não-ficção dados:** O mito da meritocracia em 47 gráficos, 200 entrevistas e zero final feliz.
+## 1. Logline
 
-**Teste:** Se alguém ouve a logline e diz "me conta mais", funcionou. Se diz "ah, legal", falhou.
+Target length: about 25 words.
 
-**Instrução para gerar:** Adaptar a estrutura [Protagonista] + [situação/conflito] + [stakes] ao gênero do projeto. Memoir puxa pra experiência pessoal. Thriller puxa pra tensão. Fantasia puxa pra dilema impossível. Não-ficção puxa pra promessa de revelação.
+Purpose: one sentence that sells the book in a pitch, email, website, or social bio.
 
-### Formato 2: Sinopse de Capa (~100 palavras)
+Structure:
 
-O texto da quarta capa / contracapa / descrição do ebook. Vende a EXPERIÊNCIA, não o enredo.
-
-**Estrutura em 4 movimentos:**
-1. **Gancho** (1-2 frases) — A situação que prende
-2. **Contexto** (2-3 frases) — O que o livro é
-3. **Diferencial** (1-2 frases) — Por que ESTE livro e não outro
-4. **Chamada** (1 frase) — Pra quem é e por que importa
-
-**Adaptação por gênero:**
-- **Memoir:** Gancho = momento vulnerável. Diferencial = a voz única do autor. Chamada = identificação ("se você já sentiu X...").
-- **Thriller/suspense:** Gancho = situação impossível. Contexto = quem está em perigo. Chamada = tensão ("quanto tempo até...").
-- **Fantasia/sci-fi:** Gancho = regra do mundo que intriga. Contexto = o dilema. Chamada = escala ("o destino de...").
-- **Não-ficção:** Gancho = dado surpreendente. Contexto = por que importa. Chamada = promessa ("o que ninguém te contou sobre...").
-
-**Regras:**
-- Nunca revelar o final
-- Sem spoilers de momentos-chave
-- Linguagem do público-alvo (não linguagem literária se o público é mainstream)
-- A última frase deve criar urgência ou identificação
-
-### Formato 3: Sinopse Editorial (~300 palavras)
-
-Para agentes e editoras. REVELA o final — eles precisam saber como termina.
-
-**Estrutura:**
-1. **Premissa** — O que o livro é, em termos de gênero e posicionamento
-2. **Arco narrativo** — Início, desenvolvimento, clímax, resolução (SIM, o final)
-3. **Diferencial** — O que este livro faz que os comp titles não fazem
-4. **Posicionamento de mercado** — Comp titles, público, momento cultural
-
-**Regras:**
-- Tom profissional mas não burocrático
-- Revelar TUDO — agentes rejeitam sinopses que escondem o final
-- Mencionar word count e gênero no primeiro parágrafo
-- Se o livro tem device estilístico, mencionar — é diferencial
-
----
-
-## PARTE 2 — QUERY LETTER
-
-A carta que abre (ou fecha) a porta. Um editor lê centenas por semana. Tem 30 segundos pra decidir se lê o manuscrito.
-
-### 5 Elementos Obrigatórios
-
-**1. Gancho (primeira frase)**
-A frase que faz o editor parar de scrollar. Deve ser a frase mais forte que você tem.
-- Não: "Estou escrevendo para submeter meu manuscrito..."
-- Sim (memoir): "Aos 19 anos, fumei um baseado numa praia chamada Sossego e tive uma crise de pânico que nunca mais parou."
-- Sim (thriller): "Minha protagonista percebe, na página 40, que o homem com quem dorme há 12 anos matou sete mulheres."
-- Sim (não-ficção): "Passei 3 anos entrevistando 200 brasileiros que seguiram o roteiro e quebraram mesmo assim."
-
-**2. Sinopse compacta (~150 palavras)**
-O livro em miniatura. Arco, conflito, o que está em jogo. Pode revelar parcialmente o final (diferente da capa, similar à editorial).
-
-**3. Comp titles (2-3 livros)**
-"Para leitores de X e Y" — posiciona o livro na cabeça do editor.
-- Escolher livros publicados nos últimos 5 anos
-- Pelo menos 1 no mesmo idioma/mercado do manuscrito
-- Nunca comparar com clássicos (não dizer "o próximo Guimarães Rosa")
-
-**4. Credenciais do autor**
-Por que VOCÊ escreveu ESTE livro. Não é CV — é relevância.
-- Experiência vivida (memoir)
-- Expertise (não-ficção técnica)
-- Publicações anteriores (se houver)
-- Plataforma (audiência existente — YouTube, newsletter, redes)
-
-**5. Dados práticos**
-- Gênero exato
-- Word count
-- Status: completo / em revisão / rascunho
-- Direitos: disponíveis / representado por agente
-
-### Protocolo de Personalização
-
-**Antes de enviar cada carta:**
-1. Pesquisar o que o agente/editora publicou nos últimos 2 anos
-2. Identificar 1 livro do catálogo deles que dialoga com o seu
-3. Mencionar esse livro na carta (mostra que você fez o dever de casa)
-4. Adaptar o tom: editora acadêmica ≠ editora de mercado
-
-### Formato
-
-- Email (não papel, salvo exceções)
-- Máximo 400 palavras
-- Parágrafo de gancho → sinopse → comp titles → credenciais → dados → agradecimento
-- Sem anexos não solicitados (se quiserem o manuscrito, vão pedir)
-- Assunto do email: "[Gênero] — [Título] — [Word count]"
-
----
-
-## PARTE 3 — COVER BRIEF
-
-O briefing que guia o designer (ou a geração por IA) da capa.
-
-### Análise de Posicionamento Visual
-
-Antes de criar o brief:
-1. Pesquisar as 20 capas mais vendidas no gênero nos últimos 3 anos
-2. Identificar: paleta dominante, composição padrão, tipografia padrão
-3. Decidir: seguir a linguagem do gênero ou quebrar intencionalmente
-
-### Elementos do Brief
-
-**A. Conceito Emocional (1 parágrafo)**
-O que a capa comunica emocionalmente. Emoção primeiro, imagem depois.
-
-**B. Paleta de Cores**
-- Cor dominante (60%)
-- Cor secundária (30%)
-- Cor de acento (10%)
-- Referências (hex, nomes, ou capas de referência)
-
-**C. Elemento Visual Principal**
-- Figura humana (rosto / silhueta / de costas / parcial)
-- Objeto simbólico
-- Paisagem/Ambiente
-- Abstrato/Conceitual
-
-**D. Tipografia**
-- Título: família, tamanho, posição, tratamento
-- Autor: posição, tamanho relativo ao título
-- Subtítulo/Série: se houver
-
-**E. Referências Visuais**
-3-5 capas existentes que capturam algo do que se quer:
-- Uma com a paleta certa
-- Uma com a composição desejada
-- Uma com a tipografia no tom certo
-- Uma do mesmo gênero que funciona em thumbnail
-
-**F. O que Evitar**
-Lista explícita. Tão importante quanto o que quer.
-
-### Para Geração por IA
-
-Se a capa for gerada por IA (Midjourney, DALL-E, etc.):
-
-**Estrutura de prompt:**
-```
-[Estilo visual] + [Elemento principal] + [Paleta] + [Iluminação] + [Composição] + [Referência] + [Parâmetros técnicos]
+```text
+[Protagonist] + [central conflict] + [stakes]
 ```
 
-- Sempre especificar proporção (2:3 para livro padrão)
-- Pedir "negative space for title" se quiser área limpa para texto
-- Iterar — primeira geração nunca é final
-- Pós-geração: adicionar título/autor em software de edição
+Examples:
 
-### Especificações Técnicas
+- Memoir: A broke founder rebuilds his life after discovering that every self-help system he trusted was teaching him to disappear.
+- Thriller: A prosecutor hunting a serial killer realizes the murderer has been sleeping beside her for twelve years.
+- Fantasy: A mechanic in the last floating city learns that repairing its engine will kill everyone she loves.
+- Nonfiction: A data-driven takedown of meritocracy told through interviews, charts, and the people the system promised to save.
 
-- Ebook: 2560 x 1600 px, RGB, JPEG alta qualidade
-- Impresso: 300 DPI, CMYK, PDF com sangria (3mm bleed)
-- Thumbnail test: a capa funciona em 100px? Título legível?
+Test:
 
----
+- If the listener asks "tell me more," it works.
+- If the listener says "interesting" and changes topic, it failed.
 
-## COMO USAR
+## 2. Back-Cover Copy
 
-**Input mínimo:** Manuscrito completo (ou sinopse editorial existente) + público-alvo
+Target length: about 100-180 words.
 
-**Input ideal:** Manuscrito + relatório do `beta-reader` + Genesis Score + preferências visuais do autor
+Purpose: sell the reading experience, not the plot summary.
 
-**Output:** Pacote completo:
-1. Logline
-2. Sinopse de capa
-3. Sinopse editorial
-4. Query letter (template + versão personalizada se editora específica)
-5. Cover brief
+Four movements:
 
-Todos os documentos coerentes entre si — a mesma voz, o mesmo posicionamento, a mesma promessa.
+1. hook: the situation that creates immediate interest
+2. context: what kind of book this is
+3. distinction: why this book, not a generic version of the premise
+4. reader promise: who it is for and why it matters now
+
+Rules:
+
+- Do not reveal the ending.
+- Do not spoil major reversals.
+- Use the target reader's language.
+- Make the final sentence create urgency, dread, desire, recognition, or curiosity.
+- Avoid vague praise: "gripping," "powerful," "unforgettable" unless anchored in specifics.
+
+Genre adaptations:
+
+- Memoir: lead with vulnerability, voice, and transformation cost.
+- Thriller: lead with impossible pressure and time tension.
+- Fantasy/sci-fi: lead with world rule, dilemma, and scale.
+- Nonfiction: lead with a surprising claim and practical consequence.
+- Literary fiction: lead with voice, situation, and moral/emotional contradiction.
+
+## 3. Editorial Synopsis
+
+Target length: about 300-700 words, depending on market.
+
+Purpose: show agents/editors what happens, including the ending.
+
+Required:
+
+1. genre and word count
+2. premise
+3. protagonist and desire
+4. central conflict
+5. escalation
+6. climax
+7. ending/resolution
+8. market positioning
+9. comp titles if available
+
+Rules:
+
+- Reveal the ending. Professionals reject coy synopses.
+- Do not write jacket copy here.
+- Keep tone professional, not academic.
+- Mention stylistic devices only if they affect market positioning.
+- Name the core transformation or final unresolved question.
+
+## 4. Query Letter
+
+Target length: 250-400 words.
+
+Purpose: make an agent/editor request pages.
+
+Structure:
+
+1. hook
+2. compact book pitch
+3. market positioning and comps
+4. author relevance
+5. practical details
+6. polite close
+
+Practical details:
+
+- exact genre/category
+- word count
+- completion status
+- rights status
+- series/standalone status
+- author name
+- contact line if needed
+
+Bad opening:
+
+```text
+I am writing to submit my manuscript...
+```
+
+Better opening:
+
+```text
+In my novel, an archivist discovers that deleted manuscripts are still being edited by someone who knows how every author dies.
+```
+
+Comp title rules:
+
+- Prefer books from the last 5 years.
+- Use at least one title in the target language/market when possible.
+- Do not compare directly to untouchable classics.
+- Explain the comparison: "the institutional paranoia of X with the voice-driven grief of Y."
+
+Personalization:
+
+- Research what the agent/editor published or requested recently.
+- Mention one specific title, list, or stated interest.
+- Keep it brief. Personalization should prove fit, not flatter.
+
+## 5. Cover Brief
+
+Purpose: guide a designer or image model toward market-fit cover direction.
+
+Include:
+
+### A. Positioning
+
+- genre/category
+- target shelf
+- reader expectation
+- thumbnail priority
+- ebook/print priority
+
+### B. Emotional Concept
+
+One paragraph explaining what the cover should make the reader feel before they know the plot.
+
+### C. Visual Direction
+
+- primary visual element
+- secondary visual element
+- composition
+- lighting
+- texture
+- level of realism/abstraction
+- what must be legible at thumbnail size
+
+### D. Color
+
+- dominant color
+- secondary color
+- accent color
+- avoid list
+
+### E. Typography
+
+- title hierarchy
+- author hierarchy
+- subtitle/series treatment
+- mood: literary, commercial, thriller, cozy, epic, intimate, etc.
+
+### F. References
+
+Use 3-5 reference covers:
+
+- one for color
+- one for typography
+- one for composition
+- one from the same shelf/category
+- one anti-reference if useful
+
+### G. AI Image Prompt
+
+If using an image model, provide a prompt like:
+
+```text
+[visual style], [primary subject], [environment], [mood], [lighting],
+[composition], [color palette], negative space for title, book cover art,
+2:3 aspect ratio, high detail, no text
+```
+
+Always add text in layout software afterward. Do not rely on image models for final typography.
+
+## 6. Submission Checklist
+
+Include:
+
+- title and author name consistent everywhere
+- word count checked
+- genre/category stated
+- rights status stated
+- manuscript complete or status clearly disclosed
+- query under 400 words unless market expects otherwise
+- synopsis reveals ending
+- comp titles current
+- cover brief aligned with target shelf
+- sensitivity/legal/factual review needs listed
+- next recipient/action listed
+
+## 7. Package Risk Notes
+
+End with short risk notes:
+
+- unclear genre
+- wrong comps
+- inflated claims
+- sensitivity risk
+- factual/legal risk
+- title/author inconsistency
+- cover-market mismatch
+- manuscript not actually ready
+
+Do not hide blockers. A useful package is honest.

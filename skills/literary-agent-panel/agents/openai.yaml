@@ -1,0 +1,3 @@
+display_name: Literary Agent Panel
+short_description: Simulate agent, editor, bookseller, and reader review for market readiness.
+default_prompt: Review this book project like a literary agent panel and tell me what blocks market readiness.
