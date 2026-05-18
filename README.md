@@ -2,260 +2,110 @@
 
 <img src="assets/brand/logo-banner.svg" alt="Book Genesis" width="720">
 
-# Book Genesis Bestseller Skills Suite
+# Book Genesis
 
-### Build, edit, stress-test, and package commercial books with repo-aware AI agents.
+### A multi-agent LLM pipeline for end-to-end content production with adversarial evaluation.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-D4A574?style=for-the-badge&labelColor=0A0E27)](LICENSE)
 [![Agent Ready](https://img.shields.io/badge/Agent%20Ready-Claude%20Code%20%7C%20Codex%20%7C%20Kimi-D4A574?style=for-the-badge&labelColor=0A0E27)](#use-it-with-any-agent)
-[![Skills](https://img.shields.io/badge/Skills-9%20book%20studio%20skills-D4A574?style=for-the-badge&labelColor=0A0E27)](#bestseller-skills-suite)
-[![Score Gate](https://img.shields.io/badge/Target-8.5%2B%20editorial%20gate-D4A574?style=for-the-badge&labelColor=0A0E27)](#quality-gates)
+[![Skills](https://img.shields.io/badge/Skills-9%20book%20studio%20skills-D4A574?style=for-the-badge&labelColor=0A0E27)](#system-architecture)
+[![Score Gate](https://img.shields.io/badge/Target-8.5%2B%20editorial%20gate-D4A574?style=for-the-badge&labelColor=0A0E27)](#evaluation-methodology)
 
-<img src="assets/brand/bestseller-skills-banner.svg" alt="Book Genesis Bestseller Skills Suite" width="900">
+<img src="assets/brand/bestseller-skills-banner.svg" alt="Book Genesis" width="900">
 
 </div>
 
 ---
 
-## What It Is
+## What this is
 
-**Book Genesis Bestseller Skills Suite** is an open-source AI book studio for file-aware agents.
+Most people building on LLMs hit the same wall: easy to generate text, hard to know if it's *good*. Book Genesis is my answer to that problem in one specific domain (long-form book production), but the architecture generalizes to any task where you need an LLM pipeline that produces output you can defend.
 
-It is not a single prompt, SaaS wrapper, or writing gimmick. It is a reproducible system of skills, scoring rules, project files, review gates, and editorial deliverables that lets an AI agent behave like a book production team:
+Built solo over 6 months. **10+ books shipped through the system in under 30 days.** MIT licensed, agent-agnostic (Claude Code, Codex, Antigravity, Kimi, or any file-based agent).
 
-- researcher
-- architect
-- writer
-- developmental editor
-- copyeditor
-- literary-agent panel
-- reader-swarm simulator
-- humanizer
-- editorial packager
+## System architecture
 
-The core promise:
+The system runs 7 sequential phases, each backed by a different agent role:
 
-> Turn an idea or messy manuscript into a structured, scored, revised, market-aware book package.
+| Phase | Agent role | Output | Engineering note |
+|---|---|---|---|
+| 0 | Intake | Brief, market map, story engine | Schema-validated YAML, no free-text drift |
+| 1 | Foundation | Characters, theme, emotional curve | File-backed state, idempotent rerun |
+| 2 | Architecture | Outline, tension map | Adversarial outline review before commit |
+| 3 | Drafting | Chapter files | Streaming write, checkpoint every chapter |
+| 4 | Adversarial Audit | Structural criticism | Separate critic agent, blocks scoring if fails |
+| 5 | Final Score | 10-dimension Genesis Score | Evidence-required scoring, floor mechanism |
+| 6 | Editorial Package | Logline, blurb, query strategy | Outputs ready for publication submission |
 
-## Why It Exists
+## Evaluation methodology
 
-Most AI book workflows stop at "draft more text." Book Genesis does the harder parts:
+The hardest engineering problem in the pipeline isn't generation. It's evaluation.
 
-- pressure-test the premise;
-- build durable project state;
-- compare against market expectations;
-- revise by weakest dimension;
-- run simulated agent/editor/reader panels;
-- produce submission-ready editorial materials;
-- keep evidence files so quality claims can be audited.
+I had a working scoring system early — 10 dimensions, weighted average, floor mechanism. Scores went up over time as I iterated: 8.5, 9.0, 9.04. But I had no honest way to know if the books would actually land with real readers. Critic-quality and reader-experience are different signals.
 
-The system targets an internal **8.5+ editorial gate**. That is a quality target, not a bestseller guarantee.
+So I built **MiroFish**: a multi-persona reader simulation layer that runs in parallel with the critic scoring. Several reader personas (different genre expectations, sensibilities, attention spans) plus several critic personas read the full manuscript independently and return scores + commentary. Aggregated, it's a simulated market reception.
 
----
+The combination caught failure modes that neither side caught alone — including one book that scored 9.2 internally but 6.8 on MiroFish because the second act loses casual readers even though the prose is technically perfect. That's the kind of bug you only catch with proper evaluation infrastructure.
 
-## Bestseller Skills Suite
+### Quality gates
 
-The current public suite includes 9 book-production skills.
+The current score uses 10 dimensions: Originality, Theme, Characters, Prose, Pacing, Emotion, Coherence, Market, Voice, Opening.
 
-| Skill | Job |
-| --- | --- |
-| `book-bestseller-studio` | Orchestrates the full commercial-readiness loop. |
-| `book-genesis` | Builds the book project, structure, phase gates, scoring, and delivery flow. |
-| `book-editor` | Applies developmental edits, pacing repair, scene surgery, and revision taxonomy. |
-| `book-researcher` | Maps genre, comps, reader promises, market gaps, and positioning. |
-| `literary-agent-panel` | Simulates agent, acquiring editor, bookseller, and target-reader review. |
-| `book-swarm-panel` | Runs MiroFish-style clean-room reader swarms, heatmaps, and revision tickets. |
-| `editorial-package` | Produces logline, query, synopsis, cover brief, ARC packet, and submission assets. |
-| `copy-editing` | Tightens prose, grammar, clarity, consistency, and final polish. |
-| `humanizer` | Removes mechanical texture and restores voice, cadence, and emotional specificity. |
+Approval requires:
+1. **Floor principle.** The book is only as strong as its weakest major dimension. A 9.5 average with a 4 on Coherence is not a 9.5.
+2. **Evidence required.** Every score must cite specific passages. No vibe-based numbers.
+3. **Adversarial audit gate.** A separate critic agent must approve before scoring runs.
 
-Full suite notes: [`docs/bestseller-skills-suite.md`](docs/bestseller-skills-suite.md).
+## Use it with any agent
 
----
-
-## Operating Loop
-
-```text
-idea or manuscript
--> market research
--> foundation and architecture
--> drafting or manuscript intake
--> developmental edit
--> humanizer pass
--> copyedit pass
--> literary-agent panel
--> MiroFish-style reader swarm
--> revision tickets
--> editorial package
--> beta / submission / launch prep
-```
-
-The important part is the loop:
-
-```text
-score below target
--> identify weakest dimension
--> revise that dimension
--> rerun panel or swarm
--> repeat until evidence supports the gate
-```
-
----
-
-## Quality Gates
-
-Book Genesis separates hype from evidence.
-
-| Gate | What It Checks |
-| --- | --- |
-| Genesis Score | Craft, structure, voice, market, pacing, opening, coherence. |
-| Floor Rule | No major dimension can be hidden by a strong average. |
-| Adversarial Audit | Hostile review before final score. |
-| Agent Panel | Would agents, editors, booksellers, and target readers keep reading? |
-| Swarm Panel | Simulated public reaction, niche-risk heatmap, and revision tickets. |
-| Human Validation | Required for culture, religion, trauma, law, medicine, and protected communities. |
-
-No simulated reader panel can certify real-world cultural approval. The suite produces diagnostic evidence, not magic.
-
----
-
-## Use It With Any Agent
+Book Genesis is a folder of markdown instructions, manifests, scoring rules, and project-file contracts. That makes it portable across tools that can read files and write project artifacts.
 
 | Tool | How to run it | Status |
-| --- | --- | --- |
-| Claude Code | Install the skill folders and invoke the relevant skill. | Native multi-file skill workflow. |
-| Codex | Open the repo and point Codex at `AGENTS.md`. | Native repo workflow. |
-| Antigravity | Open the repo and follow `AGENTS.md`. | Portable file-backed workflow. |
-| Kimi / other agents | Upload or expose the relevant `skills/` folder. | Markdown-based agent system. |
+|---|---|---|
+| Claude Code | Install the full skill folder, then run `/book-genesis-codex` | Native multi-file skill |
+| Codex | Point Codex at `AGENTS.md` or `skills/book-genesis-codex/SKILL.md` | Native repo workflow |
+| Antigravity | Open the repo and tell the agent to follow `AGENTS.md` | Agent playbook |
+| Kimi | Upload/copy the skill folder or paste `AGENTS.md` plus the manifest | File-backed workflow |
+| Other agents | Provide the full `skills/book-genesis-codex/` folder | Portable markdown system |
 
-Codex-style instruction:
+## Proof: 10+ books in under 30 days
 
-```text
-Use Book Genesis. Read AGENTS.md. Then run the Bestseller Skills Suite on this book project.
-Persist decisions to files. Do not skip adversarial audit, agent-panel review, or reader-swarm calibration.
-```
+| Project | Genre | Pipeline note |
+|---|---|---|
+| Protocolo Nao Encontrado | Memoir / generational essay | Early pipeline, strong external response |
+| Age of Aquarius | Hermetic fantasy | High internal Genesis Score after iterative evaluation |
+| Protocolo Vermelho | Vigilante thriller | V4→V5 calibration revealed score inflation |
+| The Source Code | Literary sci-fi thriller | Long revision loops, diminishing returns documented |
+| The Trumpet Protocol | Apocalyptic literary thriller | Custom theological-prophetic coherence dimension |
+| The Seventh Manuscript | Dark academia literary thriller | Unreliable narration handling, meta-genre risk |
+| Iron Core | LitRPG / dungeon core | Genre-specific SRE-methodology constraint |
+| The Saltwater Loaf | Cozy mystery | Fair-play clue system implementation |
+| Agenda 2030 | Apocalyptic sci-fi/fantasy | Large-scale RAG / foundation calibration |
 
-Claude-style invocation:
-
-```bash
-/book-genesis-codex en "a literary thriller about an archivist who discovers every deleted manuscript is still being edited somewhere"
-```
-
----
-
-## Optional Local Runner
-
-The runner does not call an LLM. It creates repeatable project folders, prepares phase packets, validates expected outputs, and advances gates.
-
-```bash
-python runner/cli.py init my-book --idea "a detective audits a haunted manuscript"
-python runner/cli.py prepare-phase my-book
-python runner/cli.py advance-phase my-book
-python runner/cli.py prepare-swarm my-book --mode hybrid --slug launch-reaction
-```
-
-Mechanical demo:
-
-```bash
-python runner/cli.py demo .tmp-book-genesis-demo
-python runner/cli.py status .tmp-book-genesis-demo
-python runner/cli.py validate .tmp-book-genesis-demo
-```
-
-See [`docs/runner.md`](docs/runner.md).
-
----
-
-## Proof Gallery
-
-<img src="assets/social/book-stack-showcase.svg" alt="Book Genesis proof gallery showing book projects" width="900">
-
-10+ book projects have been pushed through earlier versions of the system in under 30 days. Manuscripts stay private; this repo ships the pipeline, public artifacts, covers, diagnostics, and case studies.
-
-| Case | Genre | Pipeline Note |
-| --- | --- | --- |
-| Protocolo Nao Encontrado | memoir / generational essay | early public case with strong external response |
-| Age of Aquarius | speculative spiritual thriller | iterative scoring, sensitivity-risk gates, editorial package |
-| Red Protocol | vigilante thriller | V4 to V5 calibration exposed score inflation and pacing limits |
-| The Source Code | literary sci-fi thriller | long revision loops revealed diminishing returns |
-| The Source Code v2 | sci-fi thriller rewrite | audit-first scoring proved safer than endless polishing |
-| The Trumpet Protocol | apocalyptic literary thriller | custom theological-prophetic coherence dimension |
-| The Seventh Manuscript | dark academia thriller | unreliable narration and meta-genre risk testing |
-| Iron Core | LitRPG / dungeon core | genre-specific constraint design |
-| The Saltwater Loaf | cozy mystery | fair-play clue system and cozy-market constraints |
-| Agenda 2030 | apocalyptic sci-fi/fantasy | large-scale foundation calibration |
-
-More: [`SHOWCASE.md`](SHOWCASE.md), [`docs/book-gallery.md`](docs/book-gallery.md), [`examples/cases/`](examples/cases/).
-
----
-
-## What Changed In This Release
-
-- Repositioned the repo as **Book Genesis Bestseller Skills Suite**.
-- Added the full 9-skill commercial book studio.
-- Added `literary-agent-panel`, `copy-editing`, and `humanizer`.
-- Synced active local versions of `book-genesis`, `book-editor`, `book-swarm-panel`, and `book-bestseller-studio`.
-- Added GitHub marketing visuals:
-  - `assets/brand/bestseller-skills-banner.svg`
-  - `assets/social/book-stack-showcase.svg`
-- Added public suite documentation:
-  - `docs/bestseller-skills-suite.md`
-
----
-
-## Repository Map
-
-```text
-skills/book-genesis-codex/      current portable core
-skills/book-bestseller-studio/  commercial-readiness orchestration
-skills/book-swarm-panel/        MiroFish-style reader swarm diagnostics
-skills/literary-agent-panel/    simulated agent/editor/bookseller panel
-skills/book-editor/             developmental edit and revision surgery
-skills/book-researcher/         market research and comp analysis
-skills/editorial-package/       query, synopsis, cover brief, ARC package
-skills/copy-editing/            final copy polish
-skills/humanizer/               voice and cadence repair
-agents/                         legacy autonomous orchestrator
-knowledge/                      benchmark and craft references
-docs/                           architecture, migration, scoring, portability
-examples/                       public artifacts and case studies
-assets/                         brand, cover, and social visuals
-runner/                         optional local CLI
-tests/                          smoke tests for the runner
-```
-
----
+Full case write-ups in [`SHOWCASE.md`](./SHOWCASE.md) and [`examples/cases/`](./examples/cases/). Manuscripts are private (commercial); the pipeline, evaluation artifacts, and case notes are open.
 
 ## Installation
 
-macOS / Linux:
-
 ```bash
+# macOS / Linux
 ./install.sh
-```
 
-Windows PowerShell:
-
-```powershell
+# Windows
 .\install.ps1
 ```
 
-After installation, use the relevant skill folder from `skills/`.
+Then `/book-genesis-codex` in Claude Code, or point any repo-aware agent at `AGENTS.md`.
 
----
+## Engineering writeups
+
+- [`docs/book-genesis-codex.md`](./docs/book-genesis-codex.md) — migration from V4/V5 to portable core
+- [`docs/portability.md`](./docs/portability.md) — agent-agnostic design notes
+- [`SHOWCASE.md`](./SHOWCASE.md) — full case studies
 
 ## License
 
-MIT. Use it, fork it, ship books with it.
+MIT.
 
-If a manuscript ships because of Book Genesis, a credit in the colophon is appreciated, never required.
+## About
 
----
-
-<div align="center">
-
-**For writers who want a production loop, not a pile of drafts.**
-
-[Read the docs](docs/) - [Browse the cases](SHOWCASE.md) - [Star on GitHub](https://github.com/felipelobomotta-blip/book-genesis-v4)
-
-</div>
+Built by [Felipe Lobo](https://github.com/felipelobomotta-blip). I work on multi-agent LLM systems and evaluation infrastructure. Based in Brazil, **open to AI/LLM engineering roles — remote or relocation**, at companies that ship real LLM-backed products and take evaluation seriously. Reach me on [LinkedIn](https://www.linkedin.com/in/felipeloboai/) or [X](https://x.com/FelipeL72767971).
