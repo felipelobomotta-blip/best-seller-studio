@@ -11,6 +11,8 @@
 [![Skills](https://img.shields.io/badge/Skills-9%20book%20studio%20skills-D4A574?style=for-the-badge&labelColor=0A0E27)](#system-architecture)
 [![Score Gate](https://img.shields.io/badge/Target-8.5%2B%20editorial%20gate-D4A574?style=for-the-badge&labelColor=0A0E27)](#evaluation-methodology)
 
+<img src="assets/demo.gif" alt="Book Genesis demo — one-line idea to a scored book" width="720">
+
 <img src="assets/brand/bestseller-skills-banner.svg" alt="Book Genesis" width="900">
 
 </div>
