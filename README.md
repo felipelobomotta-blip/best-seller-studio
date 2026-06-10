@@ -236,23 +236,14 @@ Using **Claude Sonnet 4.6** (recommended):
 | Per chapter (avg 1.5 polish cycles) | ~$1.00–1.50 |
 | Setup phases (research + forge + foundation) | ~$1.50 |
 
-Claude Code free tier works for testing. For full book production, you need API access.
+Claude Code runs on your Anthropic account via OAuth — no separate API key needed.
 
 ---
 
 ## Requirements
 
-- [Claude Code](https://claude.ai/code) — the CLI that runs the agents
-- An Anthropic API key (set as `ANTHROPIC_API_KEY`)
+- [Claude Code](https://claude.ai/code) — log in with your Anthropic account (OAuth). No API key needed.
 - ~30 minutes unattended runtime per book (the pipeline runs autonomously)
-
-```bash
-# Set your API key
-export ANTHROPIC_API_KEY=sk-ant-...
-
-# Windows
-$env:ANTHROPIC_API_KEY = "sk-ant-..."
-```
 
 ---
 
