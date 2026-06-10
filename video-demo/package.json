@@ -1,0 +1,21 @@
+{
+  "name": "best-seller-studio-demo",
+  "version": "1.0.0",
+  "description": "Demo video for Best Seller Studio — AI book pipeline",
+  "scripts": {
+    "start": "npx remotion studio",
+    "render": "npx remotion render src/index.ts BestSellerDemo out/demo.mp4",
+    "still": "npx remotion still src/index.ts BestSellerDemo --frame=0 out/frame0.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.239",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.239"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5"
+  }
+}

@@ -10,6 +10,8 @@
 [![Agents](https://img.shields.io/badge/8%20specialized%20agents-orange?style=flat-square)](#the-agents)
 [![Books Shipped](https://img.shields.io/badge/Books%20Shipped-10%2B-blue?style=flat-square)](#proof)
 
+https://github.com/felipelobomotta-blip/best-seller-studio/raw/master/video-demo/out/demo.mp4
+
 </div>
 
 ---
