@@ -1,113 +1,231 @@
 <div align="center">
 
-<img src="assets/brand/logo-banner.svg" alt="Book Genesis" width="720">
+# Book Genesis V4
 
-# Book Genesis
+### You give it an idea. It gives you a complete book.
 
-### A multi-agent LLM pipeline for end-to-end content production with adversarial evaluation.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-D4A574?style=for-the-badge&labelColor=0A0E27)](LICENSE)
-[![Agent Ready](https://img.shields.io/badge/Agent%20Ready-Claude%20Code%20%7C%20Codex%20%7C%20Kimi-D4A574?style=for-the-badge&labelColor=0A0E27)](#use-it-with-any-agent)
-[![Skills](https://img.shields.io/badge/Skills-9%20book%20studio%20skills-D4A574?style=for-the-badge&labelColor=0A0E27)](#system-architecture)
-[![Score Gate](https://img.shields.io/badge/Target-8.5%2B%20editorial%20gate-D4A574?style=for-the-badge&labelColor=0A0E27)](#evaluation-methodology)
-
-<img src="assets/demo.gif" alt="Book Genesis demo — one-line idea to a scored book" width="720">
-
-<img src="assets/brand/bestseller-skills-banner.svg" alt="Book Genesis" width="900">
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Runs%20on-Claude%20Code-blueviolet?style=for-the-badge)](https://claude.ai/code)
+[![Quality Gate](https://img.shields.io/badge/Quality%20Gate-8.5%2F10%20floor-brightgreen?style=for-the-badge)](#the-3-quality-gates)
+[![Agents](https://img.shields.io/badge/Agents-8%20specialized-orange?style=for-the-badge)](#the-agents)
 
 </div>
 
 ---
 
-## What this is
+No writing experience needed. No prompt engineering. No creative blocks.
 
-Most people building on LLMs hit the same wall: easy to generate text, hard to know if it's *good*. Book Genesis is my answer to that problem in one specific domain (long-form book production), but the architecture generalizes to any task where you need an LLM pipeline that produces output you can defend.
+You type your idea — even a half-formed shower thought — and the system runs 8 specialized AI agents in sequence to produce a complete, publication-ready manuscript that passes a real quality gate before it lands in your hands.
 
-Built solo over 6 months. **10+ books shipped through the system in under 30 days.** MIT licensed, agent-agnostic (Claude Code, Codex, Antigravity, Kimi, or any file-based agent).
+**Built and battle-tested over 6 months. 10+ books shipped.**
 
-## System architecture
+---
 
-The system runs 7 sequential phases, each backed by a different agent role:
+## How it works (plain English)
 
-| Phase | Agent role | Output | Engineering note |
-|---|---|---|---|
-| 0 | Intake | Brief, market map, story engine | Schema-validated YAML, no free-text drift |
-| 1 | Foundation | Characters, theme, emotional curve | File-backed state, idempotent rerun |
-| 2 | Architecture | Outline, tension map | Adversarial outline review before commit |
-| 3 | Drafting | Chapter files | Streaming write, checkpoint every chapter |
-| 4 | Adversarial Audit | Structural criticism | Separate critic agent, blocks scoring if fails |
-| 5 | Final Score | 10-dimension Genesis Score | Evidence-required scoring, floor mechanism |
-| 6 | Editorial Package | Logline, blurb, query strategy | Outputs ready for publication submission |
+```
+Your idea
+   ↓
+Phase 1  — Research
+           The system reads the market for your genre.
+           Finds what readers already hate about existing books.
+           That gap becomes your weapon.
+   ↓
+Phase 1.5 — Premise Forge  ← NEW in V4
+           Your raw idea is a seed, not a contract.
+           5 structural variants are generated and scored.
+           The one with the strongest irony engine wins.
+           Your idea is elevated, not replaced.
+   ↓
+Phase 2  — Foundation & Outline
+           Characters, theme, chapter map.
+           Every story beat is intentionally subverted — no predictable arcs.
+   ↓
+           ── CHECKPOINT 1: you see the forged premise and approve ──
+   ↓
+Phase 3  — Chapter Loop (runs for every chapter)
+           Write → polish dialogue → add hooks → inject chaos
+           → score independently → if below 8.5: polish loop (max 5×)
+           → if still failing: escalate
+   ↓
+Phase 4/5 — Full Manuscript Review & Revision
+           Re-attacks any chapter below target.
+           CVI score (bestseller potential index) must hit 9.0+.
+   ↓
+           ── CHECKPOINT 2: you see every chapter score and approve ──
+   ↓
+Phase 6  — Delivery Package
+           Logline, back-cover blurb, query letter, formatted files.
+   ↓
+           ── CHECKPOINT 3: your finished book ──
+```
 
-## Evaluation methodology
+You interact 3 times. The rest is automatic.
 
-The hardest engineering problem in the pipeline isn't generation. It's evaluation.
+---
 
-I had a working scoring system early — 10 dimensions, weighted average, floor mechanism. Scores went up over time as I iterated: 8.5, 9.0, 9.04. But I had no honest way to know if the books would actually land with real readers. Critic-quality and reader-experience are different signals.
+## The 3 quality gates
 
-So I built **MiroFish**: a multi-persona reader simulation layer that runs in parallel with the critic scoring. Several reader personas (different genre expectations, sensibilities, attention spans) plus several critic personas read the full manuscript independently and return scores + commentary. Aggregated, it's a simulated market reception.
+Most AI writing tools generate and hope. This one generates and enforces.
 
-The combination caught failure modes that neither side caught alone — including one book that scored 9.2 internally but 6.8 on MiroFish because the second act loses casual readers even though the prose is technically perfect. That's the kind of bug you only catch with proper evaluation infrastructure.
+### Gate 1 — Premise floor ≥ 8.0
 
-### Quality gates
+Before a single word of the book is written, the premise must pass.
 
-The current score uses 10 dimensions: Originality, Theme, Characters, Prose, Pacing, Emotion, Coherence, Market, Voice, Opening.
+The system scores 6 dimensions:
+- **Hook** — does the one-sentence pitch make someone say "oh damn"?
+- **Irony engine** — is there a structural contradiction that generates conflict automatically? (Think Gone Girl, Breaking Bad.) A situation without a contradiction maxes at 5.0.
+- **Native escalation** — can you describe 3 escalation steps that follow from the premise itself — not external events?
+- **The question** — is there one central question that only the last page can answer?
+- **Gap fit** — is this book meaningfully different from every comparable title on the market?
+- **Retellability** — can someone retell this premise tomorrow without notes? (This is the word-of-mouth mechanism — and the bestseller mechanism.)
 
-Approval requires:
-1. **Floor principle.** The book is only as strong as its weakest major dimension. A 9.5 average with a 4 on Coherence is not a 9.5.
-2. **Evidence required.** Every score must cite specific passages. No vibe-based numbers.
-3. **Adversarial audit gate.** A separate critic agent must approve before scoring runs.
+The floor IS the score. A premise that scores 9/9/9/9/9/4 is a 4, not an 8.5.
 
-## Use it with any agent
+If the winning variant scores below 8.0, the system flags exactly which dimension is blocking it at Checkpoint 1. No silent failures.
 
-Book Genesis is a folder of markdown instructions, manifests, scoring rules, and project-file contracts. That makes it portable across tools that can read files and write project artifacts.
+### Gate 2 — Chapter floor ≥ 8.5 (Genesis Score)
 
-| Tool | How to run it | Status |
-|---|---|---|
-| Claude Code | Install the full skill folder, then run `/book-genesis-codex` | Native multi-file skill |
-| Codex | Point Codex at `AGENTS.md` or `skills/book-genesis-codex/SKILL.md` | Native repo workflow |
-| Antigravity | Open the repo and tell the agent to follow `AGENTS.md` | Agent playbook |
-| Kimi | Upload/copy the skill folder or paste `AGENTS.md` plus the manifest | File-backed workflow |
-| Other agents | Provide the full `skills/book-genesis-codex/` folder | Portable markdown system |
+Every chapter is scored by an evaluator agent that **did not write it**.
 
-## Proof: 10+ books in under 30 days
+The evaluator runs:
+- 7-dimension Genesis Score where the floor is the score
+- A 20-pattern anti-AI scan (clichés, hedged language, fake profundity, etc.)
+- Simulation of 4 reader types (casual, hostile, genre fan, stretch reader)
+- "Would you remember this chapter tomorrow?" test
 
-| Project | Genre | Pipeline note |
-|---|---|---|
-| Protocolo Nao Encontrado | Memoir / generational essay | Early pipeline, strong external response |
-| Age of Aquarius | Hermetic fantasy | High internal Genesis Score after iterative evaluation |
-| Protocolo Vermelho | Vigilante thriller | V4→V5 calibration revealed score inflation |
-| The Source Code | Literary sci-fi thriller | Long revision loops, diminishing returns documented |
-| The Trumpet Protocol | Apocalyptic literary thriller | Custom theological-prophetic coherence dimension |
-| The Seventh Manuscript | Dark academia literary thriller | Unreliable narration handling, meta-genre risk |
-| Iron Core | LitRPG / dungeon core | Genre-specific SRE-methodology constraint |
-| The Saltwater Loaf | Cozy mystery | Fair-play clue system implementation |
-| Agenda 2030 | Apocalyptic sci-fi/fantasy | Large-scale RAG / foundation calibration |
+Chapters between the hard floor (genre-adjusted 7.0–7.5) and the target (8.5) enter a Polish Loop:
+- The evaluator produces a "Path to 8.5" work order naming exactly which dimensions need fixing
+- The editor attacks only those dimensions
+- Anti-inflation protection: +0.5 per cycle maximum, so jumping from 7.5 to 8.5 takes ≥ 2 real improvement cycles
 
-Full case write-ups in [`SHOWCASE.md`](./SHOWCASE.md) and [`examples/cases/`](./examples/cases/). Manuscripts are private (commercial); the pipeline, evaluation artifacts, and case notes are open.
+Three possible verdicts: **PASS** / **POLISH** / **FAIL** — no ambiguity.
 
-## Installation
+### Gate 3 — Exit: all chapters ≥ 8.5 + CVI-Launch ≥ 9.0
+
+The manuscript only reaches the delivery package when:
+1. Every chapter has passed Gate 2
+2. The CVI-Launch (Commercial Viability Index) scores 9.0+
+
+CVI-Launch 9.0 means "breakout potential, Gone Girl tier" — the manuscript has a word-of-mouth mechanism built in at the structural level.
+
+---
+
+## The agents
+
+8 agents. Each is a markdown file — a complete system prompt with scoring rules, behavioral constraints, and anti-gaming protections.
+
+| Agent | What it does |
+|---|---|
+| `book-orchestrator` | The pipeline manager. Dispatches all other agents, enforces every gate, routes the 3 checkpoints to you. |
+| `book-researcher` | Reads the market. Finds comp titles and reader frustrations from real negative reviews. |
+| `book-architect` | Forges the premise (dispatch 0), builds the structural foundation + outline (dispatch 1), writes the voice DNA (dispatch 2). |
+| `book-writer` | Writes chapters with the 8.5 bar baked in as design targets, not post-hoc evaluation criteria. |
+| `book-evaluator` | Independent scorer. Never writes — only judges. Runs the full audit: 7 dimensions + 4 readers + 20-pattern scan. |
+| `book-editor` | Surgical revision. Only edits the specific dimensions blocking 8.5. Never touches what's working. |
+| `book-disruptor` | Chaos agent. Runs between writer and evaluator to break predictability and inject human noise. |
+| `book-packager` | Delivery. Logline, synopsis, query letter, formatted ebook + print files. |
+
+---
+
+## What's new in V4
+
+### Premise Forge (Phase 1.5)
+
+The biggest gap in every previous version: the system was great at executing ideas, but it executed your shower thought exactly as-is. If your raw idea lacked an irony engine, the best prose in the world couldn't save it.
+
+Premise Forge treats your idea as a **seed, not a contract**:
+
+1. Variant 1 = your raw idea scored honestly (if it already scores ≥ 8.0, it wins — forging for the sake of forging is a failure mode)
+2. Variants 2–5 = forged versions, each using a different irony engine: invert the protagonist, relocate the stakes, fuse the seed with a real market gap, weaponize the #1 reader frustration from negative comp reviews, collapse two stock characters into one contradiction
+
+**Hard rule: ELEVATE, DON'T REPLACE.** You must recognize your idea inside the winning premise. The `premise.md` output shows you verbatim: "here's what changed from your raw idea and why."
+
+### The 8.5 Gate System
+
+Previous versions targeted 8.5 but had no enforcement mechanism. V4 replaced this with:
+- Per-chapter gates that block progress until the score passes
+- Polish Loop with directed work orders (editor only touches what the evaluator flagged)
+- Anti-inflation: each cycle can add +0.5 max, making it impossible to skip ahead quickly
+- Exit gate requiring 100% chapter coverage + CVI-Launch ≥ 9.0
+- 3-state verdict system: no more "close enough"
+
+---
+
+## Quick start
+
+**Requirements:** [Claude Code](https://claude.ai/code)
 
 ```bash
 # macOS / Linux
-./install.sh
+cp agents/*.md ~/.claude/agents/
 
-# Windows
-.\install.ps1
+# Windows (PowerShell)
+Copy-Item agents\*.md $env:USERPROFILE\.claude\agents\
 ```
 
-Then `/book-genesis-codex` in Claude Code, or point any repo-aware agent at `AGENTS.md`.
+Then open Claude Code and type:
 
-## Engineering writeups
+```
+I have an idea for a book: [your idea here]
+```
 
-- [`docs/book-genesis-codex.md`](./docs/book-genesis-codex.md) — migration from V4/V5 to portable core
-- [`docs/portability.md`](./docs/portability.md) — agent-agnostic design notes
-- [`SHOWCASE.md`](./SHOWCASE.md) — full case studies
+The `book-orchestrator` agent takes over. You'll be asked to approve 3 times. Everything else runs automatically.
 
-## License
+**Cost estimate with Claude Sonnet 4.6:** roughly $20–30 per complete book.
 
-MIT.
+---
 
-## About
+## Live test
 
-Built by [Felipe Lobo](https://github.com/felipelobomotta-blip). I work on multi-agent LLM systems and evaluation infrastructure. Based in Brazil, **open to AI/LLM engineering roles — remote or relocation**, at companies that ship real LLM-backed products and take evaluation seriously. Reach me on [LinkedIn](https://www.linkedin.com/in/felipeloboai/) or [X](https://x.com/FelipeL72767971).
+The first book running the complete V4 pipeline (premise forge → 8.5 gate → exit gate) is **THE LAST COVENANT** — a conspiracy thriller set during the 2026 FIFA World Cup, where a journalist covering the tournament uncovers an extraterrestrial first-contact cover-up.
+
+Currently in production. When finished, the chapter scores and full evaluation artifacts will be published here as the first real-world V4 benchmark.
+
+---
+
+## Honest caveats
+
+- The 8.5 score is an internally-calibrated quality ruler, not an objective market measurement. It's the best proxy available before publishing.
+- "Bestseller" has market factors outside the manuscript (cover, marketing, timing, platform). The gate attacks the word-of-mouth mechanism (retellability + CVI), which is what the system can actually control.
+- The quality gate guarantees the system never silently ships below target. It does not guarantee the target is perfectly calibrated for your specific genre.
+
+---
+
+## File structure
+
+```
+book-genesis-v4/
+├── agents/
+│   ├── book-orchestrator.md   ← start here
+│   ├── book-architect.md
+│   ├── book-researcher.md
+│   ├── book-writer.md
+│   ├── book-evaluator.md
+│   ├── book-editor.md
+│   ├── book-disruptor.md
+│   └── book-packager.md
+├── README.md
+├── CHANGELOG.md
+└── LICENSE
+```
+
+Each agent file is self-contained — readable on its own to understand exactly what the pipeline does at each step.
+
+---
+
+## Why I built this
+
+I wanted to prove that an LLM pipeline could produce consistently high-quality long-form writing — not one-off lucky outputs, but a repeatable system with measurable quality.
+
+The key insight: the bottleneck is not generation. It's evaluation. Good generation is easy; evaluation infrastructure is what makes quality actually hold over a full manuscript.
+
+Book Genesis V4 is my current answer. The premise forge, the 8.5 gate, and the evaluator architecture are the parts I'm most proud of.
+
+---
+
+Built by [Felipe Lobo](https://github.com/felipelobomotta-blip) — developer and builder from Brazil.
+
+MIT licensed. Fork it, build on it, ship books.
+
+[X / Twitter](https://x.com/FelipeL72767971) · [LinkedIn](https://www.linkedin.com/in/felipeloboai/)
