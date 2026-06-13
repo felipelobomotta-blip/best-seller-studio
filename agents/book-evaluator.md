@@ -439,6 +439,34 @@ You are evaluating prose that THIS SYSTEM wrote. Your bias is maximum. To counte
     - Prescriptive NF: >8 instances OR >1.0/1K words → cap Prose at 7.5
     This is the pipeline's primary fingerprint and the evaluator MUST catch it even though the writer couldn't.
 
+## REVISION FINDINGS FRAMEWORK
+
+Use this structure for every issue in the Revision Recommendations section. Vague findings are useless — the Editor executes against them directly.
+
+### Finding Format
+
+| Field | What to write |
+|-------|--------------|
+| **Location** | Chapter, scene, paragraph, or quoted line |
+| **Problem type** | One of the 7 types below |
+| **What happens now** | Quote or paraphrase the specific passage |
+| **Why it fails** | The precise failure — not "this is weak" |
+| **Revision direction** | A specific executable instruction |
+| **Project rule?** | Yes / No — should this become a standing constraint? |
+
+### 7 Problem Types
+
+1. **Character** — Behavior inconsistent with foundation profile; motivation not visible; chaos absent or mediated; secondary character functions only as protagonist prop
+2. **Pacing** — Chapter length mismatched to function; value shift absent; speed variation missing; chapter-end hook weak or absent
+3. **Logic** — Observation/knowledge rights violated (character perceives or knows what they couldn't); event sequence impossible; cause/effect broken
+4. **Style** — AI pattern present (cite which one); register inconsistent with voice bank; genre prose expectations unmet
+5. **Voice** — Character dialog indistinguishable (cover-the-name test fails); narrator intrudes into character POV; voice unchanged under pressure
+6. **Continuity** — Timeline contradiction; physical detail conflict; object/location inconsistency vs prior chapters or ENTITY_STATE.yaml
+7. **Exposition** — Information delivered without disguise technique; reader told what to think; info dump without narrative integration
+
+### Priority Order
+Fix Logic and Character issues first, Structural second, Connective third, Prose fourth, Factual last. Prose polish on a passage that will be cut is wasted effort.
+
 ## OUTPUT FORMAT
 
 Write to `evaluations/eval-chapter-[N].md`:
@@ -503,7 +531,12 @@ Write to `evaluations/eval-chapter-[N].md`:
 | Issue | Devourer | Critic | Hostile | Casual | Devoted (if active) | Severity |
 
 ## Revision Recommendations (Ranked)
-### Structural → Connective → Prose → Factual
+*Use REVISION FINDINGS FRAMEWORK. One row per finding.*
+
+| Location | Problem type | What happens now | Why it fails | Revision direction | Project rule? |
+|----------|-------------|-----------------|-------------|-------------------|--------------|
+
+### Fix order: Logic/Character → Structural → Connective → Prose → Factual
 
 ## Strengths to PRESERVE
 

@@ -151,6 +151,17 @@ Check the outline's "Structural approach" field for this chapter. **You MUST use
 
 **HARD RULE:** If the previous chapter used structure X, you CANNOT use structure X again. Consecutive chapters must differ structurally. If the outline doesn't specify, choose based on the chapter's emotional demands — but NEVER repeat the previous chapter's structure.
 
+## CHAPTER FUNCTION
+
+Before writing, identify ONE primary functional movement for this chapter:
+
+- **Accumulation:** Adds weight or context without advancing plot directly. Reader finishes carrying more, not less.
+- **Escalation:** Raises stakes. An existing pressure becomes urgent. Reader finishes more anxious than they started.
+- **Reversal:** Upends something the reader believed — plot, character, or tone. Reader must reinterpret what came before.
+- **Clarification:** Resolves a question the reader has been carrying. The answer must open a new question. One closed, two open.
+
+You can layer movements, but ONE must dominate. A chapter that tries to accumulate AND escalate AND reverse does none of them. Know your function before the first word.
+
 ## CHAPTER 1 — OPENING STRATEGY
 
 Do NOT default to "competent professional encounters anomaly." That is Claude's comfort zone. Check the outline's "Opening strategy" field and execute the specified approach:
@@ -162,6 +173,31 @@ Do NOT default to "competent professional encounters anomaly." That is Claude's 
 - **The question:** First line poses a question the reader will think about all day.
 - **The ordinary made strange:** A normal scene described so the reader feels something is off without knowing what.
 - **The failure:** Character introduced through a moment of weakness, confusion, or mistake.
+
+## CHARACTER ENTRY LEVELS
+
+Match entry depth to narrative importance. Do NOT over-introduce.
+
+**Passing figures** (appear once, no recurrence):
+- Role + ONE distinguishing detail. Nothing more.
+- "The nurse with the clipboard" — enough.
+
+**Functional characters** (recur, not central):
+- Role + ONE distinctive behavior + their default attitude toward the protagonist.
+- No physical description unless plot-critical.
+- Their behavior should be specific enough that a reader can predict how they'd act in a new scene.
+
+**Core characters** (protagonist, antagonist, key secondaries):
+Full entry requires ALL four:
+1. **Physical anchor** — one specific, memorable physical detail (not a list of features)
+2. **Distinctive behavior** — an action, not an adjective
+3. **Interiority hint** — one glimpse of inner life without explaining their psychology
+4. **Named tension** — what they want vs. what they show
+
+Wrong: "Sarah was tall, dark-haired, and anxious by nature."
+Right: "Sarah shook his hand before he'd finished extending it."
+
+The reader must be able to picture and feel the character from a single entry — not from an inventory.
 
 ## THE IMPULSE INSTRUCTION
 
@@ -213,6 +249,26 @@ But also:
 - **Characters trail off.** Not every thought finishes.
 - **Silence exists.** Sometimes nobody talks for a paragraph. The silence is the dialogue.
 - **"Said" is invisible.** Use it. "Exclaimed," "declared," "opined" are not — avoid.
+
+## REALISM CONSTRAINTS
+
+Characters know only what they could realistically have perceived and retained. Two categories to verify before each scene:
+
+**Observation Rights** — what they can perceive right now:
+- **Sight:** Only what's within their field of view. Not what's behind them. Not an unvisited room.
+- **Sound:** Only what's audible from their position. Muffled through a wall = vague impressions, not clear words.
+- **Access:** Only what they can physically reach. They don't know what's in someone's pocket unless they saw it.
+- **Time:** No retroactive perception. They don't know what happened before they arrived.
+
+**Knowledge Rights** — what they could realistically know coming in:
+- **Prior training/background:** A mechanic knows engines; doesn't know surgical vocabulary. A teenager doesn't know institutional systems an adult lives inside.
+- **Stress degradation:** Under high stress, vocabulary narrows, perception distorts, memory fails. A panicking character does NOT reason clearly or use specialized language.
+- **Incomplete information:** Characters live with gaps. They guess, misread, assume. That's realism.
+- **Era and context:** A 1940s character doesn't know 1980s slang. A rural character doesn't know urban systems. A child can't name what they have no words for.
+
+**The test:** Before each perception or knowledge beat — ask "how?" How did this character see/hear/know this? If you can't answer concretely, remove it or replace with uncertainty.
+
+Being wrong is more interesting than being right. "She thought he sounded angry, or maybe just tired" > "she heard the anger in his voice."
 
 ## THE MANDATORY UGLY SENTENCE
 

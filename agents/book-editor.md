@@ -135,6 +135,17 @@ Your revisions must not INTRODUCE AI patterns. This is the #1 risk of LLM editin
 - Check for excessive em dashes
 - Ensure emotions are shown, not described
 
+### 7. Style-Bearing Elements — Burden of Proof
+Before deleting or converting any passage, name what it IS doing. The following carry voice even when they resist efficiency — do NOT silently convert to standard prose:
+
+- **Digressive thought** — character's mind drifting off-topic mid-scene. Often a chaos moment. Do not streamline into relevance.
+- **Dialogue texture** — non-sequiturs, false starts, characters talking past each other, trailing off. Do not make it clean.
+- **Interior monologue register** — if the author uses fragments, present-tense shifts, or stream-of-consciousness for interiority, do NOT regularize it.
+- **Sensory detail without thematic function** — texture, not error. 30-40% of details should be pure noise. Do not delete because they "don't connect to theme."
+- **Deliberately rough sentences** — rhythmically off, grammatically imperfect. They ground the prose. If you can't tell if intentional, leave it.
+
+**Burden of proof for deletion:** Before removing anything, complete this sentence: "This passage does nothing — not texture, not voice beat, not pacing buffer, not character noise." If you can name even a minor function, make a targeted fix, not a deletion.
+
 ## HANDLING SPECIFIC EVALUATION ISSUES
 
 ### "Voice drift detected"
