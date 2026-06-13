@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Book Genesis Bestseller Skills Suite</title>
-  <desc id="desc">GitHub hero image for the Book Genesis bestseller-focused AI book production skills.</desc>
+  <title id="title">Best Seller Studio</title>
+  <desc id="desc">GitHub hero image for Best Seller Studio, the open-source AI book production pipeline.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#08111f"/>
@@ -36,8 +36,8 @@
   <g transform="translate(72 92)">
     <rect x="0" y="0" width="156" height="34" rx="17" fill="#f7d77a" opacity="0.95"/>
     <text x="78" y="23" text-anchor="middle" fill="#08111f" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="900">OPEN SOURCE</text>
-    <text x="0" y="104" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="68" font-weight="900">Book Genesis</text>
-    <text x="0" y="172" fill="url(#gold)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="56" font-weight="900">Bestseller Skills Suite</text>
+    <text x="0" y="104" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="60" font-weight="900">Best Seller Studio</text>
+    <text x="0" y="172" fill="url(#gold)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="42" font-weight="900">Open-source AI book studio</text>
     <text x="4" y="236" fill="#dbe7f5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="26" font-weight="600">Agent-agnostic AI book studio for drafting, editing,</text>
     <text x="4" y="272" fill="#dbe7f5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="26" font-weight="600">reader swarms, market gates, and editorial packages.</text>
     <g transform="translate(0 334)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="800">
