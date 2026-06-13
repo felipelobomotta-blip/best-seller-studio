@@ -4,8 +4,18 @@
 *.json text eol=lf
 *.py text eol=lf
 *.mjs text eol=lf
+*.js text eol=lf
 *.svg text eol=lf
 *.txt text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.sh text eol=lf
 *.jpg binary
 *.jpeg binary
 *.png binary
+*.gif binary
+*.mp4 binary
+*.mov binary
+*.pdf binary
+*.ico binary
+*.zip binary
